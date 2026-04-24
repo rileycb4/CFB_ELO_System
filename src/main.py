@@ -1,117 +1,196 @@
 import xml.etree.ElementTree as ET
 import csv
-from viewing_gui import start_gui
-
-class Game:
-    def __init__(self, week_num, opponent, outcome, score_us, score_them):
-        self.week_num = week_num
-        self.opponent = opponent
-        self.outcome = outcome  # 'W', 'L', or 'T'
-        self.score_us = score_us
-        self.score_them = score_them
+from gui import start_gui
+from formula import calculate_delta_elo as dt_elo
 
 class Team:
     def __init__(self, team_name, conference, ranking=None, ELO=None):
         self.team_name = team_name
         self.conference = conference
-        self.ranking = ranking if ranking is not None else 134 # Default to bottom rank
+        self.ranking = ranking if ranking is not None else 137
         self.ELO = ELO if ELO is not None else 1500.0
-        self.games = []  # Array of Game objects
+        # MUST be curly braces for a dictionary
+        self.schedule = {} 
 
-    def get_game_by_week(self, week_num):
-        return next((g for g in self.games if g.week_num == week_num), None)
+    def add_week(self, week, score_t, score_opp, outcome, rank_t, rating_t, rank_opp, rating_opp, opp_name, is_champ=False):
+        self.schedule[week] = {
+            "opponent_name": opp_name,
+            "team": {"score": score_t, "rank": rank_t, "rating": rating_t},
+            "opponent": {"score": score_opp, "rank": rank_opp, "rating": rating_opp},
+            "outcome": outcome,
+            "is_champ": is_champ # Re-added so the GUI can filter championship games
+        }
 
 def load_teams_from_xml(file_path):
-    try:
-        tree = ET.parse(file_path)
-        root = tree.getroot()
-        teams = []
-        for conference in root.findall('conference'):
-            conf_name = conference.get('name')
-            for team in conference.findall('team'):
-                teams.append(Team(team.text.strip(), conf_name))
-        return teams
-    except Exception as e:
-        print(f"Error loading XML: {e}")
-        return []
+    tree = ET.parse(file_path)
+    root = tree.getroot()
+    teams = []
+    for conference in root.findall('Conference'): # Matches your XML tag case
+        conf_name = conference.get('name')
+        for team in conference.findall('Team'):
+            team_name = team.text
+            teams.append(Team(team_name, conf_name))
+    return teams
 
 def update_teams_with_rankings(teams, csv_file_path):
     try:
-        with open(csv_file_path, newline='', encoding='utf-8') as csvfile:
-            # Detects if file is Tab or Comma delimited
-            content = csvfile.read(1024)
-            csvfile.seek(0)
-            dialect = csv.Sniffer().sniff(content) if (',' in content or '\t' in content) else 'excel-tab'
-            
-            reader = csv.reader(csvfile, dialect=dialect)
+        with open(csv_file_path, newline='') as csvfile:
+            reader = csv.reader(csvfile, delimiter='\t')
             next(reader) 
             for row in reader:
-                if len(row) < 3: continue
-                elo = float(row[0].strip())
-                rank = int(row[1].strip())
-                name = row[2].strip()
-                
+                ELO = float(row[0].strip())
+                ranking = int(row[1].strip())
+                team_name = row[2].strip()
                 for team in teams:
-                    if team.team_name.lower() == name.lower():
-                        team.ELO = elo
-                        team.ranking = rank
+                    if team.team_name.strip() == team_name:
+                        team.ELO = ELO
+                        team.ranking = ranking
                         break
-    except Exception as e:
-        print(f"Ranking update error: {e}")
+    except FileNotFoundError:
+        print(f"Warning: {csv_file_path} not found.")
 
-def update_teams_with_schedule_and_results(teams, csv_file_path):
-    try:
-        with open(csv_file_path, newline='', encoding='utf-8') as csvfile:
-            reader = csv.reader(csvfile)
-            next(reader) # Skip header
-            for row in reader:
-                # Row structure: [Date, Week, Day, Date, Time, Network, Team1, T1Score, Team2, T2Score, ...]
-                if len(row) < 10: continue
-                
-                week_num = int(row[1])
-                t1_name = row[6].strip()
-                t1_score = int(row[7])
-                t2_name = row[8].strip()
-                t2_score = int(row[9])
+def load_results(teams, csv_file_path):
+    is_champ_period = False
+    with open(csv_file_path, newline='') as csvfile:
+        reader = csv.reader(csvfile)
+        next(reader) 
+        for row in reader:
+            if any('Conference Championships' in str(cell) for cell in row):
+                is_champ_period = True
+                continue
 
-                for team in teams:
-                    curr_name = team.team_name.lower()
-                    
-                    if curr_name == t1_name.lower():
-                        outcome = "W" if t1_score > t2_score else ("L" if t1_score < t2_score else "T")
-                        team.games.append(Game(week_num, t2_name, outcome, t1_score, t2_score))
-                    
-                    elif curr_name == t2_name.lower():
-                        outcome = "W" if t2_score > t1_score else ("L" if t2_score < t1_score else "T")
-                        team.games.append(Game(week_num, t1_name, outcome, t2_score, t1_score))
-                
-        # Sort games by week_num for every team just in case CSV was out of order
-        for team in teams:
-            team.games.sort(key=lambda x: x.week_num)
+            if not row or len(row) < 7: continue
+            week = int(row[0])
+            t1_n, t1_s, t2_n, t2_s = row[2].strip(), int(row[3]), row[5].strip(), int(row[6])
+
+            # Find the teams (returns None if it's an FCS school)
+            team1 = next((t for t in teams if t.team_name == t1_n), None)
+            team2 = next((t for t in teams if t.team_name == t2_n), None)
+
+            # Establish safe defaults for missing opponents (FCS schools)
+            t1_rank = team1.ranking if team1 else 200
+            t1_elo = team1.ELO if team1 else 1300.0
             
-    except Exception as e:
-        print(f"Schedule update error: {e}")
+            t2_rank = team2.ranking if team2 else 200
+            t2_elo = team2.ELO if team2 else 1300.0
+
+            # Add to Team 1's schedule if Team 1 is an FBS team
+            if team1:
+                out1 = "W" if t1_s > t2_s else "L"
+                team1.add_week(week, t1_s, t2_s, out1, t1_rank, t1_elo, t2_rank, t2_elo, t2_n, is_champ_period)
+            
+            # Add to Team 2's schedule if Team 2 is an FBS team
+            if team2:
+                out2 = "W" if t2_s > t1_s else "L"
+                team2.add_week(week, t2_s, t1_s, out2, t2_rank, t2_elo, t1_rank, t1_elo, t1_n, is_champ_period)
+
+def generate_weekly_breakdown_csv(teams, output_filename="weekly_breakdown.csv"):
+    """
+    Simulates the season week-by-week and exports a detailed historical breakdown 
+    to a CSV file.
+    """
+    # 1. Initialize Starting Values
+    current_elos = {t.team_name: t.ELO for t in teams}
+    current_ranks = {t.team_name: t.ranking for t in teams}
+    
+    # 2. Extract and Group all Games by Week
+    max_week = 0
+    games_by_week = {}
+    seen_games = set()
+    
+    for team in teams:
+        for week, data in team.schedule.items():
+            max_week = max(max_week, week)
+            opp_name = data["opponent_name"]
+            game_id = tuple(sorted((team.team_name, opp_name)) + [week])
+            
+            if game_id not in seen_games:
+                games_by_week.setdefault(week, []).append({
+                    't1': team.team_name, 't2': opp_name,
+                    's1': data["team"]["score"], 's2': data["opponent"]["score"]
+                })
+                seen_games.add(game_id)
+                
+    # 3. Setup the CSV Writer
+    with open(output_filename, mode='w', newline='', encoding='utf-8') as f:
+        writer = csv.writer(f)
+        # Write the Header
+        writer.writerow(["Week", "Team", "Opponent", "Score", "Old Rank", "New Rank", "Old ELO", "New ELO"])
+        
+        # 4. Process Every Week
+        for week in range(1, max_week + 1):
+            week_games = games_by_week.get(week, [])
+            
+            # Snapshot the "Old" state before games are played
+            old_elos = current_elos.copy()
+            old_ranks = current_ranks.copy()
+            
+            played_this_week = {} # Tracks who played whom
+            
+            # --- CALCULATE DELTAS ---
+            for g in week_games:
+                t1, t2 = g['t1'], g['t2']
+                s1, s2 = g['s1'], g['s2']
+                
+                t1_in = t1 in current_elos
+                t2_in = t2 in current_elos
+                
+                # Fetch dynamically (Default to 1300/200 for FCS)
+                e1 = current_elos[t1] if t1_in else 1300.0
+                e2 = current_elos[t2] if t2_in else 1300.0
+                r1 = current_ranks[t1] if t1_in else 200
+                r2 = current_ranks[t2] if t2_in else 200
+                
+                d1 = dt_elo(e1, e2, r1, r2, "W" if s1 > s2 else "L", s1, s2, week)
+                d2 = dt_elo(e2, e1, r2, r1, "W" if s2 > s1 else "L", s2, s1, week)
+                
+                if t1_in: current_elos[t1] += d1
+                if t2_in: current_elos[t2] += d2
+                
+                # Record match details for the breakdown
+                played_this_week[t1] = {"opp": t2, "score": f"{s1}-{s2}"}
+                played_this_week[t2] = {"opp": t1, "score": f"{s2}-{s1}"}
+                
+            # --- DETERMINE "NEW" RANKS ---
+            sorted_new = sorted(current_elos.items(), key=lambda x: x[1], reverse=True)
+            current_ranks = {name: rank for rank, (name, _) in enumerate(sorted_new, start=1)}
+            
+            # --- WRITE ROWS TO CSV (Alphabetical Order) ---
+            for team in sorted(teams, key=lambda t: t.team_name):
+                t_name = team.team_name
+                
+                # Check if they had a game or a BYE
+                if t_name in played_this_week:
+                    opp = played_this_week[t_name]["opp"]
+                    score = played_this_week[t_name]["score"]
+                else:
+                    opp = "BYE"
+                    score = "N/A"
+                    
+                # [Week, Team, Opp, Score, Old Rank, New Rank, Old ELO, New ELO]
+                writer.writerow([
+                    week,
+                    t_name,
+                    opp,
+                    score,
+                    old_ranks[t_name],
+                    current_ranks[t_name],
+                    f"{old_elos[t_name]:.3f}",
+                    f"{current_elos[t_name]:.3f}"
+                ])
+                
+    print(f"Success: Weekly breakdown generated at '{output_filename}'")
 
 def main():
-    # File Paths
-    xml_path = 'resources/FBS_list.xml'
-    rank_path = 'resources/preseason_rankings/rankings_2025.csv'
-    results_path = 'resources/results/results_2025.csv'
-
-    # 1. Load Base Teams
-    print("Loading XML data...")
-    teams = load_teams_from_xml(xml_path)
-
-    # 2. Update with Preseason Rankings/ELO
-    print("Applying rankings...")
-    update_teams_with_rankings(teams, rank_path)
-
-    # 3. Process Weekly Games
-    print("Processing weekly results...")
-    update_teams_with_schedule_and_results(teams, results_path)
-
-    # 4. Launch GUI
-    print(f"Successfully loaded {len(teams)} teams. Launching GUI...")
+    teams = load_teams_from_xml('resources/FBS_list.xml')
+    update_teams_with_rankings(teams, 'resources/preseason_rankings/rankings_2025.csv')
+    load_results(teams, 'resources/results/results_2025_cleaned.csv')
+    
+    # Generate the breakdown CSV!
+    print("Generating weekly breakdown report...")
+    generate_weekly_breakdown_csv(teams, "weekly_breakdown.csv")
+    
+    print("Data loaded. Initial ELO set. Launching GUI...")
     start_gui(teams)
 
 if __name__ == "__main__":
