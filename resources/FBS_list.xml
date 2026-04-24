@@ -1,161 +1,161 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<fbs>
-  <conference name="AAC">
-    <team>Army</team>
-    <team>Navy</team>
-    <team>Tulsa</team>
-    <team>Texas-San Antonio</team>
-    <team>South Florida</team>
-    <team>East Carolina</team>
-    <team>North Texas</team>
-    <team>Memphis</team>
-    <team>Alabama-Birmingham</team>
-    <team>Tulane</team>
-    <team>Temple</team>
-    <team>Florida Atlantic</team>
-    <team>Rice</team>
-    <team>Charlotte</team>
-  </conference>
-  <conference name="ACC">
-    <team>Clemson</team>
-    <team>Duke</team>
-    <team>North Carolina</team>
-    <team>North Carolina State</team>
-    <team>Wake Forest</team>
-    <team>Virginia</team>
-    <team>Georgia Tech</team>
-    <team>Florida State</team>
-    <team>Miami (FL)</team>
-    <team>Virginia Tech</team>
-    <team>Boston College</team>
-    <team>Pittsburgh</team>
-    <team>Syracuse</team>
-    <team>Louisville</team>
-    <team>Southern Methodist</team>
-    <team>California</team>
-    <team>Stanford</team>
-  </conference>
-  <conference name="Big10">
-    <team>Indiana</team>
-    <team>Ohio State</team>
-    <team>Oregon</team>
-    <team>Southern California</team>
-    <team>Michigan</team>
-    <team>Iowa</team>
-    <team>Washington</team>
-    <team>Illinois</team>
-    <team>Minnesota</team>
-    <team>Nebraska</team>
-    <team>Northwestern</team>
-    <team>UCLA</team>
-    <team>Penn State</team>
-    <team>Wisconsin</team>
-    <team>Rutgers</team>
-    <team>Michigan State</team>
-    <team>Maryland</team>
-    <team>Purdue</team>
-  </conference>
-  <conference name="Big12">
-    <team>Arizona</team>
-    <team>Arizona State</team>
-    <team>Baylor</team>
-    <team>Brigham Young</team>
-    <team>Central Florida</team>
-    <team>Cincinnati</team>
-    <team>Colorado</team>
-    <team>Houston</team>
-    <team>Iowa State</team>
-    <team>Kansas</team>
-    <team>Kansas State</team>
-    <team>Oklahoma State</team>
-    <team>Texas Christian</team>
-    <team>Utah</team>
-    <team>Texas Tech</team>
-    <team>West Virginia</team>
-  </conference>
-  <conference name="CUSA">
-    <team>Delaware</team>
-    <team>Florida International</team>
-    <team>Jacksonville State</team>
-    <team>Kennesaw State</team>
-    <team>Liberty</team>
-    <team>Louisiana Tech</team>
-    <team>Middle Tennessee State</team>
-    <team>Missouri State</team>
-    <team>New Mexico State</team>
-    <team>Sam Houston</team>
-    <team>Texas-El Paso</team>
-    <team>Western Kentucky</team>
-  </conference>
-  <conference name="MAC">
-    <team>Akron</team>
-    <team>Ball State</team>
-    <team>Bowling Green</team>
-    <team>Buffalo</team>
-    <team>Central Michigan</team>
-    <team>Eastern Michigan</team>
-    <team>Kent State</team>
-    <team>Massachusetts</team>
-    <team>Miami (OH)</team>
-    <team>Northern Illinois</team>
-    <team>Ohio</team>
-    <team>Toledo</team>
-    <team>Western Michigan</team>
-  </conference>
-  <conference name="MWC">
-    <team>Air Force</team>
-    <team>Boise State</team>
-    <team>Colorado State</team>
-    <team>Fresno State</team>
-    <team>Hawaii</team>
-    <team>Nevada</team>
-    <team>New Mexico</team>
-    <team>San Diego State</team>
-    <team>San Jose State</team>
-    <team>Nevada-Las Vegas</team>
-    <team>Utah State</team>
-    <team>Wyoming</team>
-  </conference>
-  <conference name="PAC12">
-    <team>Oregon State</team>
-    <team>Washington State</team>
-  </conference>
-  <conference name="SEC">
-    <team>Alabama</team>
-    <team>Arkansas</team>
-    <team>Auburn</team>
-    <team>Florida</team>
-    <team>Georgia</team>
-    <team>Kentucky</team>
-    <team>Louisiana State</team>
-    <team>Mississippi</team>
-    <team>Mississippi State</team>
-    <team>Missouri</team>
-    <team>Oklahoma</team>
-    <team>South Carolina</team>
-    <team>Tennessee</team>
-    <team>Texas</team>
-    <team>Texas A&amp;M</team>
-    <team>Vanderbilt</team>
-  </conference>
-  <conference name="SBC">
-    <team>Appalachian State</team>
-    <team>Coastal Carolina</team>
-    <team>Georgia Southern</team>
-    <team>Georgia State</team>
-    <team>James Madison</team>
-    <team>Marshall</team>
-    <team>Old Dominion</team>
-    <team>Arkansas State</team>
-    <team>Louisiana</team>
-    <team>Louisiana-Monroe</team>
-    <team>South Alabama</team>
-    <team>Southern Mississippi</team>
-    <team>Texas State</team>
-    <team>Troy</team>
-  </conference>
-  <conference name="Independents">
-    <team>Notre Dame</team>
-    <team>Connecticut</team>
-  </conference>
-</fbs>
+<FBS>
+  <Conference name="AAC">
+    <Team>Army</Team>
+    <Team>Navy</Team>
+    <Team>Tulsa</Team>
+    <Team>Texas-San Antonio</Team>
+    <Team>South Florida</Team>
+    <Team>East Carolina</Team>
+    <Team>North Texas</Team>
+    <Team>Memphis</Team>
+    <Team>Alabama-Birmingham</Team>
+    <Team>Tulane</Team>
+    <Team>Temple</Team>
+    <Team>Florida Atlantic</Team>
+    <Team>Rice</Team>
+    <Team>Charlotte</Team>
+  </Conference>
+  <Conference name="ACC">
+    <Team>Clemson</Team>
+    <Team>Duke</Team>
+    <Team>North Carolina</Team>
+    <Team>North Carolina State</Team>
+    <Team>Wake Forest</Team>
+    <Team>Virginia</Team>
+    <Team>Georgia Tech</Team>
+    <Team>Florida State</Team>
+    <Team>Miami (FL)</Team>
+    <Team>Virginia Tech</Team>
+    <Team>Boston College</Team>
+    <Team>Pittsburgh</Team>
+    <Team>Syracuse</Team>
+    <Team>Louisville</Team>
+    <Team>Southern Methodist</Team>
+    <Team>California</Team>
+    <Team>Stanford</Team>
+  </Conference>
+  <Conference name="Big10">
+    <Team>Indiana</Team>
+    <Team>Ohio State</Team>
+    <Team>Oregon</Team>
+    <Team>Southern California</Team>
+    <Team>Michigan</Team>
+    <Team>Iowa</Team>
+    <Team>Washington</Team>
+    <Team>Illinois</Team>
+    <Team>Minnesota</Team>
+    <Team>Nebraska</Team>
+    <Team>Northwestern</Team>
+    <Team>UCLA</Team>
+    <Team>Penn State</Team>
+    <Team>Wisconsin</Team>
+    <Team>Rutgers</Team>
+    <Team>Michigan State</Team>
+    <Team>Maryland</Team>
+    <Team>Purdue</Team>
+  </Conference>
+  <Conference name="Big12">
+    <Team>Arizona</Team>
+    <Team>Arizona State</Team>
+    <Team>Baylor</Team>
+    <Team>Brigham Young</Team>
+    <Team>Central Florida</Team>
+    <Team>Cincinnati</Team>
+    <Team>Colorado</Team>
+    <Team>Houston</Team>
+    <Team>Iowa State</Team>
+    <Team>Kansas</Team>
+    <Team>Kansas State</Team>
+    <Team>Oklahoma State</Team>
+    <Team>Texas Christian</Team>
+    <Team>Utah</Team>
+    <Team>Texas Tech</Team>
+    <Team>West Virginia</Team>
+  </Conference>
+  <Conference name="CUSA">
+    <Team>Delaware</Team>
+    <Team>Florida International</Team>
+    <Team>Jacksonville State</Team>
+    <Team>Kennesaw State</Team>
+    <Team>Liberty</Team>
+    <Team>Louisiana Tech</Team>
+    <Team>Middle Tennessee State</Team>
+    <Team>Missouri State</Team>
+    <Team>New Mexico State</Team>
+    <Team>Sam Houston</Team>
+    <Team>Texas-El Paso</Team>
+    <Team>Western Kentucky</Team>
+  </Conference>
+  <Conference name="MAC">
+    <Team>Akron</Team>
+    <Team>Ball State</Team>
+    <Team>Bowling Green</Team>
+    <Team>Buffalo</Team>
+    <Team>Central Michigan</Team>
+    <Team>Eastern Michigan</Team>
+    <Team>Kent State</Team>
+    <Team>Massachusetts</Team>
+    <Team>Miami (OH)</Team>
+    <Team>Northern Illinois</Team>
+    <Team>Ohio</Team>
+    <Team>Toledo</Team>
+    <Team>Western Michigan</Team>
+  </Conference>
+  <Conference name="MWC">
+    <Team>Air Force</Team>
+    <Team>Boise State</Team>
+    <Team>Colorado State</Team>
+    <Team>Fresno State</Team>
+    <Team>Hawaii</Team>
+    <Team>Nevada</Team>
+    <Team>New Mexico</Team>
+    <Team>San Diego State</Team>
+    <Team>San Jose State</Team>
+    <Team>Nevada-Las Vegas</Team>
+    <Team>Utah State</Team>
+    <Team>Wyoming</Team>
+  </Conference>
+  <Conference name="PAC12">
+    <Team>Oregon State</Team>
+    <Team>Washington State</Team>
+  </Conference>
+  <Conference name="SEC">
+    <Team>Alabama</Team>
+    <Team>Arkansas</Team>
+    <Team>Auburn</Team>
+    <Team>Florida</Team>
+    <Team>Georgia</Team>
+    <Team>Kentucky</Team>
+    <Team>Louisiana State</Team>
+    <Team>Mississippi</Team>
+    <Team>Mississippi State</Team>
+    <Team>Missouri</Team>
+    <Team>Oklahoma</Team>
+    <Team>South Carolina</Team>
+    <Team>Tennessee</Team>
+    <Team>Texas</Team>
+    <Team>Texas A&amp;M</Team>
+    <Team>Vanderbilt</Team>
+  </Conference>
+  <Conference name="SBC">
+    <Team>Appalachian State</Team>
+    <Team>Coastal Carolina</Team>
+    <Team>Georgia Southern</Team>
+    <Team>Georgia State</Team>
+    <Team>James Madison</Team>
+    <Team>Marshall</Team>
+    <Team>Old Dominion</Team>
+    <Team>Arkansas State</Team>
+    <Team>Louisiana</Team>
+    <Team>Louisiana-Monroe</Team>
+    <Team>South Alabama</Team>
+    <Team>Southern Mississippi</Team>
+    <Team>Texas State</Team>
+    <Team>Troy</Team>
+  </Conference>
+  <Conference name="Independents">
+    <Team>Notre Dame</Team>
+    <Team>Connecticut</Team>
+  </Conference>
+</FBS>

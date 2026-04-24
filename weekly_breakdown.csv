@@ -1,0 +1,2177 @@
+Week,Team,Opponent,Score,Old Rank,New Rank,Old ELO,New ELO
+1,Air Force,BYE,N/A,99,97,1499.190,1499.190
+1,Akron,BYE,N/A,132,128,1497.501,1497.501
+1,Alabama,BYE,N/A,9,14,1502.086,1502.086
+1,Alabama-Birmingham,BYE,N/A,124,120,1498.192,1498.192
+1,Appalachian State,BYE,N/A,96,94,1499.278,1499.278
+1,Arizona,BYE,N/A,77,78,1499.786,1499.786
+1,Arizona State,BYE,N/A,8,13,1502.172,1502.172
+1,Arkansas,BYE,N/A,47,48,1500.554,1500.554
+1,Arkansas State,BYE,N/A,87,87,1499.527,1499.527
+1,Army,BYE,N/A,72,73,1499.912,1499.912
+1,Auburn,BYE,N/A,30,32,1501.064,1501.064
+1,Ball State,BYE,N/A,130,126,1497.733,1497.733
+1,Baylor,BYE,N/A,28,30,1501.134,1501.134
+1,Boise State,BYE,N/A,23,26,1501.322,1501.322
+1,Boston College,BYE,N/A,56,56,1500.316,1500.316
+1,Bowling Green,BYE,N/A,108,105,1498.901,1498.901
+1,Brigham Young,BYE,N/A,32,34,1500.998,1500.998
+1,Buffalo,BYE,N/A,73,74,1499.887,1499.887
+1,California,BYE,N/A,84,84,1499.606,1499.606
+1,Central Florida,BYE,N/A,82,82,1499.658,1499.658
+1,Central Michigan,BYE,N/A,115,111,1498.637,1498.637
+1,Charlotte,BYE,N/A,123,119,1498.251,1498.251
+1,Cincinnati,BYE,N/A,67,66,1500.038,1500.038
+1,Clemson,BYE,N/A,2,7,1503.114,1503.114
+1,Coastal Carolina,BYE,N/A,102,100,1499.098,1499.098
+1,Colorado,BYE,N/A,51,51,1500.447,1500.447
+1,Colorado State,BYE,N/A,89,88,1499.473,1499.473
+1,Connecticut,BYE,N/A,83,83,1499.632,1499.632
+1,Delaware,BYE,N/A,128,124,1497.914,1497.914
+1,Duke,BYE,N/A,37,38,1500.840,1500.840
+1,East Carolina,BYE,N/A,80,80,1499.710,1499.710
+1,Eastern Michigan,BYE,N/A,112,108,1498.756,1498.756
+1,Florida,BYE,N/A,15,19,1501.693,1501.693
+1,Florida Atlantic,BYE,N/A,118,114,1498.506,1498.506
+1,Florida International,BYE,N/A,126,122,1498.063,1498.063
+1,Florida State,BYE,N/A,49,49,1500.500,1500.500
+1,Fresno State,Kansas,7-31,78,134,1499.761,1475.140
+1,Georgia,BYE,N/A,5,10,1502.499,1502.499
+1,Georgia Southern,BYE,N/A,86,86,1499.553,1499.553
+1,Georgia State,BYE,N/A,116,112,1498.595,1498.595
+1,Georgia Tech,BYE,N/A,31,33,1501.031,1501.031
+1,Hawaii,Stanford,23-20,109,4,1498.866,1524.469
+1,Houston,BYE,N/A,74,75,1499.862,1499.862
+1,Illinois,BYE,N/A,11,16,1501.937,1501.937
+1,Indiana,BYE,N/A,17,21,1501.589,1501.589
+1,Iowa,BYE,N/A,29,31,1501.099,1501.099
+1,Iowa State,Kansas State,24-21,27,1,1501.170,1525.766
+1,Jacksonville State,BYE,N/A,97,95,1499.249,1499.249
+1,James Madison,BYE,N/A,43,44,1500.665,1500.665
+1,Kansas,Fresno State,31-7,36,2,1500.871,1525.491
+1,Kansas State,Iowa State,21-24,21,133,1501.405,1476.809
+1,Kennesaw State,BYE,N/A,135,131,1496.886,1496.886
+1,Kent State,BYE,N/A,136,132,1496.355,1496.355
+1,Kentucky,BYE,N/A,70,71,1499.962,1499.962
+1,Liberty,BYE,N/A,60,60,1500.214,1500.214
+1,Louisiana,BYE,N/A,45,46,1500.609,1500.609
+1,Louisiana State,BYE,N/A,10,15,1502.009,1502.009
+1,Louisiana Tech,BYE,N/A,119,115,1498.460,1498.460
+1,Louisiana-Monroe,BYE,N/A,111,107,1498.793,1498.793
+1,Louisville,BYE,N/A,22,25,1501.363,1501.363
+1,Marshall,BYE,N/A,105,102,1499.002,1499.002
+1,Maryland,BYE,N/A,75,76,1499.837,1499.837
+1,Massachusetts,BYE,N/A,134,130,1497.160,1497.160
+1,Memphis,BYE,N/A,54,54,1500.368,1500.368
+1,Miami (FL),BYE,N/A,137,68,1500.000,1500.000
+1,Miami (OH),BYE,N/A,137,69,1500.000,1500.000
+1,Michigan,BYE,N/A,14,18,1501.749,1501.749
+1,Michigan State,BYE,N/A,55,55,1500.342,1500.342
+1,Middle Tennessee State,BYE,N/A,125,121,1498.130,1498.130
+1,Minnesota,BYE,N/A,44,45,1500.637,1500.637
+1,Mississippi,BYE,N/A,16,20,1501.640,1501.640
+1,Mississippi State,BYE,N/A,90,89,1499.446,1499.446
+1,Missouri,BYE,N/A,34,36,1500.933,1500.933
+1,Missouri State,BYE,N/A,131,127,1497.626,1497.626
+1,Navy,BYE,N/A,41,42,1500.722,1500.722
+1,Nebraska,BYE,N/A,39,40,1500.780,1500.780
+1,Nevada,BYE,N/A,122,118,1498.307,1498.307
+1,Nevada-Las Vegas,Idaho State,38-31,48,5,1500.527,1512.132
+1,New Mexico,BYE,N/A,121,117,1498.360,1498.360
+1,New Mexico State,BYE,N/A,129,125,1497.828,1497.828
+1,North Carolina,BYE,N/A,50,50,1500.473,1500.473
+1,North Carolina State,BYE,N/A,52,52,1500.420,1500.420
+1,North Texas,BYE,N/A,95,93,1499.307,1499.307
+1,Northern Illinois,BYE,N/A,107,104,1498.936,1498.936
+1,Northwestern,BYE,N/A,79,79,1499.735,1499.735
+1,Notre Dame,BYE,N/A,6,11,1502.374,1502.374
+1,Ohio,BYE,N/A,94,92,1499.335,1499.335
+1,Ohio State,BYE,N/A,4,9,1502.649,1502.649
+1,Oklahoma,BYE,N/A,25,28,1501.244,1501.244
+1,Oklahoma State,BYE,N/A,68,67,1500.013,1500.013
+1,Old Dominion,BYE,N/A,101,99,1499.129,1499.129
+1,Oregon,BYE,N/A,7,12,1502.267,1502.267
+1,Oregon State,BYE,N/A,76,77,1499.811,1499.811
+1,Penn State,BYE,N/A,1,6,1503.645,1503.645
+1,Pittsburgh,BYE,N/A,33,35,1500.965,1500.965
+1,Purdue,BYE,N/A,92,91,1499.391,1499.391
+1,Rice,BYE,N/A,127,123,1497.991,1497.991
+1,Rutgers,BYE,N/A,65,64,1500.088,1500.088
+1,Sam Houston,Western Kentucky,24-41,103,135,1499.067,1474.643
+1,San Diego State,BYE,N/A,100,98,1499.160,1499.160
+1,San Jose State,BYE,N/A,62,62,1500.163,1500.163
+1,South Alabama,BYE,N/A,98,96,1499.220,1499.220
+1,South Carolina,BYE,N/A,12,17,1501.870,1501.870
+1,South Florida,BYE,N/A,59,59,1500.239,1500.239
+1,Southern California,BYE,N/A,42,43,1500.693,1500.693
+1,Southern Methodist,BYE,N/A,19,23,1501.494,1501.494
+1,Southern Mississippi,BYE,N/A,104,101,1499.035,1499.035
+1,Stanford,Hawaii,20-23,93,136,1499.363,1473.761
+1,Syracuse,BYE,N/A,53,53,1500.394,1500.394
+1,Temple,BYE,N/A,106,103,1498.969,1498.969
+1,Tennessee,BYE,N/A,26,29,1501.207,1501.207
+1,Texas,BYE,N/A,3,8,1502.840,1502.840
+1,Texas A&M,BYE,N/A,20,24,1501.449,1501.449
+1,Texas Christian,BYE,N/A,35,37,1500.902,1500.902
+1,Texas State,BYE,N/A,57,57,1500.290,1500.290
+1,Texas Tech,BYE,N/A,24,27,1501.283,1501.283
+1,Texas-El Paso,BYE,N/A,113,109,1498.717,1498.717
+1,Texas-San Antonio,BYE,N/A,58,58,1500.265,1500.265
+1,Toledo,BYE,N/A,71,72,1499.937,1499.937
+1,Troy,BYE,N/A,114,110,1498.678,1498.678
+1,Tulane,BYE,N/A,38,39,1500.810,1500.810
+1,Tulsa,BYE,N/A,133,129,1497.351,1497.351
+1,UCLA,BYE,N/A,66,65,1500.063,1500.063
+1,Utah,BYE,N/A,18,22,1501.540,1501.540
+1,Utah State,BYE,N/A,120,116,1498.411,1498.411
+1,Vanderbilt,BYE,N/A,46,47,1500.581,1500.581
+1,Virginia,BYE,N/A,81,81,1499.684,1499.684
+1,Virginia Tech,BYE,N/A,61,61,1500.189,1500.189
+1,Wake Forest,BYE,N/A,91,90,1499.419,1499.419
+1,Washington,BYE,N/A,40,41,1500.751,1500.751
+1,Washington State,BYE,N/A,85,85,1499.580,1499.580
+1,West Virginia,BYE,N/A,69,70,1499.987,1499.987
+1,Western Kentucky,Sam Houston,41-24,63,3,1500.138,1524.562
+1,Western Michigan,BYE,N/A,110,106,1498.830,1498.830
+1,Wisconsin,BYE,N/A,64,63,1500.113,1500.113
+1,Wyoming,BYE,N/A,117,113,1498.551,1498.551
+2,Air Force,Bucknell,49-13,97,74,1499.190,1510.658
+2,Akron,Wyoming,0-10,128,123,1497.501,1474.490
+2,Alabama,Florida State,17-31,14,115,1502.086,1475.344
+2,Alabama-Birmingham,Alabama State,52-42,120,83,1498.192,1509.371
+2,Appalachian State,Charlotte,34-11,94,41,1499.278,1522.646
+2,Arizona,Hawaii,40-6,78,4,1499.786,1533.921
+2,Arizona State,Northern Arizona,38-19,13,49,1502.172,1513.275
+2,Arkansas,Alabama A&M,52-7,48,61,1500.554,1512.065
+2,Arkansas State,Southeast Missouri State,42-24,87,72,1499.527,1510.747
+2,Army,Tarleton State,27-30,73,136,1499.912,1443.232
+2,Auburn,Baylor,38-24,32,24,1501.064,1524.398
+2,Ball State,Purdue,0-31,126,126,1497.733,1474.195
+2,Baylor,Auburn,24-38,30,93,1501.134,1477.800
+2,Boise State,South Florida,7-34,26,124,1501.322,1474.437
+2,Boston College,Fordham,66-10,56,64,1500.316,1511.973
+2,Bowling Green,Lafayette,26-7,105,78,1498.901,1510.165
+2,Brigham Young,Portland State,69-0,34,52,1500.998,1512.773
+2,Buffalo,Minnesota,10-23,74,100,1499.887,1476.772
+2,California,Oregon State,34-15,84,33,1499.606,1523.513
+2,Central Florida,Jacksonville State,17-10,82,42,1499.658,1522.629
+2,Central Michigan,San Jose State,16-14,111,11,1498.637,1526.549
+2,Charlotte,Appalachian State,11-34,119,121,1498.251,1474.883
+2,Cincinnati,Nebraska,17-20,66,95,1500.038,1477.201
+2,Clemson,Louisiana State,10-17,7,92,1503.114,1479.394
+2,Coastal Carolina,Virginia,7-48,100,117,1499.098,1475.226
+2,Colorado,Georgia Tech,20-27,51,94,1500.447,1477.487
+2,Colorado State,Washington,21-38,88,107,1499.473,1476.284
+2,Connecticut,Central Connecticut State,59-13,83,69,1499.632,1511.203
+2,Delaware,Delaware State,35-17,124,84,1497.914,1509.213
+2,Duke,Elon,45-17,38,60,1500.840,1512.125
+2,East Carolina,North Carolina State,17-24,80,102,1499.710,1476.759
+2,Eastern Michigan,Texas State,27-52,108,114,1498.756,1475.369
+2,Florida,Long Island,55-0,19,50,1501.693,1513.268
+2,Florida Atlantic,Maryland,7-39,114,119,1498.506,1474.920
+2,Florida International,Bethune-Cookman,42-9,122,82,1498.063,1509.550
+2,Florida State,Alabama,31-17,49,8,1500.500,1527.242
+2,Fresno State,Georgia Southern,42-14,134,88,1475.140,1505.685
+2,Georgia,Marshall,45-7,10,12,1502.499,1526.093
+2,Georgia Southern,Fresno State,14-42,86,133,1499.553,1469.009
+2,Georgia State,Mississippi,7-63,112,122,1498.595,1474.514
+2,Georgia Tech,Colorado,27-20,33,26,1501.031,1523.990
+2,Hawaii,Arizona,6-40,4,89,1524.469,1490.333
+2,Houston,Stephen F. Austin,27-0,75,70,1499.862,1511.182
+2,Illinois,Western Illinois,52-3,16,48,1501.937,1513.427
+2,Indiana,Old Dominion,27-14,21,22,1501.589,1524.590
+2,Iowa,Albany,34-7,31,58,1501.099,1512.358
+2,Iowa State,South Dakota,55-7,1,1,1525.766,1536.088
+2,Jacksonville State,Central Florida,10-17,95,108,1499.249,1476.278
+2,James Madison,Weber State,45-10,44,63,1500.665,1512.047
+2,Kansas,Wagner,46-7,2,2,1525.491,1535.727
+2,Kansas State,North Dakota,38-35,133,90,1476.809,1488.959
+2,Kennesaw State,Wake Forest,9-10,131,125,1496.886,1474.224
+2,Kent State,Merrimack,21-17,132,87,1496.355,1507.541
+2,Kentucky,Toledo,24-16,71,37,1499.962,1522.986
+2,Liberty,Maine,28-7,60,67,1500.214,1511.439
+2,Louisiana,Rice,12-14,46,132,1500.609,1469.314
+2,Louisiana State,Clemson,17-10,15,13,1502.009,1525.728
+2,Louisiana Tech,Southeastern Louisiana,24-0,115,81,1498.460,1509.810
+2,Louisiana-Monroe,St. Francis (PA),29-0,107,77,1498.793,1510.192
+2,Louisville,Eastern Kentucky,51-17,25,54,1501.363,1512.698
+2,Marshall,Georgia,7-45,102,113,1499.002,1475.408
+2,Maryland,Florida Atlantic,39-7,76,34,1499.837,1523.423
+2,Massachusetts,Temple,10-42,130,128,1497.160,1473.606
+2,Memphis,Chattanooga,45-10,54,65,1500.368,1511.765
+2,Miami (FL),Notre Dame,27-24,68,7,1500.000,1528.937
+2,Miami (OH),Wisconsin,0-17,69,103,1500.000,1476.733
+2,Michigan,New Mexico,34-17,18,19,1501.749,1524.796
+2,Michigan State,Western Michigan,23-6,55,32,1500.342,1523.515
+2,Middle Tennessee State,Austin Peay,14-34,121,135,1498.130,1449.656
+2,Minnesota,Buffalo,23-10,45,28,1500.637,1523.751
+2,Mississippi,Georgia State,63-7,20,15,1501.640,1525.721
+2,Mississippi State,Southern Mississippi,34-17,89,40,1499.446,1522.693
+2,Missouri,Central Arkansas,61-6,36,56,1500.933,1512.547
+2,Missouri State,Southern California,13-73,127,129,1497.626,1473.448
+2,Navy,Virginia Military Institute,52-7,42,59,1500.722,1512.225
+2,Nebraska,Cincinnati,20-17,40,30,1500.780,1523.616
+2,Nevada,Penn State,11-46,118,120,1498.307,1474.916
+2,Nevada-Las Vegas,Sam Houston,38-21,5,5,1512.132,1532.905
+2,New Mexico,Michigan,17-34,117,116,1498.360,1475.313
+2,New Mexico State,Bryant,19-3,125,85,1497.828,1509.105
+2,North Carolina,Texas Christian,14-48,50,101,1500.473,1476.772
+2,North Carolina State,East Carolina,24-17,52,36,1500.420,1523.371
+2,North Texas,Lamar,51-0,93,71,1499.307,1510.955
+2,Northern Illinois,Holy Cross,19-17,104,79,1498.936,1509.970
+2,Northwestern,Tulane,3-23,79,106,1499.735,1476.451
+2,Notre Dame,Miami (FL),24-27,11,130,1502.374,1473.437
+2,Ohio,Rutgers,31-34,92,104,1499.335,1476.500
+2,Ohio State,Texas,14-7,9,14,1502.649,1525.721
+2,Oklahoma,Illinois State,35-3,28,55,1501.244,1512.559
+2,Oklahoma State,Tennessee-Martin,27-7,67,68,1500.013,1511.235
+2,Old Dominion,Indiana,14-27,99,109,1499.129,1476.129
+2,Oregon,Montana State,59-13,12,47,1502.267,1513.704
+2,Oregon State,California,15-34,77,110,1499.811,1475.904
+2,Penn State,Nevada,46-11,6,10,1503.645,1527.037
+2,Pittsburgh,Duquesne,61-9,35,57,1500.965,1512.541
+2,Purdue,Ball State,31-0,91,38,1499.391,1522.929
+2,Rice,Louisiana,14-12,123,6,1497.991,1529.286
+2,Rutgers,Ohio,34-31,64,39,1500.088,1522.923
+2,Sam Houston,Nevada-Las Vegas,21-38,135,134,1474.643,1453.870
+2,San Diego State,Stony Brook,42-0,98,73,1499.160,1510.705
+2,San Jose State,Central Michigan,14-16,62,131,1500.163,1472.251
+2,South Alabama,Morgan State,38-21,96,76,1499.220,1510.442
+2,South Carolina,Virginia Tech,24-11,17,17,1501.870,1524.923
+2,South Florida,Boise State,34-7,59,9,1500.239,1527.125
+2,Southern California,Missouri State,73-13,43,18,1500.693,1524.871
+2,Southern Methodist,East Texas A&M,42-13,23,53,1501.494,1512.759
+2,Southern Mississippi,Mississippi State,17-34,101,111,1499.035,1475.788
+2,Stanford,BYE,N/A,136,127,1473.761,1473.761
+2,Syracuse,Tennessee,26-45,53,97,1500.394,1477.119
+2,Temple,Massachusetts,42-10,103,43,1498.969,1522.523
+2,Tennessee,Syracuse,45-26,29,23,1501.207,1524.481
+2,Texas,Ohio State,7-14,8,91,1502.840,1479.767
+2,Texas A&M,Texas-San Antonio,42-24,24,20,1501.449,1524.671
+2,Texas Christian,North Carolina,48-14,37,21,1500.902,1524.602
+2,Texas State,Eastern Michigan,52-27,57,29,1500.290,1523.678
+2,Texas Tech,Arkansas-Pine Bluff,67-7,27,51,1501.283,1512.938
+2,Texas-El Paso,Utah State,16-28,109,118,1498.717,1475.000
+2,Texas-San Antonio,Texas A&M,24-42,58,98,1500.265,1477.042
+2,Toledo,Kentucky,16-24,72,99,1499.937,1476.913
+2,Troy,Nicholls State,38-20,110,80,1498.678,1509.939
+2,Tulane,Northwestern,23-3,39,25,1500.810,1524.094
+2,Tulsa,Abilene Christian,35-7,129,86,1497.351,1508.809
+2,UCLA,Utah,10-43,65,105,1500.063,1476.460
+2,Utah,UCLA,43-10,22,16,1501.540,1525.143
+2,Utah State,Texas-El Paso,28-16,116,44,1498.411,1522.128
+2,Vanderbilt,Charleston Southern,45-3,47,62,1500.581,1512.054
+2,Virginia,Coastal Carolina,48-7,81,31,1499.684,1523.556
+2,Virginia Tech,South Carolina,11-24,61,96,1500.189,1477.136
+2,Wake Forest,Kennesaw State,10-9,90,45,1499.419,1522.081
+2,Washington,Colorado State,38-21,41,27,1500.751,1523.940
+2,Washington State,Idaho,13-10,85,75,1499.580,1510.597
+2,West Virginia,Robert Morris,45-3,70,66,1499.987,1511.491
+2,Western Kentucky,North Alabama,55-6,3,3,1524.562,1534.952
+2,Western Michigan,Michigan State,6-23,106,112,1498.830,1475.657
+2,Wisconsin,Miami (OH),17-0,63,35,1500.113,1523.380
+2,Wyoming,Akron,10-0,113,46,1498.551,1521.563
+3,Air Force,BYE,N/A,74,57,1510.658,1510.658
+3,Akron,Nebraska,0-68,123,127,1474.490,1454.411
+3,Alabama,Louisiana-Monroe,73-0,115,61,1475.344,1505.354
+3,Alabama-Birmingham,Navy,24-38,83,97,1509.371,1487.520
+3,Appalachian State,Lindenwood,20-13,41,47,1522.646,1532.140
+3,Arizona,Weber State,48-3,4,17,1533.921,1543.341
+3,Arizona State,Mississippi State,20-24,49,80,1513.275,1492.098
+3,Arkansas,Arkansas State,56-14,61,33,1512.065,1534.720
+3,Arkansas State,Arkansas,14-56,72,93,1510.747,1488.092
+3,Army,Kansas State,24-21,136,116,1443.232,1472.760
+3,Auburn,Ball State,42-3,24,15,1524.398,1543.813
+3,Ball State,Auburn,3-42,126,124,1474.195,1454.780
+3,Baylor,Southern Methodist,48-45,93,60,1477.800,1505.831
+3,Boise State,Eastern Washington,51-14,124,103,1474.437,1486.566
+3,Boston College,Michigan State,40-42,64,81,1511.973,1490.980
+3,Bowling Green,Cincinnati,20-34,78,108,1510.165,1484.466
+3,Brigham Young,Stanford,27-3,52,44,1512.773,1532.572
+3,Buffalo,St. Francis (PA),45-6,100,87,1476.772,1488.809
+3,California,Texas Southern,35-3,33,41,1523.513,1533.249
+3,Central Florida,North Carolina A&T,68-7,42,43,1522.629,1532.710
+3,Central Michigan,Pittsburgh,17-45,11,75,1526.549,1498.571
+3,Charlotte,North Carolina,3-20,121,129,1474.883,1452.893
+3,Cincinnati,Bowling Green,34-20,95,66,1477.201,1502.900
+3,Clemson,Troy,27-16,92,64,1479.394,1504.332
+3,Coastal Carolina,Charleston Southern,13-0,117,100,1475.226,1486.988
+3,Colorado,Delaware,31-7,94,67,1477.487,1502.687
+3,Colorado State,Northern Colorado,21-17,107,95,1476.284,1487.867
+3,Connecticut,Syracuse,20-27,69,109,1511.203,1484.460
+3,Delaware,Colorado,7-31,84,110,1509.213,1484.014
+3,Duke,Illinois,19-45,60,83,1512.125,1489.866
+3,East Carolina,Campbell,56-3,102,85,1476.759,1488.976
+3,Eastern Michigan,Long Island,23-28,114,136,1475.369,1430.437
+3,Florida,South Florida,16-18,50,78,1513.268,1492.420
+3,Florida Atlantic,Florida A&M,56-14,119,98,1474.920,1487.090
+3,Florida International,Penn State,0-34,82,92,1509.550,1488.140
+3,Florida State,East Texas A&M,77-3,8,26,1527.242,1537.243
+3,Fresno State,Oregon State,36-27,88,54,1505.685,1525.713
+3,Georgia,Austin Peay,28-6,12,30,1526.093,1535.608
+3,Georgia Southern,Southern California,20-59,133,132,1469.009,1449.955
+3,Georgia State,Memphis,16-38,122,126,1474.514,1454.649
+3,Georgia Tech,Gardner-Webb,59-12,26,39,1523.990,1533.865
+3,Hawaii,Sam Houston,37-20,89,58,1490.333,1510.132
+3,Houston,Rice,35-9,70,21,1511.182,1541.539
+3,Illinois,Duke,45-19,48,29,1513.427,1535.686
+3,Indiana,Kennesaw State,56-9,22,12,1524.590,1544.161
+3,Iowa,Iowa State,13-16,58,79,1512.358,1492.100
+3,Iowa State,Iowa,16-13,1,1,1536.088,1556.347
+3,Jacksonville State,Liberty,34-24,108,62,1476.278,1504.681
+3,James Madison,Louisville,14-28,63,82,1512.047,1490.055
+3,Kansas,Missouri,31-42,2,59,1535.727,1506.672
+3,Kansas State,Army,21-24,90,117,1488.959,1459.431
+3,Kennesaw State,Indiana,9-56,125,125,1474.224,1454.653
+3,Kent State,Texas Tech,14-62,87,105,1507.541,1485.009
+3,Kentucky,Mississippi,23-30,37,70,1522.986,1501.311
+3,Liberty,Jacksonville State,24-34,67,112,1511.439,1483.037
+3,Louisiana,McNeese State,34-10,132,113,1469.314,1481.528
+3,Louisiana State,Louisiana Tech,23-7,13,6,1525.728,1546.801
+3,Louisiana Tech,Louisiana State,7-23,81,88,1509.810,1488.737
+3,Louisiana-Monroe,Alabama,0-73,77,114,1510.192,1480.183
+3,Louisville,James Madison,28-14,54,34,1512.698,1534.689
+3,Marshall,Missouri State,20-21,113,130,1475.408,1452.262
+3,Maryland,Northern Illinois,20-9,34,10,1523.423,1544.527
+3,Massachusetts,Bryant,26-27,128,135,1473.606,1431.352
+3,Memphis,Georgia State,38-16,65,50,1511.765,1531.629
+3,Miami (FL),Bethune-Cookman,45-3,7,25,1528.937,1538.542
+3,Miami (OH),Rutgers,17-45,103,120,1476.733,1457.300
+3,Michigan,Oklahoma,13-24,19,74,1524.796,1498.602
+3,Michigan State,Boston College,42-40,32,11,1523.515,1544.508
+3,Middle Tennessee State,Wisconsin,10-42,135,134,1449.656,1431.865
+3,Minnesota,Northwestern State,66-0,28,40,1523.751,1533.832
+3,Mississippi,Kentucky,30-23,15,5,1525.721,1547.396
+3,Mississippi State,Arizona State,24-20,40,14,1522.693,1543.871
+3,Missouri,Kansas,42-31,56,20,1512.547,1541.601
+3,Missouri State,Marshall,21-20,129,77,1473.448,1496.594
+3,Navy,Alabama-Birmingham,38-24,59,37,1512.225,1534.077
+3,Nebraska,Akron,68-0,30,16,1523.616,1543.696
+3,Nevada,Sacramento State,20-17,120,104,1474.916,1486.551
+3,Nevada-Las Vegas,UCLA,30-23,5,2,1532.905,1551.234
+3,New Mexico,Idaho State,32-22,116,99,1475.313,1487.028
+3,New Mexico State,Tulsa,21-14,85,52,1509.105,1530.934
+3,North Carolina,Charlotte,20-3,101,73,1476.772,1498.763
+3,North Carolina State,Virginia,35-31,36,8,1523.371,1545.511
+3,North Texas,Western Michigan,33-30,71,53,1510.955,1530.495
+3,Northern Illinois,Maryland,9-20,79,86,1509.970,1488.866
+3,Northwestern,Western Illinois,42-7,106,89,1476.451,1488.451
+3,Notre Dame,BYE,N/A,130,115,1473.437,1473.437
+3,Ohio,West Virginia,17-10,104,63,1476.500,1504.439
+3,Ohio State,Grambling State,70-0,14,28,1525.721,1535.752
+3,Oklahoma,Michigan,24-13,55,24,1512.559,1538.754
+3,Oklahoma State,Oregon,3-69,68,94,1511.235,1488.086
+3,Old Dominion,North Carolina Central,54-6,109,90,1476.129,1488.315
+3,Oregon,Oklahoma State,69-3,47,27,1513.704,1536.853
+3,Oregon State,Fresno State,27-36,110,123,1475.904,1455.876
+3,Penn State,Florida International,34-0,10,3,1527.037,1548.446
+3,Pittsburgh,Central Michigan,45-17,57,23,1512.541,1540.519
+3,Purdue,Southern Illinois,34-17,38,45,1522.929,1532.525
+3,Rice,Houston,9-35,6,72,1529.286,1498.929
+3,Rutgers,Miami (OH),45-17,39,19,1522.923,1542.357
+3,Sam Houston,Hawaii,20-37,134,133,1453.870,1434.071
+3,San Diego State,Washington State,13-36,73,91,1510.705,1488.301
+3,San Jose State,Texas,7-38,131,131,1472.251,1450.268
+3,South Alabama,Tulane,31-33,76,84,1510.442,1489.580
+3,South Carolina,South Carolina State,38-10,17,35,1524.923,1534.554
+3,South Florida,Florida,18-16,9,4,1527.125,1547.974
+3,Southern California,Georgia Southern,59-20,18,13,1524.871,1543.925
+3,Southern Methodist,Baylor,45-48,53,107,1512.759,1484.728
+3,Southern Mississippi,Jackson State,38-20,111,96,1475.788,1487.591
+3,Stanford,Brigham Young,3-27,127,128,1473.761,1453.962
+3,Syracuse,Connecticut,27-20,97,65,1477.119,1503.862
+3,Temple,Howard,55-7,43,46,1522.523,1532.474
+3,Tennessee,East Tennessee State,72-17,23,36,1524.481,1534.417
+3,Texas,San Jose State,38-7,91,68,1479.767,1501.750
+3,Texas A&M,Utah State,44-22,20,7,1524.671,1546.748
+3,Texas Christian,BYE,N/A,21,55,1524.602,1524.602
+3,Texas State,Texas-San Antonio,43-36,29,18,1523.678,1542.611
+3,Texas Tech,Kent State,62-14,51,31,1512.938,1535.470
+3,Texas-El Paso,Tennessee-Martin,42-17,118,102,1475.000,1486.939
+3,Texas-San Antonio,Texas State,36-43,98,119,1477.042,1458.110
+3,Toledo,Western Kentucky,45-21,99,56,1476.913,1514.844
+3,Troy,Clemson,16-27,80,106,1509.939,1485.002
+3,Tulane,South Alabama,33-31,25,9,1524.094,1544.955
+3,Tulsa,New Mexico State,14-21,86,101,1508.809,1486.980
+3,UCLA,Nevada-Las Vegas,23-30,105,118,1476.460,1458.130
+3,Utah,Cal Poly,63-9,16,32,1525.143,1535.039
+3,Utah State,Texas A&M,22-44,44,71,1522.128,1500.051
+3,Vanderbilt,Virginia Tech,44-20,62,48,1512.054,1532.113
+3,Virginia,North Carolina State,31-35,31,69,1523.556,1501.416
+3,Virginia Tech,Vanderbilt,20-44,96,121,1477.136,1457.078
+3,Wake Forest,Western Carolina,42-10,45,49,1522.081,1531.880
+3,Washington,California-Davis,70-10,27,38,1523.940,1533.951
+3,Washington State,San Diego State,36-13,75,42,1510.597,1533.000
+3,West Virginia,Ohio,10-17,66,111,1511.491,1483.551
+3,Western Kentucky,Toledo,21-45,3,76,1534.952,1497.021
+3,Western Michigan,North Texas,30-33,112,122,1475.657,1456.117
+3,Wisconsin,Middle Tennessee State,42-10,35,22,1523.380,1541.171
+3,Wyoming,Northern Iowa,31-7,46,51,1521.563,1531.297
+4,Air Force,Utah State,30-49,57,90,1510.658,1487.817
+4,Akron,Alabama-Birmingham,28-31,127,133,1454.411,1435.719
+4,Alabama,Wisconsin,38-14,61,40,1505.354,1532.604
+4,Alabama-Birmingham,Akron,31-28,97,79,1487.520,1506.211
+4,Appalachian State,Southern Mississippi,22-38,47,82,1532.140,1503.378
+4,Arizona,Kansas State,23-17,17,13,1543.341,1559.159
+4,Arizona State,Texas State,34-15,80,44,1492.098,1522.969
+4,Arkansas,Mississippi,35-41,33,54,1534.720,1514.746
+4,Arkansas State,Iowa State,16-24,93,105,1488.092,1471.342
+4,Army,BYE,N/A,116,101,1472.760,1472.760
+4,Auburn,South Alabama,31-15,15,9,1543.813,1561.545
+4,Ball State,New Hampshire,34-29,124,112,1454.780,1466.827
+4,Baylor,Samford,42-7,60,53,1505.831,1515.872
+4,Boise State,BYE,N/A,103,91,1486.566,1486.566
+4,Boston College,Stanford,20-30,81,121,1490.980,1463.192
+4,Bowling Green,Liberty,23-13,108,80,1484.466,1505.211
+4,Brigham Young,BYE,N/A,44,41,1532.572,1532.572
+4,Buffalo,Kent State,31-28,87,70,1488.809,1509.237
+4,California,Minnesota,27-14,41,20,1533.249,1554.247
+4,Central Florida,BYE,N/A,43,39,1532.710,1532.710
+4,Central Michigan,Michigan,3-63,75,98,1498.571,1476.558
+4,Charlotte,Monmouth,42-35,129,116,1452.893,1465.062
+4,Cincinnati,Northwestern State,70-0,66,58,1502.900,1513.450
+4,Clemson,Georgia Tech,21-24,64,92,1504.332,1485.430
+4,Coastal Carolina,East Carolina,0-38,100,115,1486.988,1465.600
+4,Colorado,Houston,20-36,67,94,1502.687,1484.043
+4,Colorado State,BYE,N/A,95,89,1487.867,1487.867
+4,Connecticut,Delaware,41-44,109,119,1484.460,1463.723
+4,Delaware,Connecticut,44-41,110,81,1484.014,1504.750
+4,Duke,Tulane,27-34,83,102,1489.866,1472.375
+4,East Carolina,Coastal Carolina,38-0,85,66,1488.976,1510.364
+4,Eastern Michigan,Kentucky,23-48,136,136,1430.437,1413.502
+4,Florida,Louisiana State,10-20,78,99,1492.420,1474.823
+4,Florida Atlantic,Florida International,28-38,98,114,1487.090,1466.322
+4,Florida International,Florida Atlantic,38-28,92,74,1488.140,1508.908
+4,Florida State,BYE,N/A,26,34,1537.243,1537.243
+4,Fresno State,Southern,56-7,54,35,1525.713,1535.041
+4,Georgia,Tennessee,44-41,30,15,1535.608,1556.191
+4,Georgia Southern,Jacksonville State,41-34,132,96,1449.955,1481.690
+4,Georgia State,Murray State,37-21,126,109,1454.649,1466.863
+4,Georgia Tech,Clemson,24-21,39,25,1533.865,1552.767
+4,Hawaii,Portland State,23-3,58,48,1510.132,1519.819
+4,Houston,Colorado,36-20,21,10,1541.539,1560.183
+4,Illinois,Western Michigan,38-0,29,27,1535.686,1552.354
+4,Indiana,Indiana State,73-0,12,22,1544.161,1552.946
+4,Iowa,Massachusetts,47-7,79,69,1492.100,1509.926
+4,Iowa State,Arkansas State,24-16,1,1,1556.347,1573.097
+4,Jacksonville State,Georgia Southern,34-41,62,100,1504.681,1472.946
+4,James Madison,BYE,N/A,82,85,1490.055,1490.055
+4,Kansas,BYE,N/A,59,76,1506.672,1506.672
+4,Kansas State,Arizona,17-23,117,128,1459.431,1443.612
+4,Kennesaw State,Merrimack,27-13,125,110,1454.653,1466.837
+4,Kent State,Buffalo,28-31,105,118,1485.009,1464.581
+4,Kentucky,Eastern Michigan,48-23,70,49,1501.311,1518.245
+4,Liberty,Bowling Green,13-23,112,122,1483.037,1462.291
+4,Louisiana,Missouri,10-52,113,120,1481.528,1463.622
+4,Louisiana State,Florida,20-10,6,4,1546.801,1564.398
+4,Louisiana Tech,New Mexico State,49-14,88,51,1488.737,1516.435
+4,Louisiana-Monroe,BYE,N/A,114,97,1480.183,1480.183
+4,Louisville,BYE,N/A,34,36,1534.689,1534.689
+4,Marshall,Eastern Kentucky,38-7,130,117,1452.262,1464.809
+4,Maryland,Towson,44-17,10,23,1544.527,1552.883
+4,Massachusetts,Iowa,7-47,135,135,1431.352,1413.525
+4,Memphis,Troy,28-7,50,33,1531.629,1549.917
+4,Miami (FL),South Florida,49-12,25,7,1538.542,1562.449
+4,Miami (OH),BYE,N/A,120,125,1457.300,1457.300
+4,Michigan,Central Michigan,63-3,74,47,1498.602,1520.615
+4,Michigan State,Youngstown State,41-24,11,24,1544.508,1552.769
+4,Middle Tennessee State,Nevada,14-13,134,124,1431.865,1458.645
+4,Minnesota,California,14-27,40,59,1533.832,1512.834
+4,Mississippi,Arkansas,41-35,5,2,1547.396,1567.371
+4,Mississippi State,Alcorn State,63-0,14,26,1543.871,1552.580
+4,Missouri,Louisiana,52-10,20,12,1541.601,1559.507
+4,Missouri State,Southern Methodist,10-28,77,103,1496.594,1472.143
+4,Navy,Tulsa,42-23,37,29,1534.077,1552.294
+4,Nebraska,Houston Baptist,59-7,16,28,1543.696,1552.314
+4,Nevada,Middle Tennessee State,13-14,104,123,1486.551,1459.772
+4,Nevada-Las Vegas,BYE,N/A,2,31,1551.234,1551.234
+4,New Mexico,UCLA,35-10,99,77,1487.028,1506.470
+4,New Mexico State,Louisiana Tech,14-49,52,83,1530.934,1503.236
+4,North Carolina,Richmond,41-6,73,72,1498.763,1509.121
+4,North Carolina State,Wake Forest,34-24,8,3,1545.511,1565.525
+4,North Texas,Washington State,59-10,53,21,1530.495,1553.299
+4,Northern Illinois,BYE,N/A,86,86,1488.866,1488.866
+4,Northwestern,Oregon,14-34,89,107,1488.451,1470.290
+4,Notre Dame,Texas A&M,40-41,115,126,1473.437,1457.118
+4,Ohio,Ohio State,9-37,63,93,1504.439,1485.078
+4,Ohio State,Ohio,37-9,28,17,1535.752,1555.113
+4,Oklahoma,Temple,42-3,24,11,1538.754,1559.899
+4,Oklahoma State,BYE,N/A,94,88,1488.086,1488.086
+4,Old Dominion,Virginia Tech,45-26,90,75,1488.315,1507.482
+4,Oregon,Northwestern,34-14,27,18,1536.853,1555.014
+4,Oregon State,Texas Tech,14-45,123,130,1455.876,1439.337
+4,Penn State,Villanova,52-6,3,14,1548.446,1556.825
+4,Pittsburgh,West Virginia,24-31,23,78,1540.519,1506.327
+4,Purdue,Southern California,17-33,45,60,1532.525,1512.233
+4,Rice,Prairie View A&M,38-17,72,73,1498.929,1509.117
+4,Rutgers,Norfolk State,60-10,19,32,1542.357,1551.011
+4,Sam Houston,BYE,N/A,133,134,1434.071,1434.071
+4,San Diego State,BYE,N/A,91,87,1488.301,1488.301
+4,San Jose State,BYE,N/A,131,127,1450.268,1450.268
+4,South Alabama,Auburn,15-31,84,104,1489.580,1471.848
+4,South Carolina,Vanderbilt,7-31,35,61,1534.554,1512.194
+4,South Florida,Miami (FL),12-49,4,43,1547.974,1524.067
+4,Southern California,Purdue,33-17,13,5,1543.925,1564.217
+4,Southern Methodist,Missouri State,28-10,107,71,1484.728,1509.179
+4,Southern Mississippi,Appalachian State,38-22,96,52,1487.591,1516.354
+4,Stanford,Boston College,30-20,128,95,1453.962,1481.750
+4,Syracuse,Colgate,66-24,65,55,1503.862,1514.069
+4,Temple,Oklahoma,3-42,46,65,1532.474,1511.329
+4,Tennessee,Georgia,41-44,36,57,1534.417,1513.834
+4,Texas,Texas-El Paso,27-10,68,46,1501.750,1521.860
+4,Texas A&M,Notre Dame,41-40,7,6,1546.748,1563.067
+4,Texas Christian,Abilene Christian,42-21,55,38,1524.602,1533.692
+4,Texas State,Arizona State,15-34,18,63,1542.611,1511.740
+4,Texas Tech,Oregon State,45-14,31,30,1535.470,1552.009
+4,Texas-El Paso,Texas,10-27,102,111,1486.939,1466.829
+4,Texas-San Antonio,Incarnate Word,48-20,119,106,1458.110,1470.319
+4,Toledo,Morgan State,60-0,56,42,1514.844,1524.751
+4,Troy,Memphis,7-28,106,113,1485.002,1466.713
+4,Tulane,Duke,34-27,9,8,1544.955,1562.447
+4,Tulsa,Navy,23-42,101,108,1486.980,1468.762
+4,UCLA,New Mexico,10-35,118,131,1458.130,1438.689
+4,Utah,Wyoming,31-6,32,16,1535.039,1556.012
+4,Utah State,Air Force,49-30,71,45,1500.051,1522.892
+4,Vanderbilt,South Carolina,31-7,48,19,1532.113,1554.473
+4,Virginia,William & Mary,55-16,69,64,1501.416,1511.699
+4,Virginia Tech,Old Dominion,26-45,121,132,1457.078,1437.911
+4,Wake Forest,North Carolina State,24-34,49,62,1531.880,1511.866
+4,Washington,BYE,N/A,38,37,1533.951,1533.951
+4,Washington State,North Texas,10-59,42,68,1533.000,1510.196
+4,West Virginia,Pittsburgh,31-24,111,50,1483.551,1517.743
+4,Western Kentucky,BYE,N/A,76,84,1497.021,1497.021
+4,Western Michigan,Illinois,0-38,122,129,1456.117,1439.449
+4,Wisconsin,Alabama,14-38,22,56,1541.171,1513.920
+4,Wyoming,Utah,6-31,51,67,1531.297,1510.324
+5,Air Force,Boise State,37-49,90,107,1487.817,1467.855
+5,Akron,Duquesne,51-7,133,121,1435.719,1448.638
+5,Alabama,BYE,N/A,40,43,1532.604,1532.604
+5,Alabama-Birmingham,Tennessee,24-56,79,97,1506.211,1486.356
+5,Appalachian State,BYE,N/A,82,69,1503.378,1503.378
+5,Arizona,BYE,N/A,13,20,1559.159,1559.159
+5,Arizona State,Baylor,27-24,44,34,1522.969,1542.189
+5,Arkansas,Memphis,31-32,54,73,1514.746,1497.148
+5,Arkansas State,Kennesaw State,21-28,105,118,1471.342,1451.038
+5,Army,North Texas,38-45,101,116,1472.760,1457.533
+5,Auburn,Oklahoma,17-24,9,35,1561.545,1541.617
+5,Ball State,Connecticut,25-31,112,125,1466.827,1446.477
+5,Baylor,Arizona State,24-27,53,74,1515.872,1496.652
+5,Boise State,Air Force,49-37,91,66,1486.566,1506.528
+5,Boston College,BYE,N/A,121,113,1463.192,1463.192
+5,Bowling Green,Louisville,17-40,80,94,1505.211,1486.818
+5,Brigham Young,East Carolina,34-13,41,31,1532.572,1551.340
+5,Buffalo,Troy,17-21,70,102,1509.237,1483.092
+5,California,San Diego State,0-34,20,54,1554.247,1522.670
+5,Central Florida,North Carolina,34-9,39,30,1532.710,1551.485
+5,Central Michigan,Wagner,49-10,98,92,1476.558,1487.431
+5,Charlotte,Rice,17-28,116,124,1465.062,1447.747
+5,Cincinnati,BYE,N/A,58,59,1513.450,1513.450
+5,Clemson,Syracuse,21-34,92,108,1485.430,1467.202
+5,Coastal Carolina,South Alabama,38-20,115,95,1465.600,1486.756
+5,Colorado,Wyoming,37-20,94,64,1484.043,1507.873
+5,Colorado State,Texas-San Antonio,16-17,89,110,1487.867,1465.958
+5,Connecticut,Ball State,31-25,119,99,1463.723,1484.073
+5,Delaware,Florida International,38-16,81,52,1504.750,1525.553
+5,Duke,North Carolina State,45-33,102,62,1472.375,1509.326
+5,East Carolina,Brigham Young,13-34,66,84,1510.364,1491.596
+5,Eastern Michigan,Louisiana,34-31,136,133,1413.502,1437.308
+5,Florida,Miami (FL),7-26,99,115,1474.823,1459.761
+5,Florida Atlantic,BYE,N/A,114,109,1466.322,1466.322
+5,Florida International,Delaware,16-38,74,90,1508.908,1488.105
+5,Florida State,Kent State,66-10,34,25,1537.243,1553.778
+5,Fresno State,Hawaii,23-21,35,24,1535.041,1553.780
+5,Georgia,BYE,N/A,15,22,1556.191,1556.191
+5,Georgia Southern,Maine,45-17,96,83,1481.690,1492.199
+5,Georgia State,Vanderbilt,21-70,109,117,1466.863,1451.291
+5,Georgia Tech,Temple,45-24,25,11,1552.767,1570.436
+5,Hawaii,Fresno State,21-23,48,71,1519.819,1501.080
+5,Houston,BYE,N/A,10,19,1560.183,1560.183
+5,Illinois,Indiana,10-63,27,46,1552.354,1531.626
+5,Indiana,Illinois,63-10,22,6,1552.946,1573.675
+5,Iowa,Rutgers,38-28,69,38,1509.926,1535.525
+5,Iowa State,BYE,N/A,1,8,1573.097,1573.097
+5,Jacksonville State,Murray State,45-10,100,100,1472.946,1483.937
+5,James Madison,Liberty,31-13,85,63,1490.055,1508.441
+5,Kansas,West Virginia,41-10,76,48,1506.672,1529.810
+5,Kansas State,BYE,N/A,128,127,1443.612,1443.612
+5,Kennesaw State,Arkansas State,28-21,110,93,1466.837,1487.141
+5,Kent State,Florida State,10-66,118,122,1464.581,1448.046
+5,Kentucky,BYE,N/A,49,57,1518.245,1518.245
+5,Liberty,James Madison,13-31,122,126,1462.291,1443.906
+5,Louisiana,Eastern Michigan,31-34,120,130,1463.622,1439.816
+5,Louisiana State,Southeastern Louisiana,56-10,4,9,1564.398,1571.784
+5,Louisiana Tech,Southern Mississippi,30-20,51,37,1516.435,1536.220
+5,Louisiana-Monroe,Texas-El Paso,31-25,97,72,1480.183,1499.120
+5,Louisville,Bowling Green,40-17,36,26,1534.689,1553.083
+5,Marshall,Middle Tennessee State,42-28,117,98,1464.809,1484.340
+5,Maryland,Wisconsin,27-10,23,10,1552.883,1570.610
+5,Massachusetts,BYE,N/A,135,136,1413.525,1413.525
+5,Memphis,Arkansas,32-31,33,16,1549.917,1567.515
+5,Miami (FL),Florida,26-7,7,4,1562.449,1577.510
+5,Miami (OH),Nevada-Las Vegas,38-41,125,128,1457.300,1442.858
+5,Michigan,Nebraska,30-27,47,32,1520.615,1543.613
+5,Michigan State,Southern California,31-45,24,41,1552.769,1533.539
+5,Middle Tennessee State,Marshall,28-42,124,131,1458.645,1439.113
+5,Minnesota,BYE,N/A,59,60,1512.834,1512.834
+5,Mississippi,Tulane,45-10,2,1,1567.371,1587.450
+5,Mississippi State,Northern Illinois,38-10,26,13,1552.580,1569.125
+5,Missouri,South Carolina,29-20,12,5,1559.507,1576.597
+5,Missouri State,Tennessee-Martin,42-10,103,101,1472.143,1483.135
+5,Navy,BYE,N/A,29,28,1552.294,1552.294
+5,Nebraska,Michigan,27-30,28,49,1552.314,1529.316
+5,Nevada,Western Kentucky,16-31,123,129,1459.772,1441.990
+5,Nevada-Las Vegas,Miami (OH),41-38,31,17,1551.234,1565.676
+5,New Mexico,BYE,N/A,77,67,1506.470,1506.470
+5,New Mexico State,BYE,N/A,83,70,1503.236,1503.236
+5,North Carolina,Central Florida,9-34,72,89,1509.121,1490.345
+5,North Carolina State,Duke,33-45,3,50,1565.525,1528.574
+5,North Texas,Army,45-38,21,15,1553.299,1568.526
+5,Northern Illinois,Mississippi State,10-38,86,105,1488.866,1472.321
+5,Northwestern,BYE,N/A,107,106,1470.290,1470.290
+5,Notre Dame,Purdue,56-30,126,91,1457.118,1487.495
+5,Ohio,Gardner-Webb,52-35,93,77,1485.078,1495.306
+5,Ohio State,BYE,N/A,17,23,1555.113,1555.113
+5,Oklahoma,Auburn,24-17,11,3,1559.899,1579.827
+5,Oklahoma State,Tulsa,12-19,88,111,1488.086,1465.634
+5,Old Dominion,BYE,N/A,75,65,1507.482,1507.482
+5,Oregon,Oregon State,41-7,18,14,1555.014,1568.825
+5,Oregon State,Oregon,7-41,130,134,1439.337,1425.526
+5,Penn State,BYE,N/A,14,21,1556.825,1556.825
+5,Pittsburgh,BYE,N/A,78,68,1506.327,1506.327
+5,Purdue,Notre Dame,30-56,60,103,1512.233,1481.855
+5,Rice,Charlotte,28-17,73,51,1509.117,1526.431
+5,Rutgers,Iowa,28-38,32,53,1551.011,1525.411
+5,Sam Houston,Texas,0-55,134,135,1434.071,1418.412
+5,San Diego State,California,34-0,87,56,1488.301,1519.878
+5,San Jose State,Idaho,31-28,127,114,1450.268,1461.896
+5,South Alabama,Coastal Carolina,20-38,104,119,1471.848,1450.693
+5,South Carolina,Missouri,20-29,61,78,1512.194,1495.103
+5,South Florida,South Carolina State,63-14,43,42,1524.067,1532.995
+5,Southern California,Michigan State,45-31,5,2,1564.217,1583.447
+5,Southern Methodist,Texas Christian,24-35,71,87,1509.179,1490.761
+5,Southern Mississippi,Louisiana Tech,20-30,52,75,1516.354,1496.569
+5,Stanford,Virginia,20-48,95,112,1481.750,1463.279
+5,Syracuse,Clemson,34-21,55,44,1514.069,1532.296
+5,Temple,Georgia Tech,24-45,65,80,1511.329,1493.661
+5,Tennessee,Alabama-Birmingham,56-24,57,40,1513.834,1533.689
+5,Texas,Sam Houston,55-0,46,36,1521.860,1537.519
+5,Texas A&M,BYE,N/A,6,18,1563.067,1563.067
+5,Texas Christian,Southern Methodist,35-24,38,29,1533.692,1552.110
+5,Texas State,Nicholls State,35-3,63,55,1511.740,1521.002
+5,Texas Tech,Utah,34-10,30,7,1552.009,1573.431
+5,Texas-El Paso,Louisiana-Monroe,25-31,111,123,1466.829,1447.892
+5,Texas-San Antonio,Colorado State,17-16,106,82,1470.319,1492.228
+5,Toledo,Western Michigan,13-14,42,88,1524.751,1490.468
+5,Troy,Buffalo,21-17,113,81,1466.713,1492.858
+5,Tulane,Mississippi,10-45,8,33,1562.447,1542.368
+5,Tulsa,Oklahoma State,19-12,108,86,1468.762,1491.215
+5,UCLA,BYE,N/A,131,132,1438.689,1438.689
+5,Utah,Texas Tech,10-34,16,39,1556.012,1534.589
+5,Utah State,McNeese State,48-7,45,45,1522.892,1531.791
+5,Vanderbilt,Georgia State,70-21,19,12,1554.473,1570.044
+5,Virginia,Stanford,48-20,64,47,1511.699,1530.171
+5,Virginia Tech,Wofford,38-6,132,120,1437.911,1450.552
+5,Wake Forest,BYE,N/A,62,61,1511.866,1511.866
+5,Washington,Washington State,59-24,37,27,1533.951,1552.929
+5,Washington State,Washington,24-59,68,85,1510.196,1491.219
+5,West Virginia,Kansas,10-41,50,79,1517.743,1494.606
+5,Western Kentucky,Nevada,31-16,84,58,1497.021,1514.803
+5,Western Michigan,Toledo,14-13,129,104,1439.449,1473.731
+5,Wisconsin,Maryland,10-27,56,76,1513.920,1496.193
+5,Wyoming,Colorado,20-37,67,96,1510.324,1486.493
+6,Air Force,Hawaii,35-44,107,116,1467.855,1450.867
+6,Akron,Toledo,3-45,121,129,1448.638,1431.476
+6,Alabama,Georgia,24-21,43,26,1532.604,1554.164
+6,Alabama-Birmingham,BYE,N/A,97,92,1486.356,1486.356
+6,Appalachian State,Boise State,14-47,69,94,1503.378,1484.246
+6,Arizona,Iowa State,14-39,20,34,1559.159,1540.793
+6,Arizona State,Texas Christian,27-24,34,21,1542.189,1561.679
+6,Arkansas,Notre Dame,13-56,73,101,1497.148,1475.684
+6,Arkansas State,Louisiana-Monroe,16-28,118,127,1451.038,1434.784
+6,Army,East Carolina,6-28,116,125,1457.533,1440.329
+6,Auburn,Texas A&M,10-16,35,54,1541.617,1524.061
+6,Ball State,BYE,N/A,125,122,1446.477,1446.477
+6,Baylor,Oklahoma State,45-27,74,64,1496.652,1513.941
+6,Boise State,Appalachian State,47-14,66,51,1506.528,1525.660
+6,Boston College,California,24-28,113,121,1463.192,1447.693
+6,Bowling Green,Ohio,20-35,94,104,1486.818,1468.367
+6,Brigham Young,Colorado,24-21,31,19,1551.340,1567.661
+6,Buffalo,Connecticut,17-20,102,108,1483.092,1464.505
+6,California,Boston College,28-24,54,36,1522.670,1538.169
+6,Central Florida,Kansas State,20-34,30,60,1551.485,1515.475
+6,Central Michigan,Eastern Michigan,24-13,92,74,1487.431,1503.557
+6,Charlotte,BYE,N/A,124,120,1447.747,1447.747
+6,Cincinnati,Kansas,37-34,59,41,1513.450,1533.752
+6,Clemson,BYE,N/A,108,105,1467.202,1467.202
+6,Coastal Carolina,BYE,N/A,95,90,1486.756,1486.756
+6,Colorado,Brigham Young,21-24,64,84,1507.873,1491.553
+6,Colorado State,Washington State,3-20,110,117,1465.958,1448.376
+6,Connecticut,Buffalo,20-17,99,76,1484.073,1502.661
+6,Delaware,BYE,N/A,52,52,1525.553,1525.553
+6,Duke,Syracuse,38-3,62,48,1509.326,1531.396
+6,East Carolina,Army,28-6,84,70,1491.596,1508.800
+6,Eastern Michigan,Central Michigan,13-24,133,133,1437.308,1421.183
+6,Florida,BYE,N/A,115,111,1459.761,1459.761
+6,Florida Atlantic,Memphis,26-55,109,114,1466.322,1452.546
+6,Florida International,BYE,N/A,90,88,1488.105,1488.105
+6,Florida State,Virginia,38-46,25,46,1553.778,1531.995
+6,Fresno State,BYE,N/A,24,28,1553.780,1553.780
+6,Georgia,Alabama,21-24,22,39,1556.191,1534.631
+6,Georgia Southern,James Madison,10-35,83,103,1492.199,1473.960
+6,Georgia State,BYE,N/A,117,115,1451.291,1451.291
+6,Georgia Tech,Wake Forest,30-29,11,7,1570.436,1585.924
+6,Hawaii,Air Force,44-35,71,58,1501.080,1518.067
+6,Houston,Oregon State,27-24,19,15,1560.183,1571.940
+6,Illinois,Southern California,34-32,46,24,1531.626,1557.086
+6,Indiana,Iowa,20-15,6,3,1573.675,1590.317
+6,Iowa,Indiana,15-20,38,57,1535.525,1518.883
+6,Iowa State,Arizona,39-14,8,2,1573.097,1591.463
+6,Jacksonville State,Southern Mississippi,25-42,100,107,1483.937,1465.669
+6,James Madison,Georgia Southern,35-10,63,50,1508.441,1526.680
+6,Kansas,Cincinnati,34-37,48,67,1529.810,1509.508
+6,Kansas State,Central Florida,34-20,127,99,1443.612,1479.622
+6,Kennesaw State,Middle Tennessee State,24-16,93,75,1487.141,1503.319
+6,Kent State,BYE,N/A,122,119,1448.046,1448.046
+6,Kentucky,South Carolina,13-35,57,79,1518.245,1496.217
+6,Liberty,Old Dominion,7-21,126,130,1443.906,1428.434
+6,Louisiana,Marshall,54-51,130,109,1439.816,1463.640
+6,Louisiana State,Mississippi,19-24,9,27,1571.784,1553.940
+6,Louisiana Tech,Texas-El Paso,30-11,37,31,1536.220,1550.492
+6,Louisiana-Monroe,Arkansas State,28-16,72,61,1499.120,1515.374
+6,Louisville,Pittsburgh,34-27,26,18,1553.083,1569.309
+6,Marshall,Louisiana,51-54,98,110,1484.340,1460.516
+6,Maryland,BYE,N/A,10,16,1570.610,1570.610
+6,Massachusetts,Missouri,6-42,136,136,1413.525,1402.633
+6,Memphis,Florida Atlantic,55-26,16,8,1567.515,1581.291
+6,Miami (FL),BYE,N/A,4,12,1577.510,1577.510
+6,Miami (OH),Lindenwood,38-0,128,113,1442.858,1454.710
+6,Michigan,BYE,N/A,32,33,1543.613,1543.613
+6,Michigan State,BYE,N/A,41,42,1533.539,1533.539
+6,Middle Tennessee State,Kennesaw State,16-24,131,131,1439.113,1422.935
+6,Minnesota,Rutgers,31-28,60,45,1512.834,1532.615
+6,Mississippi,Louisiana State,24-19,1,1,1587.450,1605.294
+6,Mississippi State,Tennessee,34-41,13,32,1569.125,1546.211
+6,Missouri,Massachusetts,42-6,5,4,1576.597,1587.490
+6,Missouri State,Western Kentucky,22-27,101,106,1483.135,1466.147
+6,Navy,Rice,21-13,28,17,1552.294,1569.655
+6,Nebraska,BYE,N/A,49,49,1529.316,1529.316
+6,Nevada,BYE,N/A,129,124,1441.990,1441.990
+6,Nevada-Las Vegas,BYE,N/A,17,20,1565.676,1565.676
+6,New Mexico,New Mexico State,38-20,67,53,1506.470,1525.272
+6,New Mexico State,New Mexico,20-38,70,93,1503.236,1484.433
+6,North Carolina,BYE,N/A,89,86,1490.345,1490.345
+6,North Carolina State,Virginia Tech,21-23,50,77,1528.574,1498.517
+6,North Texas,South Alabama,36-22,15,9,1568.526,1581.244
+6,Northern Illinois,San Diego State,3-6,105,112,1472.321,1456.217
+6,Northwestern,UCLA,17-14,106,89,1470.290,1487.239
+6,Notre Dame,Arkansas,56-13,91,69,1487.495,1508.960
+6,Ohio,Bowling Green,35-20,77,65,1495.306,1513.757
+6,Ohio State,Washington,24-6,23,13,1555.113,1573.973
+6,Oklahoma,BYE,N/A,3,11,1579.827,1579.827
+6,Oklahoma State,Baylor,27-45,111,118,1465.634,1448.344
+6,Old Dominion,Liberty,21-7,65,55,1507.482,1522.953
+6,Oregon,Penn State,30-24,14,6,1568.825,1586.888
+6,Oregon State,Houston,24-27,134,135,1425.526,1413.769
+6,Penn State,Oregon,24-30,21,35,1556.825,1538.762
+6,Pittsburgh,Louisville,27-34,68,87,1506.327,1490.101
+6,Purdue,BYE,N/A,103,96,1481.855,1481.855
+6,Rice,Navy,13-21,51,68,1526.431,1509.070
+6,Rutgers,Minnesota,28-31,53,73,1525.411,1505.630
+6,Sam Houston,BYE,N/A,135,134,1418.412,1418.412
+6,San Diego State,Northern Illinois,6-3,56,38,1519.878,1535.982
+6,San Jose State,Stanford,29-30,114,123,1461.896,1443.376
+6,South Alabama,North Texas,22-36,119,126,1450.693,1437.975
+6,South Carolina,Kentucky,35-13,78,59,1495.103,1517.132
+6,South Florida,BYE,N/A,42,43,1532.995,1532.995
+6,Southern California,Illinois,32-34,2,23,1583.447,1557.986
+6,Southern Methodist,BYE,N/A,87,85,1490.761,1490.761
+6,Southern Mississippi,Jacksonville State,42-25,75,63,1496.569,1514.837
+6,Stanford,San Jose State,30-29,112,97,1463.279,1481.799
+6,Syracuse,Duke,3-38,44,66,1532.296,1510.226
+6,Temple,BYE,N/A,80,81,1493.661,1493.661
+6,Tennessee,Mississippi State,41-34,40,25,1533.689,1556.603
+6,Texas,BYE,N/A,36,37,1537.519,1537.519
+6,Texas A&M,Auburn,16-10,18,10,1563.067,1580.622
+6,Texas Christian,Arizona State,24-27,29,44,1552.110,1532.620
+6,Texas State,BYE,N/A,55,56,1521.002,1521.002
+6,Texas Tech,BYE,N/A,7,14,1573.431,1573.431
+6,Texas-El Paso,Louisiana Tech,11-30,123,128,1447.892,1433.619
+6,Texas-San Antonio,BYE,N/A,82,83,1492.228,1492.228
+6,Toledo,Akron,45-3,88,72,1490.468,1507.630
+6,Troy,BYE,N/A,81,82,1492.858,1492.858
+6,Tulane,Tulsa,31-14,33,22,1542.368,1558.554
+6,Tulsa,Tulane,14-31,86,102,1491.215,1475.029
+6,UCLA,Northwestern,14-17,132,132,1438.689,1421.740
+6,Utah,West Virginia,48-14,39,30,1534.589,1551.703
+6,Utah State,Vanderbilt,35-55,45,62,1531.791,1514.854
+6,Vanderbilt,Utah State,55-35,12,5,1570.044,1586.982
+6,Virginia,Florida State,46-38,47,29,1530.171,1551.954
+6,Virginia Tech,North Carolina State,23-21,120,98,1450.552,1480.609
+6,Wake Forest,Georgia Tech,29-30,61,78,1511.866,1496.377
+6,Washington,Ohio State,6-24,27,40,1552.929,1534.068
+6,Washington State,Colorado State,20-3,85,71,1491.219,1508.800
+6,West Virginia,Utah,14-48,79,100,1494.606,1477.492
+6,Western Kentucky,Missouri State,27-22,58,47,1514.803,1531.790
+6,Western Michigan,Rhode Island,47-14,104,95,1473.731,1484.115
+6,Wisconsin,BYE,N/A,76,80,1496.193,1496.193
+6,Wyoming,BYE,N/A,96,91,1486.493,1486.493
+7,Air Force,Navy,31-34,116,120,1450.867,1438.988
+7,Akron,Central Michigan,28-22,129,118,1431.476,1458.147
+7,Alabama,Vanderbilt,30-14,26,16,1554.164,1575.484
+7,Alabama-Birmingham,Army,13-31,92,115,1486.356,1463.128
+7,Appalachian State,Oregon State,27-23,94,77,1484.246,1498.428
+7,Arizona,Oklahoma State,41-13,34,29,1540.793,1554.290
+7,Arizona State,BYE,N/A,21,22,1561.679,1561.679
+7,Arkansas,BYE,N/A,101,95,1475.684,1475.684
+7,Arkansas State,Texas State,31-30,127,110,1434.784,1463.938
+7,Army,Alabama-Birmingham,31-13,125,114,1440.329,1463.557
+7,Auburn,BYE,N/A,54,49,1524.061,1524.061
+7,Ball State,Ohio,20-14,122,98,1446.477,1473.068
+7,Baylor,Kansas State,35-34,64,46,1513.941,1529.866
+7,Boise State,Notre Dame,7-28,51,73,1525.660,1505.371
+7,Boston College,Pittsburgh,7-48,121,128,1447.693,1431.438
+7,Bowling Green,BYE,N/A,104,105,1468.367,1468.367
+7,Brigham Young,West Virginia,38-24,19,14,1567.661,1581.051
+7,Buffalo,Eastern Michigan,31-30,108,91,1464.505,1479.978
+7,California,Duke,21-45,36,52,1538.169,1518.838
+7,Central Florida,Kansas,20-27,60,79,1515.475,1496.937
+7,Central Michigan,Akron,22-28,74,93,1503.557,1476.885
+7,Charlotte,South Florida,26-54,120,126,1447.747,1433.896
+7,Cincinnati,Iowa State,38-30,41,26,1533.752,1557.966
+7,Clemson,North Carolina,38-10,105,85,1467.202,1488.101
+7,Coastal Carolina,Old Dominion,7-47,90,103,1486.756,1470.191
+7,Colorado,Texas Christian,21-35,84,94,1491.553,1475.719
+7,Colorado State,San Diego State,24-45,117,125,1448.376,1434.751
+7,Connecticut,Florida International,51-10,76,50,1502.661,1520.389
+7,Delaware,Western Kentucky,24-27,52,67,1525.553,1508.162
+7,Duke,California,45-21,48,34,1531.396,1550.727
+7,East Carolina,BYE,N/A,70,64,1508.800,1508.800
+7,Eastern Michigan,Buffalo,30-31,133,133,1421.183,1405.710
+7,Florida,Texas,29-21,111,84,1459.761,1488.962
+7,Florida Atlantic,Rice,27-21,114,92,1452.546,1477.336
+7,Florida International,Connecticut,10-51,88,102,1488.105,1470.377
+7,Florida State,Miami (FL),22-28,46,55,1531.995,1516.537
+7,Fresno State,Nevada,20-17,28,20,1553.780,1565.979
+7,Georgia,Kentucky,35-14,39,33,1534.631,1550.733
+7,Georgia Southern,BYE,N/A,103,97,1473.960,1473.960
+7,Georgia State,James Madison,7-14,115,122,1451.291,1437.298
+7,Georgia Tech,BYE,N/A,7,11,1585.924,1585.924
+7,Hawaii,BYE,N/A,58,53,1518.067,1518.067
+7,Houston,Texas Tech,11-35,15,31,1571.940,1553.862
+7,Illinois,Purdue,43-27,24,18,1557.086,1571.239
+7,Indiana,BYE,N/A,3,7,1590.317,1590.317
+7,Iowa,BYE,N/A,57,51,1518.883,1518.883
+7,Iowa State,Cincinnati,30-38,2,19,1591.463,1567.249
+7,Jacksonville State,BYE,N/A,107,108,1465.669,1465.669
+7,James Madison,Georgia State,14-7,50,43,1526.680,1540.674
+7,Kansas,Central Florida,27-20,67,48,1509.508,1528.047
+7,Kansas State,Baylor,34-35,99,111,1479.622,1463.697
+7,Kennesaw State,BYE,N/A,75,75,1503.319,1503.319
+7,Kent State,Oklahoma,0-44,119,123,1448.046,1436.205
+7,Kentucky,Georgia,14-35,79,90,1496.217,1480.116
+7,Liberty,BYE,N/A,130,130,1428.434,1428.434
+7,Louisiana,BYE,N/A,109,112,1463.640,1463.640
+7,Louisiana State,BYE,N/A,27,30,1553.940,1553.940
+7,Louisiana Tech,BYE,N/A,31,35,1550.492,1550.492
+7,Louisiana-Monroe,Northwestern,7-42,61,81,1515.374,1493.221
+7,Louisville,Virginia,27-30,18,36,1569.309,1549.970
+7,Marshall,BYE,N/A,110,117,1460.516,1460.516
+7,Maryland,Washington,20-24,16,39,1570.610,1549.128
+7,Massachusetts,Western Michigan,3-21,136,136,1402.633,1388.755
+7,Memphis,Tulsa,45-7,8,3,1581.291,1594.262
+7,Miami (FL),Florida State,28-22,12,4,1577.510,1592.969
+7,Miami (OH),Northern Illinois,25-14,113,99,1454.710,1472.718
+7,Michigan,Wisconsin,24-10,33,23,1543.613,1559.124
+7,Michigan State,Nebraska,27-38,42,57,1533.539,1515.003
+7,Middle Tennessee State,BYE,N/A,131,132,1422.935,1422.935
+7,Minnesota,Ohio State,3-42,45,56,1532.615,1516.340
+7,Mississippi,BYE,N/A,1,1,1605.294,1605.294
+7,Mississippi State,Texas A&M,9-31,32,45,1546.211,1529.885
+7,Missouri,BYE,N/A,4,9,1587.490,1587.490
+7,Missouri State,BYE,N/A,106,107,1466.147,1466.147
+7,Navy,Air Force,34-31,17,12,1569.655,1581.535
+7,Nebraska,Michigan State,38-27,49,41,1529.316,1547.853
+7,Nevada,Fresno State,17-20,124,129,1441.990,1429.791
+7,Nevada-Las Vegas,Wyoming,31-17,20,15,1565.676,1579.601
+7,New Mexico,San Jose State,28-35,53,80,1525.272,1496.293
+7,New Mexico State,Sam Houston,37-10,93,76,1484.433,1499.231
+7,North Carolina,Clemson,10-38,86,104,1490.345,1469.447
+7,North Carolina State,Campbell,56-10,77,70,1498.517,1507.514
+7,North Texas,BYE,N/A,9,13,1581.244,1581.244
+7,Northern Illinois,Miami (OH),14-25,112,121,1456.217,1438.209
+7,Northwestern,Louisiana-Monroe,42-7,89,63,1487.239,1509.392
+7,Notre Dame,Boise State,28-7,69,47,1508.960,1529.249
+7,Ohio,Ball State,14-20,65,86,1513.757,1487.166
+7,Ohio State,Minnesota,42-3,13,8,1573.973,1590.249
+7,Oklahoma,Kent State,44-0,11,5,1579.827,1591.668
+7,Oklahoma State,Arizona,13-41,118,124,1448.344,1434.847
+7,Old Dominion,Coastal Carolina,47-7,55,44,1522.953,1539.517
+7,Oregon,BYE,N/A,6,10,1586.888,1586.888
+7,Oregon State,Appalachian State,23-27,135,135,1413.769,1399.587
+7,Penn State,UCLA,37-42,35,74,1538.762,1504.304
+7,Pittsburgh,Boston College,48-7,87,71,1490.101,1506.357
+7,Purdue,Illinois,27-43,96,106,1481.855,1467.702
+7,Rice,Florida Atlantic,21-27,68,87,1509.070,1484.281
+7,Rutgers,BYE,N/A,73,72,1505.630,1505.630
+7,Sam Houston,New Mexico State,10-37,134,134,1418.412,1403.615
+7,San Diego State,Colorado State,45-24,38,37,1535.982,1549.608
+7,San Jose State,New Mexico,35-28,123,101,1443.376,1472.355
+7,South Alabama,Troy,24-31,126,131,1437.975,1422.967
+7,South Carolina,BYE,N/A,59,54,1517.132,1517.132
+7,South Florida,Charlotte,54-26,43,42,1532.995,1546.846
+7,Southern California,BYE,N/A,23,25,1557.986,1557.986
+7,Southern Methodist,Syracuse,31-18,85,62,1490.761,1511.096
+7,Southern Mississippi,BYE,N/A,63,59,1514.837,1514.837
+7,Stanford,BYE,N/A,97,88,1481.799,1481.799
+7,Syracuse,Southern Methodist,18-31,66,83,1510.226,1489.891
+7,Temple,Texas-San Antonio,27-21,81,61,1493.661,1511.361
+7,Tennessee,BYE,N/A,25,27,1556.603,1556.603
+7,Texas,Florida,21-29,37,66,1537.519,1508.319
+7,Texas A&M,Mississippi State,31-9,10,2,1580.622,1596.949
+7,Texas Christian,Colorado,35-21,44,40,1532.620,1548.454
+7,Texas State,Arkansas State,30-31,56,82,1521.002,1491.848
+7,Texas Tech,Houston,35-11,14,6,1573.431,1591.510
+7,Texas-El Paso,BYE,N/A,128,127,1433.619,1433.619
+7,Texas-San Antonio,Temple,21-27,83,96,1492.228,1474.528
+7,Toledo,BYE,N/A,72,69,1507.630,1507.630
+7,Troy,South Alabama,31-24,82,68,1492.858,1507.865
+7,Tulane,BYE,N/A,22,24,1558.554,1558.554
+7,Tulsa,Memphis,7-45,102,116,1475.029,1462.057
+7,UCLA,Penn State,42-37,132,119,1421.740,1456.197
+7,Utah,BYE,N/A,30,32,1551.703,1551.703
+7,Utah State,BYE,N/A,62,58,1514.854,1514.854
+7,Vanderbilt,Alabama,14-30,5,21,1586.982,1565.662
+7,Virginia,Louisville,30-27,29,17,1551.954,1571.293
+7,Virginia Tech,Wake Forest,23-30,98,113,1480.609,1463.621
+7,Wake Forest,Virginia Tech,30-23,78,60,1496.377,1513.365
+7,Washington,Maryland,24-20,40,28,1534.068,1555.550
+7,Washington State,BYE,N/A,71,65,1508.800,1508.800
+7,West Virginia,Brigham Young,24-38,100,109,1477.492,1464.102
+7,Western Kentucky,Delaware,27-24,47,38,1531.790,1549.180
+7,Western Michigan,Massachusetts,21-3,95,78,1484.115,1497.993
+7,Wisconsin,Michigan,10-24,80,89,1496.193,1480.682
+7,Wyoming,Nevada-Las Vegas,17-31,91,100,1486.493,1472.568
+8,Air Force,Nevada-Las Vegas,48-51,120,123,1438.988,1428.625
+8,Akron,Miami (OH),7-20,118,122,1458.147,1441.833
+8,Alabama,Missouri,27-24,16,10,1575.484,1593.309
+8,Alabama-Birmingham,Florida Atlantic,33-53,115,120,1463.128,1446.660
+8,Appalachian State,Georgia State,41-20,77,63,1498.428,1512.623
+8,Arizona,Brigham Young,27-33,29,39,1554.290,1538.703
+8,Arizona State,Utah,10-42,22,37,1561.679,1543.127
+8,Arkansas,Tennessee,31-34,95,111,1475.684,1462.710
+8,Arkansas State,BYE,N/A,110,110,1463.938,1463.938
+8,Army,Charlotte,24-7,114,98,1463.557,1479.209
+8,Auburn,Georgia,10-20,49,65,1524.061,1508.394
+8,Ball State,Western Michigan,0-42,98,114,1473.068,1456.731
+8,Baylor,BYE,N/A,46,48,1529.866,1529.866
+8,Boise State,New Mexico,41-25,73,57,1505.371,1522.013
+8,Boston College,Clemson,10-41,128,131,1431.438,1416.863
+8,Bowling Green,Toledo,28-23,105,81,1468.367,1489.992
+8,Brigham Young,Arizona,33-27,14,7,1581.051,1596.638
+8,Buffalo,BYE,N/A,91,95,1479.978,1479.978
+8,California,BYE,N/A,52,60,1518.838,1518.838
+8,Central Florida,Cincinnati,11-20,79,91,1496.937,1482.937
+8,Central Michigan,BYE,N/A,93,100,1476.885,1476.885
+8,Charlotte,Army,7-24,126,129,1433.896,1418.244
+8,Cincinnati,Central Florida,20-11,26,15,1557.966,1571.966
+8,Clemson,Boston College,41-10,85,68,1488.101,1502.676
+8,Coastal Carolina,Louisiana-Monroe,23-8,103,82,1470.191,1489.985
+8,Colorado,Iowa State,24-17,94,67,1475.719,1504.385
+8,Colorado State,Fresno State,49-21,125,104,1434.751,1470.323
+8,Connecticut,BYE,N/A,50,59,1520.389,1520.389
+8,Delaware,BYE,N/A,67,66,1508.162,1508.162
+8,Duke,BYE,N/A,34,33,1550.727,1550.727
+8,East Carolina,Tulane,19-26,64,75,1508.800,1494.299
+8,Eastern Michigan,Northern Illinois,16-10,133,124,1405.710,1424.988
+8,Florida,Texas A&M,17-34,84,99,1488.962,1477.005
+8,Florida Atlantic,Alabama-Birmingham,53-33,92,76,1477.336,1493.803
+8,Florida International,BYE,N/A,102,103,1470.377,1470.377
+8,Florida State,Pittsburgh,31-34,55,71,1516.537,1498.160
+8,Fresno State,Colorado State,21-49,20,46,1565.979,1530.407
+8,Georgia,Auburn,20-10,33,24,1550.733,1566.400
+8,Georgia Southern,Southern Mississippi,35-38,97,113,1473.960,1459.107
+8,Georgia State,Appalachian State,20-41,122,126,1437.298,1423.103
+8,Georgia Tech,Virginia Tech,35-20,11,6,1585.924,1597.221
+8,Hawaii,Utah State,44-26,53,42,1518.067,1535.038
+8,Houston,Oklahoma State,39-17,31,26,1553.862,1565.396
+8,Illinois,Ohio State,16-34,18,31,1571.239,1555.046
+8,Indiana,Oregon,30-20,7,3,1590.317,1607.117
+8,Iowa,Wisconsin,37-0,51,43,1518.883,1534.468
+8,Iowa State,Colorado,17-24,19,40,1567.249,1538.583
+8,Jacksonville State,Sam Houston,29-27,108,97,1465.669,1479.501
+8,James Madison,Louisiana,24-14,43,32,1540.674,1553.939
+8,Kansas,Texas Tech,17-42,48,62,1528.047,1513.898
+8,Kansas State,Texas Christian,41-28,111,78,1463.697,1491.711
+8,Kennesaw State,Louisiana Tech,35-7,75,52,1503.319,1526.363
+8,Kent State,Massachusetts,42-6,123,118,1436.205,1451.314
+8,Kentucky,BYE,N/A,90,94,1480.116,1480.116
+8,Liberty,Texas-El Paso,19-8,130,121,1428.434,1445.836
+8,Louisiana,James Madison,14-24,112,119,1463.640,1450.375
+8,Louisiana State,South Carolina,20-10,30,22,1553.940,1569.116
+8,Louisiana Tech,Kennesaw State,7-35,35,50,1550.492,1527.448
+8,Louisiana-Monroe,Coastal Carolina,8-23,81,102,1493.221,1473.427
+8,Louisville,BYE,N/A,36,34,1549.970,1549.970
+8,Marshall,Old Dominion,48-24,117,87,1460.516,1488.753
+8,Maryland,Nebraska,31-34,39,44,1549.128,1532.143
+8,Massachusetts,Kent State,6-42,136,136,1388.755,1373.645
+8,Memphis,BYE,N/A,3,9,1594.262,1594.262
+8,Miami (FL),BYE,N/A,4,11,1592.969,1592.969
+8,Miami (OH),Akron,20-7,99,86,1472.718,1489.033
+8,Michigan,Southern California,13-31,23,38,1559.124,1541.838
+8,Michigan State,UCLA,13-38,57,85,1515.003,1489.168
+8,Middle Tennessee State,Missouri State,20-22,132,133,1422.935,1408.212
+8,Minnesota,Purdue,27-20,56,45,1516.340,1530.894
+8,Mississippi,Washington State,24-21,1,1,1605.294,1617.561
+8,Mississippi State,BYE,N/A,45,47,1529.885,1529.885
+8,Missouri,Alabama,24-27,9,20,1587.490,1569.665
+8,Missouri State,Middle Tennessee State,22-20,107,93,1466.147,1480.870
+8,Navy,Temple,32-31,12,8,1581.535,1594.972
+8,Nebraska,Maryland,34-31,41,27,1547.853,1564.837
+8,Nevada,San Diego State,10-44,129,130,1429.791,1418.135
+8,Nevada-Las Vegas,Air Force,51-48,15,12,1579.601,1589.964
+8,New Mexico,Boise State,25-41,80,96,1496.293,1479.651
+8,New Mexico State,BYE,N/A,76,70,1499.231,1499.231
+8,North Carolina,BYE,N/A,104,105,1469.447,1469.447
+8,North Carolina State,Notre Dame,7-36,70,79,1507.514,1491.251
+8,North Texas,South Florida,36-63,13,30,1581.244,1559.954
+8,Northern Illinois,Eastern Michigan,10-16,121,128,1438.209,1418.931
+8,Northwestern,Penn State,22-21,63,53,1509.392,1525.927
+8,Notre Dame,North Carolina State,36-7,47,36,1529.249,1545.512
+8,Ohio,BYE,N/A,86,89,1487.166,1487.166
+8,Ohio State,Illinois,34-16,8,4,1590.249,1606.441
+8,Oklahoma,Texas,6-23,5,28,1591.668,1564.695
+8,Oklahoma State,Houston,17-39,124,125,1434.847,1423.313
+8,Old Dominion,Marshall,24-48,44,64,1539.517,1511.280
+8,Oregon,Indiana,20-30,10,19,1586.888,1570.089
+8,Oregon State,Wake Forest,14-39,135,135,1399.587,1387.780
+8,Penn State,Northwestern,21-22,74,88,1504.304,1487.769
+8,Pittsburgh,Florida State,34-31,71,55,1506.357,1524.733
+8,Purdue,Minnesota,20-27,106,116,1467.702,1453.148
+8,Rice,Texas-San Antonio,13-61,87,107,1484.281,1465.490
+8,Rutgers,Washington,19-38,72,80,1505.630,1490.928
+8,Sam Houston,Jacksonville State,27-29,134,134,1403.615,1389.782
+8,San Diego State,Nevada,44-10,37,29,1549.608,1561.264
+8,San Jose State,Wyoming,28-35,101,115,1472.355,1455.460
+8,South Alabama,BYE,N/A,131,127,1422.967,1422.967
+8,South Carolina,Louisiana State,10-20,54,69,1517.132,1501.955
+8,South Florida,North Texas,63-36,42,23,1546.846,1568.137
+8,Southern California,Michigan,31-13,25,13,1557.986,1575.273
+8,Southern Methodist,Stanford,34-10,62,51,1511.096,1526.893
+8,Southern Mississippi,Georgia Southern,38-35,59,49,1514.837,1529.690
+8,Stanford,Southern Methodist,10-34,88,106,1481.799,1466.001
+8,Syracuse,BYE,N/A,83,83,1489.891,1489.891
+8,Temple,Navy,31-32,61,72,1511.361,1497.924
+8,Tennessee,Arkansas,34-31,27,21,1556.603,1569.577
+8,Texas,Oklahoma,23-6,66,41,1508.319,1535.292
+8,Texas A&M,Florida,34-17,2,2,1596.949,1608.905
+8,Texas Christian,Kansas State,28-41,40,58,1548.454,1520.440
+8,Texas State,Troy,41-48,82,101,1491.848,1475.721
+8,Texas Tech,Kansas,42-17,6,5,1591.510,1605.658
+8,Texas-El Paso,Liberty,8-19,127,132,1433.619,1416.218
+8,Texas-San Antonio,Rice,61-13,96,77,1474.528,1493.319
+8,Toledo,Bowling Green,23-28,69,90,1507.630,1486.005
+8,Troy,Texas State,48-41,68,56,1507.865,1523.992
+8,Tulane,East Carolina,26-19,24,14,1558.554,1573.055
+8,Tulsa,BYE,N/A,116,112,1462.057,1462.057
+8,UCLA,Michigan State,38-13,119,92,1456.197,1482.032
+8,Utah,Arizona State,42-10,32,17,1551.703,1570.254
+8,Utah State,Hawaii,26-44,58,73,1514.854,1497.883
+8,Vanderbilt,BYE,N/A,21,25,1565.662,1565.662
+8,Virginia,BYE,N/A,17,16,1571.293,1571.293
+8,Virginia Tech,Georgia Tech,20-35,113,117,1463.621,1452.324
+8,Wake Forest,Oregon State,39-14,60,54,1513.365,1525.172
+8,Washington,Rutgers,38-19,28,18,1555.550,1570.252
+8,Washington State,Mississippi,21-24,65,74,1508.800,1496.533
+8,West Virginia,BYE,N/A,109,109,1464.102,1464.102
+8,Western Kentucky,BYE,N/A,38,35,1549.180,1549.180
+8,Western Michigan,Ball State,42-0,78,61,1497.993,1514.330
+8,Wisconsin,Iowa,0-37,89,108,1480.682,1465.097
+8,Wyoming,San Jose State,35-28,100,84,1472.568,1489.463
+9,Air Force,Wyoming,24-21,123,116,1428.625,1450.508
+9,Akron,Ball State,28-42,122,124,1441.833,1426.331
+9,Alabama,Tennessee,37-20,10,6,1593.309,1608.454
+9,Alabama-Birmingham,Memphis,31-24,120,90,1446.660,1481.346
+9,Appalachian State,Coastal Carolina,37-45,63,80,1512.623,1494.224
+9,Arizona,Houston,28-31,39,56,1538.703,1523.947
+9,Arizona State,Texas Tech,26-22,37,26,1543.127,1564.497
+9,Arkansas,Texas A&M,42-45,111,114,1462.710,1453.082
+9,Arkansas State,South Alabama,15-14,110,96,1463.938,1478.009
+9,Army,Tulane,17-24,98,106,1479.209,1467.384
+9,Auburn,Missouri,17-23,65,78,1508.394,1495.154
+9,Ball State,Akron,42-28,114,102,1456.731,1472.233
+9,Baylor,Texas Christian,36-42,48,60,1529.866,1512.796
+9,Boise State,Nevada-Las Vegas,56-31,57,41,1522.013,1545.425
+9,Boston College,Connecticut,23-38,131,132,1416.863,1405.341
+9,Bowling Green,Central Michigan,6-27,81,103,1489.992,1471.787
+9,Brigham Young,Utah,24-21,7,4,1596.638,1611.408
+9,Buffalo,Massachusetts,28-21,95,83,1479.978,1491.271
+9,California,North Carolina,21-18,60,50,1518.838,1532.563
+9,Central Florida,West Virginia,45-13,91,75,1482.937,1498.576
+9,Central Michigan,Bowling Green,27-6,100,79,1476.885,1495.090
+9,Charlotte,Temple,14-49,129,131,1418.244,1405.394
+9,Cincinnati,Oklahoma State,49-17,15,16,1571.966,1581.828
+9,Clemson,Southern Methodist,24-35,68,87,1502.676,1487.661
+9,Coastal Carolina,Appalachian State,45-37,82,65,1489.985,1508.385
+9,Colorado,BYE,N/A,67,67,1504.385,1504.385
+9,Colorado State,Hawaii,19-31,104,111,1470.323,1457.141
+9,Connecticut,Boston College,38-23,59,51,1520.389,1531.911
+9,Delaware,Jacksonville State,25-38,66,86,1508.162,1488.396
+9,Duke,Georgia Tech,18-27,33,49,1550.727,1536.769
+9,East Carolina,Tulsa,41-27,75,64,1494.299,1508.996
+9,Eastern Michigan,Miami (OH),30-44,124,126,1424.988,1411.744
+9,Florida,Mississippi State,23-21,99,73,1477.005,1499.618
+9,Florida Atlantic,South Florida,13-48,76,92,1493.803,1480.709
+9,Florida International,Western Kentucky,25-6,103,77,1470.377,1496.519
+9,Florida State,Stanford,13-20,71,95,1498.160,1478.025
+9,Fresno State,BYE,N/A,46,52,1530.407,1530.407
+9,Georgia,Mississippi,43-35,24,9,1566.400,1586.529
+9,Georgia Southern,Georgia State,41-24,113,101,1459.107,1473.682
+9,Georgia State,Georgia Southern,24-41,126,128,1423.103,1408.528
+9,Georgia Tech,Duke,27-18,6,5,1597.221,1611.179
+9,Hawaii,Colorado State,31-19,42,39,1535.038,1548.220
+9,Houston,Arizona,31-28,26,18,1565.396,1580.152
+9,Illinois,BYE,N/A,31,32,1555.046,1555.046
+9,Indiana,Michigan State,38-13,3,2,1607.117,1618.157
+9,Iowa,Penn State,25-24,43,38,1534.468,1548.280
+9,Iowa State,BYE,N/A,40,46,1538.583,1538.583
+9,Jacksonville State,Delaware,38-25,97,74,1479.501,1499.267
+9,James Madison,Old Dominion,63-27,32,23,1553.939,1568.519
+9,Kansas,BYE,N/A,62,59,1513.898,1513.898
+9,Kansas State,BYE,N/A,78,82,1491.711,1491.711
+9,Kennesaw State,BYE,N/A,52,54,1526.363,1526.363
+9,Kent State,Toledo,10-45,118,122,1451.314,1436.375
+9,Kentucky,Texas,13-16,94,107,1480.116,1466.651
+9,Liberty,New Mexico State,30-27,121,104,1445.836,1468.413
+9,Louisiana,Southern Mississippi,10-22,119,121,1450.375,1437.843
+9,Louisiana State,Vanderbilt,24-31,22,34,1569.116,1552.745
+9,Louisiana Tech,BYE,N/A,50,53,1527.448,1527.448
+9,Louisiana-Monroe,Troy,14-37,102,110,1473.427,1459.426
+9,Louisville,Miami (FL),24-21,34,22,1549.970,1569.574
+9,Marshall,Texas State,40-37,87,69,1488.753,1504.135
+9,Maryland,UCLA,17-20,44,63,1532.143,1510.019
+9,Massachusetts,Buffalo,21-28,136,136,1373.645,1362.353
+9,Memphis,Alabama-Birmingham,24-31,9,29,1594.262,1559.576
+9,Miami (FL),Louisville,21-24,11,21,1592.969,1573.365
+9,Miami (OH),Eastern Michigan,44-30,86,70,1489.033,1502.276
+9,Michigan,Washington,24-7,38,28,1541.838,1560.802
+9,Michigan State,Indiana,13-38,85,94,1489.168,1478.128
+9,Middle Tennessee State,BYE,N/A,133,129,1408.212,1408.212
+9,Minnesota,Nebraska,24-6,45,36,1530.894,1550.001
+9,Mississippi,Georgia,35-43,1,7,1617.561,1597.432
+9,Mississippi State,Florida,21-23,47,66,1529.885,1507.272
+9,Missouri,Auburn,23-17,20,14,1569.665,1582.906
+9,Missouri State,BYE,N/A,93,91,1480.870,1480.870
+9,Navy,BYE,N/A,8,8,1594.972,1594.972
+9,Nebraska,Minnesota,6-24,27,40,1564.837,1545.730
+9,Nevada,New Mexico,22-24,130,133,1418.135,1404.970
+9,Nevada-Las Vegas,Boise State,31-56,12,24,1589.964,1566.553
+9,New Mexico,Nevada,24-22,96,81,1479.651,1492.816
+9,New Mexico State,Liberty,27-30,70,98,1499.231,1476.654
+9,North Carolina,California,18-21,105,112,1469.447,1455.722
+9,North Carolina State,BYE,N/A,79,84,1491.251,1491.251
+9,North Texas,Texas-San Antonio,55-17,30,20,1559.954,1573.445
+9,Northern Illinois,Ohio,21-48,128,130,1418.931,1405.677
+9,Northwestern,Purdue,19-0,53,45,1525.927,1538.855
+9,Notre Dame,Southern California,34-24,36,25,1545.512,1564.621
+9,Ohio,Northern Illinois,48-21,89,72,1487.166,1500.420
+9,Ohio State,Wisconsin,34-0,4,3,1606.441,1616.620
+9,Oklahoma,South Carolina,26-7,28,19,1564.695,1578.076
+9,Oklahoma State,Cincinnati,17-49,125,125,1423.313,1413.450
+9,Old Dominion,James Madison,27-63,64,76,1511.280,1496.701
+9,Oregon,Rutgers,56-10,19,13,1570.089,1583.117
+9,Oregon State,Lafayette,45-13,135,134,1387.780,1400.224
+9,Penn State,Iowa,24-25,88,100,1487.769,1473.957
+9,Pittsburgh,Syracuse,30-13,55,44,1524.733,1539.362
+9,Purdue,Northwestern,0-19,116,120,1453.148,1440.220
+9,Rice,BYE,N/A,107,108,1465.490,1465.490
+9,Rutgers,Oregon,10-56,80,97,1490.928,1477.900
+9,Sam Houston,Texas-El Paso,17-35,134,135,1389.782,1374.746
+9,San Diego State,BYE,N/A,29,27,1561.264,1561.264
+9,San Jose State,Utah State,25-30,115,119,1455.460,1441.385
+9,South Alabama,Arkansas State,14-15,127,127,1422.967,1408.897
+9,South Carolina,Oklahoma,7-26,69,85,1501.955,1488.574
+9,South Florida,Florida Atlantic,48-13,23,17,1568.137,1581.230
+9,Southern California,Notre Dame,24-34,13,30,1575.273,1556.164
+9,Southern Methodist,Clemson,35-24,51,43,1526.893,1541.908
+9,Southern Mississippi,Louisiana,22-10,49,42,1529.690,1542.221
+9,Stanford,Florida State,20-13,106,88,1466.001,1486.137
+9,Syracuse,Pittsburgh,13-30,83,99,1489.891,1475.262
+9,Temple,Charlotte,49-14,72,62,1497.924,1510.775
+9,Tennessee,Alabama,20-37,21,33,1569.577,1554.432
+9,Texas,Kentucky,16-13,41,37,1535.292,1548.757
+9,Texas A&M,Arkansas,45-42,2,1,1608.905,1618.532
+9,Texas Christian,Baylor,42-36,58,48,1520.440,1537.511
+9,Texas State,Marshall,37-40,101,109,1475.721,1460.339
+9,Texas Tech,Arizona State,22-26,5,11,1605.658,1584.288
+9,Texas-El Paso,Sam Houston,35-17,132,123,1416.218,1431.254
+9,Texas-San Antonio,North Texas,17-55,77,93,1493.319,1479.828
+9,Toledo,Kent State,45-10,90,71,1486.005,1500.944
+9,Troy,Louisiana-Monroe,37-14,56,47,1523.992,1537.994
+9,Tulane,Army,24-17,14,10,1573.055,1584.879
+9,Tulsa,East Carolina,27-41,112,118,1462.057,1447.360
+9,UCLA,Maryland,20-17,92,68,1482.032,1504.156
+9,Utah,Brigham Young,21-24,17,31,1570.254,1555.484
+9,Utah State,San Jose State,30-25,73,61,1497.883,1511.957
+9,Vanderbilt,Louisiana State,31-24,25,15,1565.662,1582.033
+9,Virginia,Washington State,22-20,16,12,1571.293,1583.873
+9,Virginia Tech,BYE,N/A,117,115,1452.324,1452.324
+9,Wake Forest,BYE,N/A,54,55,1525.172,1525.172
+9,Washington,Michigan,7-24,18,35,1570.252,1551.288
+9,Washington State,Virginia,20-22,74,89,1496.533,1483.954
+9,West Virginia,Central Florida,13-45,109,117,1464.102,1448.463
+9,Western Kentucky,Florida International,6-25,35,57,1549.180,1523.038
+9,Western Michigan,BYE,N/A,61,58,1514.330,1514.330
+9,Wisconsin,Ohio State,0-34,108,113,1465.097,1454.918
+9,Wyoming,Air Force,21-24,84,105,1489.463,1467.581
+10,Air Force,BYE,N/A,116,112,1450.508,1450.508
+10,Akron,Buffalo,24-16,124,113,1426.331,1447.626
+10,Alabama,South Carolina,29-22,6,5,1608.454,1618.646
+10,Alabama-Birmingham,BYE,N/A,90,90,1481.346,1481.346
+10,Appalachian State,Old Dominion,21-24,80,92,1494.224,1479.150
+10,Arizona,BYE,N/A,56,52,1523.947,1523.947
+10,Arizona State,Houston,16-24,26,39,1564.497,1549.909
+10,Arkansas,Auburn,24-33,114,119,1453.082,1439.631
+10,Arkansas State,Georgia Southern,34-24,96,82,1478.009,1493.131
+10,Army,BYE,N/A,106,102,1467.384,1467.384
+10,Auburn,Arkansas,33-24,78,65,1495.154,1508.605
+10,Ball State,Northern Illinois,7-21,102,111,1472.233,1451.830
+10,Baylor,Cincinnati,20-41,60,71,1512.796,1500.325
+10,Boise State,Nevada,24-3,41,36,1545.425,1554.987
+10,Boston College,Louisville,24-38,132,130,1405.341,1396.731
+10,Bowling Green,Kent State,21-24,103,110,1471.787,1453.819
+10,Brigham Young,Iowa State,41-27,4,3,1611.408,1623.615
+10,Buffalo,Akron,16-24,83,100,1491.271,1469.976
+10,California,Virginia Tech,34-42,50,67,1532.563,1508.262
+10,Central Florida,BYE,N/A,75,75,1498.576,1498.576
+10,Central Michigan,Massachusetts,38-13,79,68,1495.090,1504.995
+10,Charlotte,North Texas,20-54,131,131,1405.394,1396.722
+10,Cincinnati,Baylor,41-20,16,11,1581.828,1594.299
+10,Clemson,BYE,N/A,87,86,1487.661,1487.661
+10,Coastal Carolina,BYE,N/A,65,66,1508.385,1508.385
+10,Colorado,Utah,7-53,67,84,1504.385,1490.765
+10,Colorado State,Wyoming,0-28,111,117,1457.141,1441.973
+10,Connecticut,Rice,34-37,51,63,1531.911,1509.242
+10,Delaware,Middle Tennessee State,31-28,86,72,1488.396,1500.136
+10,Duke,BYE,N/A,49,48,1536.769,1536.769
+10,East Carolina,BYE,N/A,64,64,1508.996,1508.996
+10,Eastern Michigan,Ohio,21-28,126,128,1411.744,1400.298
+10,Florida,BYE,N/A,73,73,1499.618,1499.618
+10,Florida Atlantic,Navy,32-42,92,99,1480.709,1470.258
+10,Florida International,Kennesaw State,26-45,77,89,1496.519,1482.369
+10,Florida State,BYE,N/A,95,94,1478.025,1478.025
+10,Fresno State,San Diego State,0-23,52,56,1530.407,1516.236
+10,Georgia,BYE,N/A,9,15,1586.529,1586.529
+10,Georgia Southern,Arkansas State,24-34,101,107,1473.682,1458.560
+10,Georgia State,South Alabama,31-38,128,134,1408.528,1393.287
+10,Georgia Tech,Syracuse,41-16,5,4,1611.179,1620.959
+10,Hawaii,BYE,N/A,39,42,1548.220,1548.220
+10,Houston,Arizona State,24-16,18,10,1580.152,1594.740
+10,Illinois,Washington,25-42,32,46,1555.046,1539.293
+10,Indiana,UCLA,56-6,2,2,1618.157,1629.099
+10,Iowa,Minnesota,41-3,38,31,1548.280,1564.264
+10,Iowa State,Brigham Young,27-41,46,50,1538.583,1526.375
+10,Jacksonville State,BYE,N/A,74,74,1499.267,1499.267
+10,James Madison,BYE,N/A,23,24,1568.519,1568.519
+10,Kansas,Kansas State,17-42,59,78,1513.898,1495.792
+10,Kansas State,Kansas,42-17,82,62,1491.711,1509.818
+10,Kennesaw State,Florida International,45-26,54,44,1526.363,1540.514
+10,Kent State,Bowling Green,24-21,122,109,1436.375,1454.343
+10,Kentucky,Tennessee,34-56,107,108,1466.651,1454.963
+10,Liberty,BYE,N/A,104,101,1468.413,1468.413
+10,Louisiana,Troy,23-35,121,123,1437.843,1426.799
+10,Louisiana State,Texas A&M,25-49,34,45,1552.745,1540.091
+10,Louisiana Tech,Western Kentucky,27-28,53,57,1527.448,1511.914
+10,Louisiana-Monroe,Southern Mississippi,21-49,110,114,1459.426,1447.445
+10,Louisville,Boston College,38-24,22,19,1569.574,1578.184
+10,Marshall,BYE,N/A,69,69,1504.135,1504.135
+10,Maryland,BYE,N/A,63,61,1510.019,1510.019
+10,Massachusetts,Central Michigan,13-38,136,136,1362.353,1352.448
+10,Memphis,South Florida,34-31,29,20,1559.576,1576.419
+10,Miami (FL),Stanford,42-7,21,16,1573.365,1585.249
+10,Miami (OH),Western Michigan,26-17,70,55,1502.276,1518.803
+10,Michigan,Michigan State,31-20,28,22,1560.802,1572.552
+10,Michigan State,Michigan,20-31,94,103,1478.128,1466.378
+10,Middle Tennessee State,Delaware,28-31,129,132,1408.212,1396.472
+10,Minnesota,Iowa,3-41,36,49,1550.001,1534.016
+10,Mississippi,Oklahoma,34-26,7,7,1597.432,1611.857
+10,Mississippi State,Texas,38-45,66,80,1507.272,1493.828
+10,Missouri,Vanderbilt,10-17,14,25,1582.906,1567.569
+10,Missouri State,New Mexico State,24-17,91,77,1480.870,1495.942
+10,Navy,Florida Atlantic,42-32,8,8,1594.972,1605.422
+10,Nebraska,Northwestern,28-21,40,34,1545.730,1560.686
+10,Nevada,Boise State,3-24,133,133,1404.970,1395.408
+10,Nevada-Las Vegas,BYE,N/A,24,27,1566.553,1566.553
+10,New Mexico,Utah State,33-14,81,60,1492.816,1510.431
+10,New Mexico State,Missouri State,17-24,98,105,1476.654,1461.582
+10,North Carolina,Virginia,16-17,112,115,1455.722,1445.923
+10,North Carolina State,Pittsburgh,34-53,84,95,1491.251,1477.903
+10,North Texas,Charlotte,54-20,20,18,1573.445,1582.116
+10,Northern Illinois,Ball State,21-7,130,125,1405.677,1426.080
+10,Northwestern,Nebraska,21-28,45,53,1538.855,1523.900
+10,Notre Dame,BYE,N/A,25,29,1564.621,1564.621
+10,Ohio,Eastern Michigan,28-21,72,58,1500.420,1511.865
+10,Ohio State,BYE,N/A,3,6,1616.620,1616.620
+10,Oklahoma,Mississippi,26-34,19,32,1578.076,1563.650
+10,Oklahoma State,Texas Tech,0-42,125,127,1413.450,1404.804
+10,Old Dominion,Appalachian State,24-21,76,59,1496.701,1511.775
+10,Oregon,Wisconsin,21-7,13,13,1583.117,1593.070
+10,Oregon State,BYE,N/A,134,129,1400.224,1400.224
+10,Penn State,BYE,N/A,100,98,1473.957,1473.957
+10,Pittsburgh,North Carolina State,53-34,44,38,1539.362,1552.710
+10,Purdue,Rutgers,24-27,120,124,1440.220,1426.678
+10,Rice,Connecticut,37-34,108,85,1465.490,1488.159
+10,Rutgers,Purdue,27-24,97,83,1477.900,1491.442
+10,Sam Houston,BYE,N/A,135,135,1374.746,1374.746
+10,San Diego State,Fresno State,23-0,27,21,1561.264,1575.435
+10,San Jose State,BYE,N/A,119,118,1441.385,1441.385
+10,South Alabama,Georgia State,38-31,127,126,1408.897,1424.138
+10,South Carolina,Alabama,22-29,85,93,1488.574,1478.382
+10,South Florida,Memphis,31-34,17,30,1581.230,1564.388
+10,Southern California,BYE,N/A,30,35,1556.164,1556.164
+10,Southern Methodist,Wake Forest,12-13,43,51,1541.908,1525.331
+10,Southern Mississippi,Louisiana-Monroe,49-21,42,37,1542.221,1554.201
+10,Stanford,Miami (FL),7-42,88,97,1486.137,1474.252
+10,Syracuse,Georgia Tech,16-41,99,104,1475.262,1465.481
+10,Temple,Tulsa,38-37,62,54,1510.775,1523.185
+10,Tennessee,Kentucky,56-34,33,28,1554.432,1566.120
+10,Texas,Mississippi State,45-38,37,33,1548.757,1562.201
+10,Texas A&M,Louisiana State,49-25,1,1,1618.532,1631.186
+10,Texas Christian,West Virginia,23-17,48,41,1537.511,1548.927
+10,Texas State,BYE,N/A,109,106,1460.339,1460.339
+10,Texas Tech,Oklahoma State,42-0,11,14,1584.288,1592.934
+10,Texas-El Paso,BYE,N/A,123,122,1431.254,1431.254
+10,Texas-San Antonio,BYE,N/A,93,91,1479.828,1479.828
+10,Toledo,Washington State,7-28,71,87,1500.944,1483.535
+10,Troy,Louisiana,35-23,47,40,1537.994,1549.037
+10,Tulane,BYE,N/A,10,17,1584.879,1584.879
+10,Tulsa,Temple,37-38,118,121,1447.360,1434.949
+10,UCLA,Indiana,6-56,68,81,1504.156,1493.214
+10,Utah,Colorado,53-7,31,23,1555.484,1569.104
+10,Utah State,New Mexico,14-33,61,79,1511.957,1494.343
+10,Vanderbilt,Missouri,17-10,15,9,1582.033,1597.370
+10,Virginia,North Carolina,17-16,12,12,1583.873,1593.672
+10,Virginia Tech,California,42-34,115,96,1452.324,1476.626
+10,Wake Forest,Southern Methodist,13-12,55,43,1525.172,1541.750
+10,Washington,Illinois,42-25,35,26,1551.288,1567.041
+10,Washington State,Toledo,28-7,89,70,1483.954,1501.363
+10,West Virginia,Texas Christian,17-23,117,120,1448.463,1437.047
+10,Western Kentucky,Louisiana Tech,28-27,57,47,1523.038,1538.573
+10,Western Michigan,Miami (OH),17-26,58,76,1514.330,1497.803
+10,Wisconsin,Oregon,7-21,113,116,1454.918,1444.965
+10,Wyoming,Colorado State,28-0,105,88,1467.581,1482.749
+11,Air Force,Army,17-20,112,119,1450.508,1436.785
+11,Akron,BYE,N/A,113,114,1447.626,1447.626
+11,Alabama,BYE,N/A,5,6,1618.646,1618.646
+11,Alabama-Birmingham,Connecticut,19-38,90,101,1481.346,1467.821
+11,Appalachian State,BYE,N/A,92,89,1479.150,1479.150
+11,Arizona,Colorado,52-17,52,47,1523.947,1537.494
+11,Arizona State,Iowa State,24-19,39,32,1549.909,1563.390
+11,Arkansas,Mississippi State,35-38,119,122,1439.631,1427.440
+11,Arkansas State,Troy,23-10,82,62,1493.131,1513.132
+11,Army,Air Force,20-17,102,88,1467.384,1481.108
+11,Auburn,Kentucky,3-10,65,81,1508.605,1488.776
+11,Ball State,BYE,N/A,111,110,1451.830,1451.830
+11,Baylor,Central Florida,30-3,71,61,1500.325,1515.089
+11,Boise State,Fresno State,7-30,36,48,1554.987,1537.282
+11,Boston College,Notre Dame,10-25,130,133,1396.731,1388.665
+11,Bowling Green,Buffalo,3-28,110,118,1453.819,1439.701
+11,Brigham Young,BYE,N/A,3,4,1623.615,1623.615
+11,Buffalo,Bowling Green,28-3,100,84,1469.976,1484.093
+11,California,Virginia,21-31,67,76,1508.262,1497.220
+11,Central Florida,Baylor,3-30,75,85,1498.576,1483.812
+11,Central Michigan,Western Michigan,21-24,68,79,1504.995,1489.859
+11,Charlotte,BYE,N/A,131,129,1396.722,1396.722
+11,Cincinnati,Utah,14-45,11,23,1594.299,1577.605
+11,Clemson,Duke,45-46,86,94,1487.661,1475.293
+11,Coastal Carolina,Marshall,44-27,66,55,1508.385,1522.874
+11,Colorado,Arizona,17-52,84,92,1490.765,1477.218
+11,Colorado State,BYE,N/A,117,116,1441.973,1441.973
+11,Connecticut,Alabama-Birmingham,38-19,63,56,1509.242,1522.767
+11,Delaware,Liberty,30-59,72,87,1500.136,1481.968
+11,Duke,Clemson,46-45,48,40,1536.769,1549.137
+11,East Carolina,Temple,45-14,64,52,1508.996,1525.071
+11,Eastern Michigan,BYE,N/A,128,128,1400.298,1400.298
+11,Florida,Georgia,20-24,73,82,1499.618,1488.716
+11,Florida Atlantic,BYE,N/A,99,97,1470.258,1470.258
+11,Florida International,Missouri State,21-28,89,100,1482.369,1468.440
+11,Florida State,Wake Forest,42-7,94,74,1478.025,1499.706
+11,Fresno State,Boise State,30-7,56,49,1516.236,1533.940
+11,Georgia,Florida,24-20,15,10,1586.529,1597.431
+11,Georgia Southern,BYE,N/A,107,107,1458.560,1458.560
+11,Georgia State,BYE,N/A,134,132,1393.287,1393.287
+11,Georgia Tech,North Carolina State,36-48,4,12,1620.959,1591.913
+11,Hawaii,San Jose State,38-45,42,57,1548.220,1522.749
+11,Houston,West Virginia,35-45,10,33,1594.740,1562.895
+11,Illinois,Rutgers,35-13,46,36,1539.293,1552.028
+11,Indiana,Maryland,55-10,2,1,1629.099,1639.241
+11,Iowa,BYE,N/A,31,30,1564.264,1564.264
+11,Iowa State,Arizona State,19-24,50,64,1526.375,1512.894
+11,Jacksonville State,Middle Tennessee State,24-21,74,67,1499.267,1509.543
+11,James Madison,Texas State,52-20,24,21,1568.519,1578.939
+11,Kansas,Oklahoma State,38-21,78,70,1495.792,1506.704
+11,Kansas State,Texas Tech,20-43,62,75,1509.818,1498.514
+11,Kennesaw State,Texas-El Paso,33-20,44,38,1540.514,1550.668
+11,Kent State,BYE,N/A,109,109,1454.343,1454.343
+11,Kentucky,Auburn,10-3,108,95,1454.963,1474.792
+11,Liberty,Delaware,59-30,101,83,1468.413,1486.581
+11,Louisiana,South Alabama,31-22,123,117,1426.799,1441.218
+11,Louisiana State,BYE,N/A,45,46,1540.091,1540.091
+11,Louisiana Tech,Sam Houston,55-14,57,58,1511.914,1521.326
+11,Louisiana-Monroe,Old Dominion,6-31,114,120,1447.445,1435.351
+11,Louisville,Virginia Tech,28-16,19,14,1578.184,1588.621
+11,Marshall,Coastal Carolina,27-44,69,80,1504.135,1489.646
+11,Maryland,Indiana,10-55,61,73,1510.019,1499.877
+11,Massachusetts,BYE,N/A,136,136,1352.448,1352.448
+11,Memphis,Rice,38-14,20,15,1576.419,1587.529
+11,Miami (FL),Southern Methodist,20-26,16,28,1585.249,1565.795
+11,Miami (OH),BYE,N/A,55,60,1518.803,1518.803
+11,Michigan,Purdue,21-16,22,18,1572.552,1581.274
+11,Michigan State,Minnesota,20-23,103,108,1466.378,1454.727
+11,Middle Tennessee State,Jacksonville State,21-24,132,134,1396.472,1386.196
+11,Minnesota,Michigan State,23-20,49,44,1534.016,1545.667
+11,Mississippi,South Carolina,30-14,7,5,1611.857,1621.142
+11,Mississippi State,Arkansas,38-35,80,71,1493.828,1506.020
+11,Missouri,BYE,N/A,25,26,1567.569,1567.569
+11,Missouri State,Florida International,28-21,77,66,1495.942,1509.870
+11,Navy,North Texas,17-31,8,13,1605.422,1589.263
+11,Nebraska,Southern California,17-21,34,43,1560.686,1546.017
+11,Nevada,BYE,N/A,133,130,1395.408,1395.408
+11,Nevada-Las Vegas,New Mexico,35-40,27,42,1566.553,1547.457
+11,New Mexico,Nevada-Las Vegas,40-35,60,50,1510.431,1529.526
+11,New Mexico State,Western Kentucky,16-35,105,111,1461.582,1450.085
+11,North Carolina,Syracuse,27-10,115,106,1445.923,1462.040
+11,North Carolina State,Georgia Tech,48-36,95,69,1477.903,1506.950
+11,North Texas,Navy,31-17,18,9,1582.116,1598.275
+11,Northern Illinois,BYE,N/A,125,123,1426.080,1426.080
+11,Northwestern,BYE,N/A,53,53,1523.900,1523.900
+11,Notre Dame,Boston College,25-10,29,24,1564.621,1572.687
+11,Ohio,BYE,N/A,58,65,1511.865,1511.865
+11,Ohio State,Penn State,38-14,6,3,1616.620,1625.656
+11,Oklahoma,Tennessee,33-27,32,22,1563.650,1578.418
+11,Oklahoma State,Kansas,21-38,127,131,1404.804,1393.892
+11,Old Dominion,Louisiana-Monroe,31-6,59,54,1511.775,1523.870
+11,Oregon,BYE,N/A,13,11,1593.070,1593.070
+11,Oregon State,Washington State,10-7,129,124,1400.224,1423.654
+11,Penn State,Ohio State,14-38,98,104,1473.957,1464.921
+11,Pittsburgh,Stanford,35-20,38,31,1552.710,1564.094
+11,Purdue,Michigan,16-21,124,126,1426.678,1417.956
+11,Rice,Memphis,14-38,85,93,1488.159,1477.048
+11,Rutgers,Illinois,13-35,83,90,1491.442,1478.707
+11,Sam Houston,Louisiana Tech,14-55,135,135,1374.746,1365.334
+11,San Diego State,Wyoming,24-7,21,16,1575.435,1586.281
+11,San Jose State,Hawaii,45-38,118,102,1441.385,1466.856
+11,South Alabama,Louisiana,22-31,126,127,1424.138,1409.719
+11,South Carolina,Mississippi,14-30,93,98,1478.382,1469.098
+11,South Florida,BYE,N/A,30,29,1564.388,1564.388
+11,Southern California,Nebraska,21-17,35,25,1556.164,1570.833
+11,Southern Methodist,Miami (FL),26-20,51,45,1525.331,1544.785
+11,Southern Mississippi,BYE,N/A,37,35,1554.201,1554.201
+11,Stanford,Pittsburgh,20-35,97,105,1474.252,1462.868
+11,Syracuse,North Carolina,10-27,104,113,1465.481,1449.365
+11,Temple,East Carolina,14-45,54,68,1523.185,1507.111
+11,Tennessee,Oklahoma,27-33,28,37,1566.120,1551.353
+11,Texas,Vanderbilt,34-31,33,20,1562.201,1579.615
+11,Texas A&M,BYE,N/A,1,2,1631.186,1631.186
+11,Texas Christian,BYE,N/A,41,41,1548.927,1548.927
+11,Texas State,James Madison,20-52,106,112,1460.339,1449.918
+11,Texas Tech,Kansas State,43-20,14,8,1592.934,1604.238
+11,Texas-El Paso,Kennesaw State,20-33,122,125,1431.254,1421.101
+11,Texas-San Antonio,Tulane,48-26,91,72,1479.828,1505.462
+11,Toledo,BYE,N/A,87,86,1483.535,1483.535
+11,Troy,Arkansas State,10-23,40,51,1549.037,1529.037
+11,Tulane,Texas-San Antonio,26-48,17,34,1584.879,1559.245
+11,Tulsa,BYE,N/A,121,121,1434.949,1434.949
+11,UCLA,BYE,N/A,81,78,1493.214,1493.214
+11,Utah,Cincinnati,45-14,23,17,1569.104,1585.798
+11,Utah State,BYE,N/A,79,77,1494.343,1494.343
+11,Vanderbilt,Texas,31-34,9,19,1597.370,1579.956
+11,Virginia,California,31-21,12,7,1593.672,1604.713
+11,Virginia Tech,Louisville,16-28,96,103,1476.626,1466.189
+11,Wake Forest,Florida State,7-42,43,59,1541.750,1520.068
+11,Washington,BYE,N/A,26,27,1567.041,1567.041
+11,Washington State,Oregon State,7-10,70,91,1501.363,1477.933
+11,West Virginia,Houston,45-35,120,99,1437.047,1468.891
+11,Western Kentucky,New Mexico State,35-16,47,39,1538.573,1550.070
+11,Western Michigan,Central Michigan,24-21,76,63,1497.803,1512.939
+11,Wisconsin,BYE,N/A,116,115,1444.965,1444.965
+11,Wyoming,San Diego State,7-24,88,96,1482.749,1471.903
+12,Air Force,San Jose State,26-16,119,111,1436.785,1452.782
+12,Akron,Massachusetts,44-10,114,106,1447.626,1458.036
+12,Alabama,Louisiana State,20-9,6,4,1618.646,1629.406
+12,Alabama-Birmingham,Rice,17-24,101,110,1467.821,1454.417
+12,Appalachian State,Georgia Southern,23-25,89,104,1479.150,1463.640
+12,Arizona,Kansas,24-20,47,42,1537.494,1550.000
+12,Arizona State,BYE,N/A,32,32,1563.390,1563.390
+12,Arkansas,BYE,N/A,122,120,1427.440,1427.440
+12,Arkansas State,Southern Mississippi,21-27,62,70,1513.132,1500.997
+12,Army,Temple,14-13,88,73,1481.108,1496.954
+12,Auburn,Vanderbilt,38-45,81,92,1488.776,1478.539
+12,Ball State,Kent State,17-13,110,103,1451.830,1465.686
+12,Baylor,BYE,N/A,61,63,1515.089,1515.089
+12,Boise State,BYE,N/A,48,48,1537.282,1537.282
+12,Boston College,Southern Methodist,13-45,133,134,1388.665,1380.462
+12,Bowling Green,Eastern Michigan,21-27,118,121,1439.701,1423.843
+12,Brigham Young,Texas Tech,7-29,4,7,1623.615,1608.627
+12,Buffalo,BYE,N/A,84,85,1484.093,1484.093
+12,California,Louisville,29-26,76,62,1497.220,1519.291
+12,Central Florida,Houston,27-30,85,98,1483.812,1473.176
+12,Central Michigan,BYE,N/A,79,83,1489.859,1489.859
+12,Charlotte,East Carolina,22-48,129,130,1396.722,1387.619
+12,Cincinnati,BYE,N/A,23,21,1577.605,1577.605
+12,Clemson,Florida State,24-10,94,79,1475.293,1491.324
+12,Coastal Carolina,Georgia State,40-27,55,53,1522.874,1531.798
+12,Colorado,West Virginia,22-29,92,105,1477.218,1462.778
+12,Colorado State,Nevada-Las Vegas,10-42,116,119,1441.973,1431.973
+12,Connecticut,Duke,37-34,56,47,1522.767,1538.410
+12,Delaware,Louisiana Tech,25-24,87,71,1481.968,1498.997
+12,Duke,Connecticut,34-37,40,51,1549.137,1533.493
+12,East Carolina,Charlotte,48-22,52,49,1525.071,1534.175
+12,Eastern Michigan,Bowling Green,27-21,128,123,1400.298,1416.157
+12,Florida,Kentucky,7-38,82,97,1488.716,1473.273
+12,Florida Atlantic,Tulsa,40-21,97,88,1470.258,1482.812
+12,Florida International,Middle Tennessee State,56-30,100,91,1468.440,1479.249
+12,Florida State,Clemson,10-24,74,86,1499.706,1483.676
+12,Fresno State,BYE,N/A,49,50,1533.940,1533.940
+12,Georgia,Mississippi State,41-21,10,8,1597.431,1607.819
+12,Georgia Southern,Appalachian State,25-23,107,95,1458.560,1474.070
+12,Georgia State,Coastal Carolina,27-40,132,132,1393.287,1384.363
+12,Georgia Tech,BYE,N/A,12,11,1591.913,1591.913
+12,Hawaii,San Diego State,38-6,57,44,1522.749,1542.446
+12,Houston,Central Florida,30-27,33,26,1562.895,1573.531
+12,Illinois,BYE,N/A,36,38,1552.028,1552.028
+12,Indiana,Penn State,27-24,1,1,1639.241,1646.593
+12,Iowa,Oregon,16-18,30,39,1564.264,1551.711
+12,Iowa State,Texas Christian,20-17,64,55,1512.894,1529.406
+12,Jacksonville State,Texas-El Paso,30-27,67,61,1509.543,1519.831
+12,James Madison,Marshall,35-23,21,13,1578.939,1589.308
+12,Kansas,Arizona,20-24,70,77,1506.704,1494.198
+12,Kansas State,BYE,N/A,75,72,1498.514,1498.514
+12,Kennesaw State,New Mexico State,24-21,38,33,1550.668,1560.510
+12,Kent State,Ball State,13-17,109,114,1454.343,1440.488
+12,Kentucky,Florida,38-7,95,82,1474.792,1490.235
+12,Liberty,Missouri State,17-21,83,96,1486.581,1473.780
+12,Louisiana,Texas State,42-39,117,108,1441.218,1455.496
+12,Louisiana State,Alabama,9-20,46,56,1540.091,1529.331
+12,Louisiana Tech,Delaware,24-25,58,69,1521.326,1504.296
+12,Louisiana-Monroe,BYE,N/A,120,118,1435.351,1435.351
+12,Louisville,California,26-29,14,29,1588.621,1566.550
+12,Marshall,James Madison,23-35,80,90,1489.646,1479.277
+12,Maryland,Rutgers,20-35,73,84,1499.877,1484.161
+12,Massachusetts,Akron,10-44,136,136,1352.448,1342.038
+12,Memphis,Tulane,32-38,15,27,1587.529,1571.554
+12,Miami (FL),Syracuse,38-10,28,23,1565.795,1575.348
+12,Miami (OH),Ohio,20-24,60,68,1518.803,1504.578
+12,Michigan,BYE,N/A,18,18,1581.274,1581.274
+12,Michigan State,BYE,N/A,108,109,1454.727,1454.727
+12,Middle Tennessee State,Florida International,30-56,134,135,1386.196,1375.387
+12,Minnesota,BYE,N/A,44,43,1545.667,1545.667
+12,Mississippi,Citadel,49-0,5,5,1621.142,1625.070
+12,Mississippi State,Georgia,21-41,71,74,1506.020,1495.632
+12,Missouri,Texas A&M,17-38,26,36,1567.569,1556.104
+12,Missouri State,Liberty,21-17,66,60,1509.870,1522.671
+12,Navy,Notre Dame,10-49,13,25,1589.263,1573.694
+12,Nebraska,UCLA,28-21,43,34,1546.017,1557.710
+12,Nevada,Utah State,14-51,130,131,1395.408,1385.106
+12,Nevada-Las Vegas,Colorado State,42-10,42,35,1547.457,1557.457
+12,New Mexico,BYE,N/A,50,54,1529.526,1529.526
+12,New Mexico State,Kennesaw State,21-24,111,115,1450.085,1440.242
+12,North Carolina,Stanford,20-15,106,94,1462.040,1475.846
+12,North Carolina State,BYE,N/A,69,66,1506.950,1506.950
+12,North Texas,BYE,N/A,9,10,1598.275,1598.275
+12,Northern Illinois,Toledo,3-42,123,124,1426.080,1414.135
+12,Northwestern,Southern California,17-38,53,65,1523.900,1511.779
+12,Notre Dame,Navy,49-10,24,14,1572.687,1588.256
+12,Ohio,Miami (OH),24-20,65,58,1511.865,1526.090
+12,Ohio State,Purdue,34-10,3,3,1625.656,1632.182
+12,Oklahoma,BYE,N/A,22,20,1578.418,1578.418
+12,Oklahoma State,BYE,N/A,131,129,1393.892,1393.892
+12,Old Dominion,BYE,N/A,54,59,1523.870,1523.870
+12,Oregon,Iowa,18-16,11,9,1593.070,1605.623
+12,Oregon State,Sam Houston,17-21,124,128,1423.654,1407.010
+12,Penn State,Indiana,24-27,104,107,1464.921,1457.570
+12,Pittsburgh,BYE,N/A,31,31,1564.094,1564.094
+12,Purdue,Ohio State,10-34,126,125,1417.956,1411.430
+12,Rice,Alabama-Birmingham,24-17,93,81,1477.048,1490.452
+12,Rutgers,Maryland,35-20,90,76,1478.707,1494.423
+12,Sam Houston,Oregon State,21-17,135,133,1365.334,1381.978
+12,San Diego State,Hawaii,6-38,16,28,1586.281,1566.584
+12,San Jose State,Air Force,16-26,102,112,1466.856,1450.858
+12,South Alabama,BYE,N/A,127,127,1409.719,1409.719
+12,South Carolina,BYE,N/A,98,101,1469.098,1469.098
+12,South Florida,Texas-San Antonio,55-23,29,22,1564.388,1576.183
+12,Southern California,Northwestern,38-17,25,17,1570.833,1582.953
+12,Southern Methodist,Boston College,45-13,45,37,1544.785,1552.988
+12,Southern Mississippi,Arkansas State,27-21,35,30,1554.201,1566.336
+12,Stanford,North Carolina,15-20,105,113,1462.868,1449.062
+12,Syracuse,Miami (FL),10-38,113,116,1449.365,1439.812
+12,Temple,Army,13-14,68,80,1507.111,1491.264
+12,Tennessee,BYE,N/A,37,40,1551.353,1551.353
+12,Texas,BYE,N/A,20,19,1579.615,1579.615
+12,Texas A&M,Missouri,38-17,2,2,1631.186,1642.651
+12,Texas Christian,Iowa State,17-20,41,52,1548.927,1532.415
+12,Texas State,Louisiana,39-42,112,117,1449.918,1435.640
+12,Texas Tech,Brigham Young,29-7,8,6,1604.238,1619.226
+12,Texas-El Paso,Jacksonville State,27-30,125,126,1421.101,1410.813
+12,Texas-San Antonio,South Florida,23-55,72,78,1505.462,1493.667
+12,Toledo,Northern Illinois,42-3,86,75,1483.535,1495.480
+12,Troy,BYE,N/A,51,57,1529.037,1529.037
+12,Tulane,Memphis,38-32,34,24,1559.245,1575.221
+12,Tulsa,Florida Atlantic,21-40,121,122,1434.949,1422.396
+12,UCLA,Nebraska,21-28,78,89,1493.214,1481.521
+12,Utah,BYE,N/A,17,15,1585.798,1585.798
+12,Utah State,Nevada,51-14,77,67,1494.343,1504.645
+12,Vanderbilt,Auburn,45-38,19,12,1579.956,1590.193
+12,Virginia,Wake Forest,9-16,7,16,1604.713,1583.717
+12,Virginia Tech,BYE,N/A,103,102,1466.189,1466.189
+12,Wake Forest,Virginia,16-9,59,46,1520.068,1541.064
+12,Washington,Wisconsin,10-13,27,45,1567.041,1541.069
+12,Washington State,BYE,N/A,91,93,1477.933,1477.933
+12,West Virginia,Colorado,29-22,99,87,1468.891,1483.332
+12,Western Kentucky,BYE,N/A,39,41,1550.070,1550.070
+12,Western Michigan,BYE,N/A,63,64,1512.939,1512.939
+12,Wisconsin,Washington,13-10,115,100,1444.965,1470.937
+12,Wyoming,BYE,N/A,96,99,1471.903,1471.903
+13,Air Force,Connecticut,16-26,111,113,1452.782,1442.825
+13,Akron,Kent State,35-42,106,112,1458.036,1443.909
+13,Alabama,Oklahoma,21-23,4,9,1629.406,1613.598
+13,Alabama-Birmingham,North Texas,24-53,110,111,1454.417,1446.255
+13,Appalachian State,James Madison,10-58,104,106,1463.640,1454.688
+13,Arizona,Cincinnati,30-24,42,29,1550.000,1565.275
+13,Arizona State,West Virginia,25-23,32,25,1563.390,1573.448
+13,Arkansas,Louisiana State,22-23,120,125,1427.440,1418.157
+13,Arkansas State,BYE,N/A,70,71,1500.997,1500.997
+13,Army,BYE,N/A,73,73,1496.954,1496.954
+13,Auburn,BYE,N/A,92,88,1478.539,1478.539
+13,Ball State,Eastern Michigan,9-24,103,109,1465.686,1449.421
+13,Baylor,Utah,28-55,63,67,1515.089,1504.386
+13,Boise State,San Diego State,7-17,48,57,1537.282,1525.258
+13,Boston College,Georgia Tech,34-36,134,134,1380.462,1374.522
+13,Bowling Green,BYE,N/A,121,122,1423.843,1423.843
+13,Brigham Young,Texas Christian,44-13,7,7,1608.627,1619.175
+13,Buffalo,Central Michigan,19-38,85,94,1484.093,1471.044
+13,California,BYE,N/A,62,60,1519.291,1519.291
+13,Central Florida,Texas Tech,9-48,98,98,1473.176,1464.995
+13,Central Michigan,Buffalo,38-19,83,69,1489.859,1502.908
+13,Charlotte,Texas-San Antonio,7-28,130,132,1387.619,1378.256
+13,Cincinnati,Arizona,24-30,21,32,1577.605,1562.331
+13,Clemson,Louisville,20-19,79,64,1491.324,1510.556
+13,Coastal Carolina,Georgia Southern,40-45,53,62,1531.798,1513.842
+13,Colorado,BYE,N/A,105,100,1462.778,1462.778
+13,Colorado State,New Mexico,17-20,119,123,1431.973,1422.518
+13,Connecticut,Air Force,26-16,47,42,1538.410,1548.367
+13,Delaware,Sam Houston,23-26,71,89,1498.997,1476.905
+13,Duke,Virginia,17-34,51,58,1533.493,1522.155
+13,East Carolina,Memphis,31-27,49,40,1534.175,1549.870
+13,Eastern Michigan,Ball State,24-9,123,118,1416.157,1432.422
+13,Florida,Mississippi,24-34,97,96,1473.273,1465.541
+13,Florida Atlantic,Tulane,24-35,88,93,1482.812,1473.083
+13,Florida International,Liberty,34-27,91,80,1479.249,1492.124
+13,Florida State,Virginia Tech,34-14,86,74,1483.676,1496.293
+13,Fresno State,Wyoming,24-3,50,44,1533.940,1544.891
+13,Georgia,Texas,35-10,8,6,1607.819,1620.098
+13,Georgia Southern,Coastal Carolina,45-40,95,81,1474.070,1492.025
+13,Georgia State,Marshall,18-30,132,133,1384.363,1374.711
+13,Georgia Tech,Boston College,36-34,11,13,1591.913,1597.852
+13,Hawaii,BYE,N/A,44,46,1542.446,1542.446
+13,Houston,BYE,N/A,26,24,1573.531,1573.531
+13,Illinois,Maryland,24-6,38,31,1552.028,1562.726
+13,Indiana,Wisconsin,31-7,1,1,1646.593,1653.713
+13,Iowa,Southern California,21-26,39,48,1551.711,1539.832
+13,Iowa State,BYE,N/A,55,55,1529.406,1529.406
+13,Jacksonville State,Kennesaw State,35-26,61,52,1519.831,1536.156
+13,James Madison,Appalachian State,58-10,13,12,1589.308,1598.261
+13,Kansas,BYE,N/A,77,77,1494.198,1494.198
+13,Kansas State,Oklahoma State,14-6,72,66,1498.514,1507.782
+13,Kennesaw State,Jacksonville State,26-35,33,45,1560.510,1544.185
+13,Kent State,Akron,42-35,114,107,1440.488,1454.615
+13,Kentucky,Tennessee Tech,42-10,82,72,1490.235,1496.986
+13,Liberty,Florida International,27-34,96,104,1473.780,1460.905
+13,Louisiana,BYE,N/A,108,105,1455.496,1455.496
+13,Louisiana State,Arkansas,23-22,56,50,1529.331,1538.614
+13,Louisiana Tech,Washington State,3-28,69,86,1504.296,1488.532
+13,Louisiana-Monroe,South Alabama,14-26,118,124,1435.351,1420.768
+13,Louisville,Clemson,19-20,29,43,1566.550,1547.318
+13,Marshall,Georgia State,30-18,90,85,1479.277,1488.929
+13,Maryland,Illinois,6-24,84,91,1484.161,1473.464
+13,Massachusetts,Northern Illinois,3-45,136,136,1342.038,1331.208
+13,Memphis,East Carolina,27-31,27,36,1571.554,1555.859
+13,Miami (FL),North Carolina State,41-7,23,21,1575.348,1586.222
+13,Miami (OH),Toledo,3-24,68,83,1504.578,1490.599
+13,Michigan,Northwestern,24-22,18,18,1581.274,1591.708
+13,Michigan State,Penn State,10-28,109,114,1454.727,1441.582
+13,Middle Tennessee State,Western Kentucky,26-42,135,135,1375.387,1368.304
+13,Minnesota,Oregon,13-42,43,53,1545.667,1534.538
+13,Mississippi,Florida,34-24,5,4,1625.070,1632.802
+13,Mississippi State,Missouri,27-49,74,87,1495.632,1484.611
+13,Missouri,Mississippi State,49-27,36,28,1556.104,1567.125
+13,Missouri State,Texas-El Paso,38-24,60,54,1522.671,1531.757
+13,Navy,South Florida,41-38,25,20,1573.694,1586.927
+13,Nebraska,BYE,N/A,34,34,1557.710,1557.710
+13,Nevada,San Jose State,55-10,131,128,1385.106,1402.526
+13,Nevada-Las Vegas,Utah State,29-26,35,26,1557.457,1568.511
+13,New Mexico,Colorado State,20-17,54,49,1529.526,1538.981
+13,New Mexico State,Tennessee,9-42,115,119,1440.242,1430.930
+13,North Carolina,Wake Forest,12-28,94,97,1475.846,1465.076
+13,North Carolina State,Miami (FL),7-41,66,75,1506.950,1496.076
+13,North Texas,Alabama-Birmingham,53-24,10,10,1598.275,1606.437
+13,Northern Illinois,Massachusetts,45-3,124,120,1414.135,1424.965
+13,Northwestern,Michigan,22-24,65,70,1511.779,1501.344
+13,Notre Dame,Pittsburgh,37-15,14,11,1588.256,1600.647
+13,Ohio,Western Michigan,13-17,58,63,1526.090,1512.289
+13,Ohio State,UCLA,48-10,3,3,1632.182,1640.203
+13,Oklahoma,Alabama,23-21,20,17,1578.418,1594.226
+13,Oklahoma State,Kansas State,6-14,129,131,1393.892,1384.623
+13,Old Dominion,Troy,33-0,59,51,1523.870,1537.634
+13,Oregon,Minnesota,42-13,9,8,1605.623,1616.752
+13,Oregon State,Tulsa,14-31,128,130,1407.010,1394.358
+13,Penn State,Michigan State,28-10,107,95,1457.570,1470.715
+13,Pittsburgh,Notre Dame,15-37,31,39,1564.094,1551.703
+13,Purdue,Washington,13-49,125,127,1411.430,1402.728
+13,Rice,BYE,N/A,81,84,1490.452,1490.452
+13,Rutgers,BYE,N/A,76,76,1494.423,1494.423
+13,Sam Houston,Delaware,26-23,133,126,1381.978,1404.070
+13,San Diego State,Boise State,17-7,28,23,1566.584,1578.608
+13,San Jose State,Nevada,10-55,112,117,1450.858,1433.438
+13,South Alabama,Louisiana-Monroe,26-14,127,121,1409.719,1424.302
+13,South Carolina,Texas A&M,30-31,101,101,1469.098,1462.109
+13,South Florida,Navy,38-41,22,30,1576.183,1562.950
+13,Southern California,Iowa,26-21,17,16,1582.953,1594.832
+13,Southern Methodist,BYE,N/A,37,37,1552.988,1552.988
+13,Southern Mississippi,Texas State,14-41,30,47,1566.336,1540.635
+13,Stanford,BYE,N/A,113,110,1449.062,1449.062
+13,Syracuse,BYE,N/A,116,115,1439.812,1439.812
+13,Temple,BYE,N/A,80,82,1491.264,1491.264
+13,Tennessee,New Mexico State,42-9,40,33,1551.353,1560.665
+13,Texas,Georgia,10-35,19,27,1579.615,1567.335
+13,Texas A&M,South Carolina,31-30,2,2,1642.651,1649.640
+13,Texas Christian,Brigham Young,13-44,52,59,1532.415,1521.867
+13,Texas State,Southern Mississippi,41-14,117,102,1435.640,1461.341
+13,Texas Tech,Central Florida,48-9,6,5,1619.226,1627.407
+13,Texas-El Paso,Missouri State,24-38,126,129,1410.813,1401.727
+13,Texas-San Antonio,Charlotte,28-7,78,68,1493.667,1503.030
+13,Toledo,Miami (OH),24-3,75,65,1495.480,1509.458
+13,Troy,Old Dominion,0-33,57,61,1529.037,1515.273
+13,Tulane,Florida Atlantic,35-24,24,22,1575.221,1584.949
+13,Tulsa,Oregon State,31-14,122,116,1422.396,1435.048
+13,UCLA,Ohio State,10-48,89,90,1481.521,1473.500
+13,Utah,Baylor,55-28,15,14,1585.798,1596.501
+13,Utah State,Nevada-Las Vegas,26-29,67,79,1504.645,1493.591
+13,Vanderbilt,BYE,N/A,12,19,1590.193,1590.193
+13,Virginia,Duke,34-17,16,15,1583.717,1595.055
+13,Virginia Tech,Florida State,14-34,102,108,1466.189,1453.572
+13,Wake Forest,North Carolina,28-12,46,38,1541.064,1551.834
+13,Washington,Purdue,49-13,45,41,1541.069,1549.771
+13,Washington State,Louisiana Tech,28-3,93,78,1477.933,1493.696
+13,West Virginia,Arizona State,23-25,87,92,1483.332,1473.274
+13,Western Kentucky,Middle Tennessee State,42-26,41,35,1550.070,1557.154
+13,Western Michigan,Ohio,17-13,64,56,1512.939,1526.740
+13,Wisconsin,Indiana,7-31,100,99,1470.937,1463.817
+13,Wyoming,Fresno State,3-24,99,103,1471.903,1460.952
+14,Air Force,New Mexico,3-20,113,116,1442.825,1433.643
+14,Akron,Bowling Green,19-16,112,104,1443.909,1455.562
+14,Alabama,Eastern Illinois,56-0,9,9,1613.598,1617.306
+14,Alabama-Birmingham,South Florida,18-48,111,115,1446.255,1437.623
+14,Appalachian State,Marshall,26-24,106,96,1454.688,1469.381
+14,Arizona,Baylor,41-17,29,26,1565.275,1575.754
+14,Arizona State,Colorado,42-17,25,23,1573.448,1582.229
+14,Arkansas,Texas,37-52,125,125,1418.157,1410.689
+14,Arkansas State,Louisiana,30-34,71,80,1500.997,1485.001
+14,Army,Tulsa,25-26,73,89,1496.954,1479.739
+14,Auburn,Mercer,62-17,88,79,1478.539,1485.378
+14,Ball State,Toledo,9-38,109,114,1449.421,1438.851
+14,Baylor,Arizona,17-41,67,75,1504.386,1493.906
+14,Boise State,Colorado State,49-21,57,51,1525.258,1534.335
+14,Boston College,BYE,N/A,134,133,1374.522,1374.522
+14,Bowling Green,Akron,16-19,122,124,1423.843,1412.190
+14,Brigham Young,Cincinnati,26-14,7,5,1619.175,1629.650
+14,Buffalo,Miami (OH),20-37,94,102,1471.044,1459.174
+14,California,Stanford,10-31,60,71,1519.291,1500.790
+14,Central Florida,Oklahoma State,17-14,98,91,1464.995,1474.551
+14,Central Michigan,Kent State,28-16,69,66,1502.908,1513.684
+14,Charlotte,Georgia,3-35,132,134,1378.256,1373.163
+14,Cincinnati,Brigham Young,14-26,32,40,1562.331,1551.856
+14,Clemson,Furman,45-10,64,64,1510.556,1516.443
+14,Coastal Carolina,South Carolina,7-51,62,74,1513.842,1496.479
+14,Colorado,Arizona State,17-42,100,106,1462.778,1453.996
+14,Colorado State,Boise State,21-49,123,123,1422.518,1413.441
+14,Connecticut,Florida Atlantic,48-45,42,34,1548.367,1558.095
+14,Delaware,Wake Forest,14-52,89,98,1476.905,1466.761
+14,Duke,North Carolina,32-25,58,53,1522.155,1532.559
+14,East Carolina,Texas-San Antonio,24-58,40,52,1549.870,1533.656
+14,Eastern Michigan,BYE,N/A,118,118,1432.422,1432.422
+14,Florida,Tennessee,11-31,96,103,1465.541,1456.292
+14,Florida Atlantic,Connecticut,45-48,93,101,1473.083,1463.355
+14,Florida International,Jacksonville State,27-21,80,69,1492.124,1507.708
+14,Florida State,North Carolina State,11-21,74,84,1496.293,1483.779
+14,Fresno State,Utah State,17-28,44,55,1544.891,1528.456
+14,Georgia,Charlotte,35-3,6,8,1620.098,1625.192
+14,Georgia Southern,Old Dominion,10-45,81,88,1492.025,1480.864
+14,Georgia State,Troy,19-31,133,135,1374.711,1367.008
+14,Georgia Tech,Pittsburgh,28-42,13,24,1597.852,1582.164
+14,Hawaii,Nevada-Las Vegas,10-38,46,54,1542.446,1530.663
+14,Houston,Texas Christian,14-17,24,35,1573.531,1557.242
+14,Illinois,Wisconsin,10-27,31,45,1562.726,1541.650
+14,Indiana,BYE,N/A,1,1,1653.713,1653.713
+14,Iowa,Michigan State,20-17,48,42,1539.832,1548.792
+14,Iowa State,Kansas,38-14,55,46,1529.406,1540.805
+14,Jacksonville State,Florida International,21-27,52,57,1536.156,1520.572
+14,James Madison,Washington State,24-20,12,12,1598.261,1607.024
+14,Kansas,Iowa State,14-38,77,85,1494.198,1482.799
+14,Kansas State,Utah,47-51,66,73,1507.782,1498.495
+14,Kennesaw State,Missouri State,41-34,45,36,1544.185,1556.168
+14,Kent State,Central Michigan,16-28,107,112,1454.615,1443.839
+14,Kentucky,Vanderbilt,17-45,72,77,1496.986,1487.587
+14,Liberty,Louisiana Tech,28-34,104,108,1460.905,1449.478
+14,Louisiana,Arkansas State,34-30,105,95,1455.496,1471.492
+14,Louisiana State,Western Kentucky,13-10,50,39,1538.614,1552.381
+14,Louisiana Tech,Liberty,34-28,86,72,1488.532,1499.959
+14,Louisiana-Monroe,Texas State,14-31,124,126,1420.768,1409.653
+14,Louisville,Southern Methodist,6-38,43,50,1547.318,1534.733
+14,Marshall,Appalachian State,24-26,85,92,1488.929,1474.236
+14,Maryland,Michigan,20-45,91,99,1473.464,1464.931
+14,Massachusetts,Ohio,14-42,136,136,1331.208,1324.567
+14,Memphis,BYE,N/A,36,37,1555.859,1555.859
+14,Miami (FL),Virginia Tech,34-17,21,19,1586.222,1594.218
+14,Miami (OH),Buffalo,37-20,83,70,1490.599,1502.469
+14,Michigan,Maryland,45-20,18,15,1591.708,1600.241
+14,Michigan State,Iowa,17-20,114,117,1441.582,1432.622
+14,Middle Tennessee State,Sam Houston,31-17,135,131,1368.304,1382.565
+14,Minnesota,Northwestern,35-38,53,58,1534.538,1520.105
+14,Mississippi,BYE,N/A,4,4,1632.802,1632.802
+14,Mississippi State,BYE,N/A,87,83,1484.611,1484.611
+14,Missouri,Oklahoma,6-17,28,38,1567.125,1555.610
+14,Missouri State,Kennesaw State,34-41,54,60,1531.757,1519.774
+14,Navy,BYE,N/A,20,20,1586.927,1586.927
+14,Nebraska,Penn State,10-37,34,48,1557.710,1537.491
+14,Nevada,Wyoming,13-7,128,121,1402.526,1418.472
+14,Nevada-Las Vegas,Hawaii,38-10,26,25,1568.511,1580.294
+14,New Mexico,Air Force,20-3,49,43,1538.981,1548.163
+14,New Mexico State,Texas-El Paso,34-31,119,113,1430.930,1442.259
+14,North Carolina,Duke,25-32,97,105,1465.076,1454.672
+14,North Carolina State,Florida State,21-11,75,68,1496.076,1508.590
+14,North Texas,Rice,56-24,10,10,1606.437,1615.112
+14,Northern Illinois,Western Michigan,19-35,120,122,1424.965,1415.981
+14,Northwestern,Minnesota,38-35,70,65,1501.344,1515.777
+14,Notre Dame,Syracuse,70-7,11,11,1600.647,1608.151
+14,Ohio,Massachusetts,42-14,63,62,1512.289,1518.930
+14,Ohio State,Rutgers,42-9,3,3,1640.203,1647.932
+14,Oklahoma,Missouri,17-6,17,14,1594.226,1605.741
+14,Oklahoma State,Central Florida,14-17,131,132,1384.623,1375.068
+14,Old Dominion,Georgia Southern,45-10,51,41,1537.634,1548.795
+14,Oregon,Southern California,42-27,8,6,1616.752,1628.509
+14,Oregon State,BYE,N/A,130,128,1394.358,1394.358
+14,Penn State,Nebraska,37-10,95,76,1470.715,1490.934
+14,Pittsburgh,Georgia Tech,42-28,39,30,1551.703,1567.391
+14,Purdue,BYE,N/A,127,127,1402.728,1402.728
+14,Rice,North Texas,24-56,84,87,1490.452,1481.777
+14,Rutgers,Ohio State,9-42,76,78,1494.423,1486.694
+14,Sam Houston,Middle Tennessee State,17-31,126,130,1404.070,1389.809
+14,San Diego State,San Jose State,25-3,23,21,1578.608,1586.260
+14,San Jose State,San Diego State,3-25,117,120,1433.438,1425.786
+14,South Alabama,Southern Mississippi,42-35,121,109,1424.302,1446.384
+14,South Carolina,Coastal Carolina,51-7,101,90,1462.109,1479.472
+14,South Florida,Alabama-Birmingham,48-18,30,28,1562.950,1571.582
+14,Southern California,Oregon,27-42,16,22,1594.832,1583.076
+14,Southern Methodist,Louisville,38-6,37,31,1552.988,1565.574
+14,Southern Mississippi,South Alabama,35-42,47,63,1540.635,1518.554
+14,Stanford,California,31-10,110,97,1449.062,1467.563
+14,Syracuse,Notre Dame,7-70,115,119,1439.812,1432.308
+14,Temple,Tulane,13-37,82,86,1491.264,1481.924
+14,Tennessee,Florida,31-11,33,29,1560.665,1569.914
+14,Texas,Arkansas,52-37,27,27,1567.335,1574.803
+14,Texas A&M,Samford,48-0,2,2,1649.640,1652.709
+14,Texas Christian,Houston,17-14,59,47,1521.867,1538.157
+14,Texas State,Louisiana-Monroe,31-14,102,94,1461.341,1472.456
+14,Texas Tech,BYE,N/A,5,7,1627.407,1627.407
+14,Texas-El Paso,New Mexico State,31-34,129,129,1401.727,1390.398
+14,Texas-San Antonio,East Carolina,58-24,68,61,1503.030,1519.243
+14,Toledo,Ball State,38-9,65,59,1509.458,1520.028
+14,Troy,Georgia State,31-19,61,56,1515.273,1522.976
+14,Tulane,Temple,37-13,22,18,1584.949,1594.290
+14,Tulsa,Army,26-25,116,107,1435.048,1452.263
+14,UCLA,Washington,14-48,90,100,1473.500,1463.448
+14,Utah,Kansas State,51-47,14,13,1596.501,1605.788
+14,Utah State,Fresno State,28-17,79,67,1493.591,1510.026
+14,Vanderbilt,Kentucky,45-17,19,16,1590.193,1599.592
+14,Virginia,BYE,N/A,15,17,1595.055,1595.055
+14,Virginia Tech,Miami (FL),17-34,108,110,1453.572,1445.576
+14,Wake Forest,Delaware,52-14,38,32,1551.834,1561.978
+14,Washington,UCLA,48-14,41,33,1549.771,1559.823
+14,Washington State,James Madison,20-24,78,81,1493.696,1484.933
+14,West Virginia,BYE,N/A,92,93,1473.274,1473.274
+14,Western Kentucky,Louisiana State,10-13,35,44,1557.154,1543.386
+14,Western Michigan,Northern Illinois,35-19,56,49,1526.740,1535.724
+14,Wisconsin,Illinois,27-10,99,82,1463.817,1484.893
+14,Wyoming,Nevada,7-13,103,111,1460.952,1445.007
+15,Air Force,Colorado State,42-21,116,108,1433.643,1445.235
+15,Akron,BYE,N/A,104,100,1455.562,1455.562
+15,Alabama,Auburn,27-20,9,9,1617.306,1625.023
+15,Alabama-Birmingham,Tulsa,31-24,115,105,1437.623,1450.591
+15,Appalachian State,Arkansas State,29-30,96,99,1469.381,1457.906
+15,Arizona,Arizona State,23-7,26,23,1575.754,1588.334
+15,Arizona State,Arizona,7-23,23,28,1582.229,1569.650
+15,Arkansas,Missouri,17-31,125,124,1410.689,1403.298
+15,Arkansas State,Appalachian State,30-29,80,75,1485.001,1496.476
+15,Army,Texas-San Antonio,27-24,89,79,1479.739,1486.589
+15,Auburn,Alabama,20-27,79,83,1485.378,1477.661
+15,Ball State,Miami (OH),24-45,114,116,1438.851,1428.773
+15,Baylor,Houston,24-31,75,80,1493.906,1483.984
+15,Boise State,Utah State,25-24,51,46,1534.335,1545.510
+15,Boston College,Syracuse,34-12,133,129,1374.522,1389.631
+15,Bowling Green,Massachusetts,45-14,124,119,1412.190,1421.563
+15,Brigham Young,Central Florida,41-21,5,5,1629.650,1636.793
+15,Buffalo,Ohio,26-31,102,106,1459.174,1449.156
+15,California,Southern Methodist,38-35,71,63,1500.790,1517.505
+15,Central Florida,Brigham Young,21-41,91,95,1474.551,1467.408
+15,Central Michigan,Toledo,3-21,66,73,1513.684,1501.644
+15,Charlotte,Tulane,0-27,134,134,1373.163,1367.741
+15,Cincinnati,Texas Christian,23-45,40,52,1551.856,1538.739
+15,Clemson,South Carolina,28-14,64,60,1516.443,1527.356
+15,Coastal Carolina,James Madison,10-59,74,78,1496.479,1487.693
+15,Colorado,Kansas State,14-24,106,110,1453.996,1443.395
+15,Colorado State,Air Force,21-42,123,125,1413.441,1401.849
+15,Connecticut,BYE,N/A,34,35,1558.095,1558.095
+15,Delaware,Texas-El Paso,61-31,98,86,1466.761,1476.505
+15,Duke,Wake Forest,49-32,53,44,1532.559,1546.949
+15,East Carolina,Florida Atlantic,42-3,52,49,1533.656,1543.708
+15,Eastern Michigan,Western Michigan,21-31,118,118,1432.422,1423.783
+15,Florida,Florida State,40-21,103,92,1456.292,1470.525
+15,Florida Atlantic,East Carolina,3-42,101,103,1463.355,1453.304
+15,Florida International,Sam Houston,56-16,69,64,1507.708,1516.171
+15,Florida State,Florida,21-40,84,93,1483.779,1469.546
+15,Fresno State,San Jose State,41-14,55,53,1528.456,1537.289
+15,Georgia,Georgia Tech,16-9,8,7,1625.192,1635.805
+15,Georgia Southern,Marshall,24-19,88,77,1480.864,1492.708
+15,Georgia State,Old Dominion,10-27,135,135,1367.008,1360.640
+15,Georgia Tech,Georgia,9-16,24,27,1582.164,1571.551
+15,Hawaii,Wyoming,27-7,54,51,1530.663,1539.985
+15,Houston,Baylor,31-24,35,29,1557.242,1567.163
+15,Illinois,Northwestern,20-13,45,38,1541.650,1552.854
+15,Indiana,Purdue,56-3,1,1,1653.713,1658.577
+15,Iowa,Nebraska,40-16,42,33,1548.792,1560.740
+15,Iowa State,Oklahoma State,20-13,46,43,1540.805,1547.536
+15,Jacksonville State,Western Kentucky,37-34,57,55,1520.572,1534.029
+15,James Madison,Coastal Carolina,59-10,12,12,1607.024,1615.810
+15,Kansas,Utah,21-31,85,88,1482.799,1474.780
+15,Kansas State,Colorado,24-14,73,67,1498.495,1509.096
+15,Kennesaw State,Liberty,48-42,36,30,1556.168,1564.657
+15,Kent State,Northern Illinois,35-31,112,102,1443.839,1454.934
+15,Kentucky,Louisville,0-41,77,85,1487.587,1476.699
+15,Liberty,Kennesaw State,42-48,108,111,1449.478,1440.989
+15,Louisiana,Louisiana-Monroe,30-27,95,82,1471.492,1481.415
+15,Louisiana State,Oklahoma,13-17,39,50,1552.381,1542.159
+15,Louisiana Tech,Missouri State,42-30,72,65,1499.959,1513.401
+15,Louisiana-Monroe,Louisiana,27-30,126,126,1409.653,1399.730
+15,Louisville,Kentucky,41-0,50,45,1534.733,1545.621
+15,Marshall,Georgia Southern,19-24,92,97,1474.236,1462.392
+15,Maryland,Michigan State,28-38,99,104,1464.931,1450.727
+15,Massachusetts,Bowling Green,14-45,136,136,1324.567,1315.193
+15,Memphis,Navy,17-28,37,47,1555.859,1545.072
+15,Miami (FL),Pittsburgh,38-7,19,17,1594.218,1605.706
+15,Miami (OH),Ball State,45-24,70,66,1502.469,1512.547
+15,Michigan,Ohio State,9-27,15,22,1600.241,1589.650
+15,Michigan State,Maryland,38-28,117,107,1432.622,1446.825
+15,Middle Tennessee State,New Mexico State,31-24,131,128,1382.565,1397.719
+15,Minnesota,Wisconsin,17-7,58,57,1520.105,1531.026
+15,Mississippi,Mississippi State,38-19,4,3,1632.802,1640.139
+15,Mississippi State,Mississippi,19-38,83,84,1484.611,1477.273
+15,Missouri,Arkansas,31-17,38,31,1555.610,1563.001
+15,Missouri State,Louisiana Tech,30-42,60,69,1519.774,1506.332
+15,Navy,Memphis,28-17,20,16,1586.927,1606.135
+15,Nebraska,Iowa,16-40,48,61,1537.491,1525.543
+15,Nevada,Nevada-Las Vegas,17-42,121,122,1418.472,1411.483
+15,Nevada-Las Vegas,Nevada,42-17,25,24,1580.294,1587.283
+15,New Mexico,San Diego State,23-17,43,32,1548.163,1562.749
+15,New Mexico State,Middle Tennessee State,24-31,113,117,1442.259,1427.105
+15,North Carolina,North Carolina State,19-42,105,109,1454.672,1444.236
+15,North Carolina State,North Carolina,42-19,68,62,1508.590,1519.026
+15,North Texas,Temple,52-25,10,10,1615.112,1622.974
+15,Northern Illinois,Kent State,31-35,122,123,1415.981,1404.886
+15,Northwestern,Illinois,13-20,65,70,1515.777,1504.573
+15,Notre Dame,Stanford,49-20,11,13,1608.151,1615.802
+15,Ohio,Buffalo,31-26,62,59,1518.930,1528.948
+15,Ohio State,Michigan,27-9,3,2,1647.932,1658.523
+15,Oklahoma,Louisiana State,17-13,14,11,1605.741,1615.963
+15,Oklahoma State,Iowa State,13-20,132,133,1375.068,1368.336
+15,Old Dominion,Georgia State,27-10,41,37,1548.795,1555.163
+15,Oregon,Washington,26-14,6,4,1628.509,1638.310
+15,Oregon State,Washington State,8-32,128,130,1394.358,1385.156
+15,Penn State,Rutgers,40-36,76,72,1490.934,1502.846
+15,Pittsburgh,Miami (FL),7-38,30,36,1567.391,1555.902
+15,Purdue,Indiana,3-56,127,127,1402.728,1397.864
+15,Rice,South Florida,3-52,87,91,1481.777,1472.294
+15,Rutgers,Penn State,36-40,78,87,1486.694,1474.782
+15,Sam Houston,Florida International,16-56,130,131,1389.809,1381.347
+15,San Diego State,New Mexico,17-23,21,26,1586.260,1571.674
+15,San Jose State,Fresno State,14-41,120,121,1425.786,1416.953
+15,South Alabama,Texas State,26-49,109,115,1446.384,1434.972
+15,South Carolina,Clemson,14-28,90,94,1479.472,1468.560
+15,South Florida,Rice,52-3,28,25,1571.582,1581.066
+15,Southern California,UCLA,29-10,22,20,1583.076,1591.286
+15,Southern Methodist,California,35-38,31,41,1565.574,1548.858
+15,Southern Mississippi,Troy,18-28,63,68,1518.554,1506.560
+15,Stanford,Notre Dame,20-49,97,98,1467.563,1459.912
+15,Syracuse,Boston College,12-34,119,120,1432.308,1417.200
+15,Temple,North Texas,25-52,86,89,1481.924,1474.062
+15,Tennessee,Vanderbilt,24-45,29,34,1569.914,1558.656
+15,Texas,Texas A&M,27-17,27,21,1574.803,1591.132
+15,Texas A&M,Texas,17-27,2,6,1652.709,1636.381
+15,Texas Christian,Cincinnati,45-23,47,39,1538.157,1551.273
+15,Texas State,South Alabama,49-26,94,81,1472.456,1483.867
+15,Texas Tech,West Virginia,49-0,7,8,1627.407,1634.811
+15,Texas-El Paso,Delaware,31-61,129,132,1390.398,1380.654
+15,Texas-San Antonio,Army,24-27,61,71,1519.243,1503.972
+15,Toledo,Central Michigan,21-3,59,56,1520.028,1532.068
+15,Troy,Southern Mississippi,28-18,56,54,1522.976,1534.969
+15,Tulane,Charlotte,27-0,18,19,1594.290,1599.712
+15,Tulsa,Alabama-Birmingham,24-31,107,112,1452.263,1439.295
+15,UCLA,Southern California,10-29,100,101,1463.448,1455.237
+15,Utah,Kansas,31-21,13,14,1605.788,1613.807
+15,Utah State,Boise State,24-25,67,74,1510.026,1498.850
+15,Vanderbilt,Tennessee,45-24,16,15,1599.592,1610.851
+15,Virginia,Virginia Tech,27-7,17,18,1595.055,1602.363
+15,Virginia Tech,Virginia,7-27,110,113,1445.576,1438.269
+15,Wake Forest,Duke,32-49,32,42,1561.978,1547.588
+15,Washington,Oregon,14-26,33,40,1559.823,1550.022
+15,Washington State,Oregon State,32-8,81,76,1484.933,1494.134
+15,West Virginia,Texas Tech,0-49,93,96,1473.274,1465.870
+15,Western Kentucky,Jacksonville State,34-37,44,58,1543.386,1529.928
+15,Western Michigan,Eastern Michigan,31-21,49,48,1535.724,1544.363
+15,Wisconsin,Minnesota,7-17,82,90,1484.893,1473.972
+15,Wyoming,Hawaii,7-27,111,114,1445.007,1435.685
+16,Air Force,BYE,N/A,108,108,1445.235,1445.235
+16,Akron,BYE,N/A,100,100,1455.562,1455.562
+16,Alabama,Georgia,7-28,9,14,1625.023,1613.097
+16,Alabama-Birmingham,BYE,N/A,105,105,1450.591,1450.591
+16,Appalachian State,BYE,N/A,99,99,1457.906,1457.906
+16,Arizona,BYE,N/A,23,22,1588.334,1588.334
+16,Arizona State,BYE,N/A,28,29,1569.650,1569.650
+16,Arkansas,BYE,N/A,124,124,1403.298,1403.298
+16,Arkansas State,BYE,N/A,75,75,1496.476,1496.476
+16,Army,BYE,N/A,79,79,1486.589,1486.589
+16,Auburn,BYE,N/A,83,83,1477.661,1477.661
+16,Ball State,BYE,N/A,116,116,1428.773,1428.773
+16,Baylor,BYE,N/A,80,80,1483.984,1483.984
+16,Boise State,Nevada-Las Vegas,38-21,46,35,1545.510,1560.428
+16,Boston College,BYE,N/A,129,129,1389.631,1389.631
+16,Bowling Green,BYE,N/A,119,119,1421.563,1421.563
+16,Brigham Young,Texas Tech,7-34,5,9,1636.793,1624.214
+16,Buffalo,BYE,N/A,106,106,1449.156,1449.156
+16,California,BYE,N/A,63,63,1517.505,1517.505
+16,Central Florida,BYE,N/A,95,95,1467.408,1467.408
+16,Central Michigan,BYE,N/A,73,72,1501.644,1501.644
+16,Charlotte,BYE,N/A,134,134,1367.741,1367.741
+16,Cincinnati,BYE,N/A,52,52,1538.739,1538.739
+16,Clemson,BYE,N/A,60,58,1527.356,1527.356
+16,Coastal Carolina,BYE,N/A,78,78,1487.693,1487.693
+16,Colorado,BYE,N/A,110,110,1443.395,1443.395
+16,Colorado State,BYE,N/A,125,125,1401.849,1401.849
+16,Connecticut,BYE,N/A,35,37,1558.095,1558.095
+16,Delaware,BYE,N/A,86,86,1476.505,1476.505
+16,Duke,Virginia,27-20,44,33,1546.949,1562.450
+16,East Carolina,BYE,N/A,49,49,1543.708,1543.708
+16,Eastern Michigan,BYE,N/A,118,118,1423.783,1423.783
+16,Florida,BYE,N/A,92,92,1470.525,1470.525
+16,Florida Atlantic,BYE,N/A,103,103,1453.304,1453.304
+16,Florida International,BYE,N/A,64,64,1516.171,1516.171
+16,Florida State,BYE,N/A,93,93,1469.546,1469.546
+16,Fresno State,BYE,N/A,53,53,1537.289,1537.289
+16,Georgia,Alabama,28-7,7,2,1635.805,1647.730
+16,Georgia Southern,BYE,N/A,77,77,1492.708,1492.708
+16,Georgia State,BYE,N/A,135,135,1360.640,1360.640
+16,Georgia Tech,BYE,N/A,27,28,1571.551,1571.551
+16,Hawaii,BYE,N/A,51,51,1539.985,1539.985
+16,Houston,BYE,N/A,29,30,1567.163,1567.163
+16,Illinois,BYE,N/A,38,41,1552.854,1552.854
+16,Indiana,Ohio State,13-10,1,1,1658.577,1670.620
+16,Iowa,BYE,N/A,33,34,1560.740,1560.740
+16,Iowa State,BYE,N/A,43,46,1547.536,1547.536
+16,Jacksonville State,Kennesaw State,15-19,55,61,1534.029,1523.030
+16,James Madison,Troy,31-14,12,8,1615.810,1625.260
+16,Kansas,BYE,N/A,88,88,1474.780,1474.780
+16,Kansas State,BYE,N/A,67,66,1509.096,1509.096
+16,Kennesaw State,Jacksonville State,19-15,30,25,1564.657,1575.657
+16,Kent State,BYE,N/A,102,102,1454.934,1454.934
+16,Kentucky,BYE,N/A,85,85,1476.699,1476.699
+16,Liberty,BYE,N/A,111,111,1440.989,1440.989
+16,Louisiana,BYE,N/A,82,82,1481.415,1481.415
+16,Louisiana State,BYE,N/A,50,50,1542.159,1542.159
+16,Louisiana Tech,BYE,N/A,65,65,1513.401,1513.401
+16,Louisiana-Monroe,BYE,N/A,126,126,1399.730,1399.730
+16,Louisville,BYE,N/A,45,47,1545.621,1545.621
+16,Marshall,BYE,N/A,97,97,1462.392,1462.392
+16,Maryland,BYE,N/A,104,104,1450.727,1450.727
+16,Massachusetts,BYE,N/A,136,136,1315.193,1315.193
+16,Memphis,BYE,N/A,47,48,1545.072,1545.072
+16,Miami (FL),BYE,N/A,17,18,1605.706,1605.706
+16,Miami (OH),Western Michigan,13-23,66,73,1512.547,1501.508
+16,Michigan,BYE,N/A,22,21,1589.650,1589.650
+16,Michigan State,BYE,N/A,107,107,1446.825,1446.825
+16,Middle Tennessee State,BYE,N/A,128,128,1397.719,1397.719
+16,Minnesota,BYE,N/A,57,55,1531.026,1531.026
+16,Mississippi,BYE,N/A,3,5,1640.139,1640.139
+16,Mississippi State,BYE,N/A,84,84,1477.273,1477.273
+16,Missouri,BYE,N/A,31,31,1563.001,1563.001
+16,Missouri State,BYE,N/A,69,68,1506.332,1506.332
+16,Navy,BYE,N/A,16,17,1606.135,1606.135
+16,Nebraska,BYE,N/A,61,59,1525.543,1525.543
+16,Nevada,BYE,N/A,122,122,1411.483,1411.483
+16,Nevada-Las Vegas,Boise State,21-38,24,26,1587.283,1572.364
+16,New Mexico,BYE,N/A,32,32,1562.749,1562.749
+16,New Mexico State,BYE,N/A,117,117,1427.105,1427.105
+16,North Carolina,BYE,N/A,109,109,1444.236,1444.236
+16,North Carolina State,BYE,N/A,62,62,1519.026,1519.026
+16,North Texas,Tulane,21-34,10,16,1622.974,1609.550
+16,Northern Illinois,BYE,N/A,123,123,1404.886,1404.886
+16,Northwestern,BYE,N/A,70,69,1504.573,1504.573
+16,Notre Dame,BYE,N/A,13,11,1615.802,1615.802
+16,Ohio,BYE,N/A,59,57,1528.948,1528.948
+16,Ohio State,Indiana,10-13,2,4,1658.523,1646.480
+16,Oklahoma,BYE,N/A,11,10,1615.963,1615.963
+16,Oklahoma State,BYE,N/A,133,133,1368.336,1368.336
+16,Old Dominion,BYE,N/A,37,40,1555.163,1555.163
+16,Oregon,BYE,N/A,4,6,1638.310,1638.310
+16,Oregon State,BYE,N/A,130,130,1385.156,1385.156
+16,Penn State,BYE,N/A,72,71,1502.846,1502.846
+16,Pittsburgh,BYE,N/A,36,38,1555.902,1555.902
+16,Purdue,BYE,N/A,127,127,1397.864,1397.864
+16,Rice,BYE,N/A,91,91,1472.294,1472.294
+16,Rutgers,BYE,N/A,87,87,1474.782,1474.782
+16,Sam Houston,BYE,N/A,131,131,1381.347,1381.347
+16,San Diego State,BYE,N/A,26,27,1571.674,1571.674
+16,San Jose State,BYE,N/A,121,121,1416.953,1416.953
+16,South Alabama,BYE,N/A,115,115,1434.972,1434.972
+16,South Carolina,BYE,N/A,94,94,1468.560,1468.560
+16,South Florida,BYE,N/A,25,24,1581.066,1581.066
+16,Southern California,BYE,N/A,20,19,1591.286,1591.286
+16,Southern Methodist,BYE,N/A,41,44,1548.858,1548.858
+16,Southern Mississippi,BYE,N/A,68,67,1506.560,1506.560
+16,Stanford,BYE,N/A,98,98,1459.912,1459.912
+16,Syracuse,BYE,N/A,120,120,1417.200,1417.200
+16,Temple,BYE,N/A,89,89,1474.062,1474.062
+16,Tennessee,BYE,N/A,34,36,1558.656,1558.656
+16,Texas,BYE,N/A,21,20,1591.132,1591.132
+16,Texas A&M,BYE,N/A,6,7,1636.381,1636.381
+16,Texas Christian,BYE,N/A,39,42,1551.273,1551.273
+16,Texas State,BYE,N/A,81,81,1483.867,1483.867
+16,Texas Tech,Brigham Young,34-7,8,3,1634.811,1647.390
+16,Texas-El Paso,BYE,N/A,132,132,1380.654,1380.654
+16,Texas-San Antonio,BYE,N/A,71,70,1503.972,1503.972
+16,Toledo,BYE,N/A,56,54,1532.068,1532.068
+16,Troy,James Madison,14-31,54,60,1534.969,1525.520
+16,Tulane,North Texas,34-21,19,13,1599.712,1613.136
+16,Tulsa,BYE,N/A,112,112,1439.295,1439.295
+16,UCLA,BYE,N/A,101,101,1455.237,1455.237
+16,Utah,BYE,N/A,14,12,1613.807,1613.807
+16,Utah State,BYE,N/A,74,74,1498.850,1498.850
+16,Vanderbilt,BYE,N/A,15,15,1610.851,1610.851
+16,Virginia,Duke,20-27,18,23,1602.363,1586.861
+16,Virginia Tech,BYE,N/A,113,113,1438.269,1438.269
+16,Wake Forest,BYE,N/A,42,45,1547.588,1547.588
+16,Washington,BYE,N/A,40,43,1550.022,1550.022
+16,Washington State,BYE,N/A,76,76,1494.134,1494.134
+16,West Virginia,BYE,N/A,96,96,1465.870,1465.870
+16,Western Kentucky,BYE,N/A,58,56,1529.928,1529.928
+16,Western Michigan,Miami (OH),23-13,48,39,1544.363,1555.402
+16,Wisconsin,BYE,N/A,90,90,1473.972,1473.972
+16,Wyoming,BYE,N/A,114,114,1435.685,1435.685

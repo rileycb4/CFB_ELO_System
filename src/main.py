@@ -11,6 +11,7 @@ class Team:
         self.ELO = ELO if ELO is not None else 1500.0
         # MUST be curly braces for a dictionary
         self.schedule = {} 
+        self.weekly_history = {} 
 
     def add_week(self, week, score_t, score_opp, outcome, rank_t, rating_t, rank_opp, rating_opp, opp_name, is_champ=False):
         self.schedule[week] = {
@@ -30,6 +31,7 @@ def load_teams_from_xml(file_path):
         for team in conference.findall('Team'):
             team_name = team.text
             teams.append(Team(team_name, conf_name))
+            #print(f"Loaded team: {team_name} from conference: {conf_name}")
     return teams
 
 def update_teams_with_rankings(teams, csv_file_path):
@@ -59,7 +61,8 @@ def load_results(teams, csv_file_path):
                 is_champ_period = True
                 continue
 
-            if not row or len(row) < 7: continue
+            if not row or len(row) < 7: continue  # Skip malformed rows and ensure we have enough columns
+
             week = int(row[0])
             t1_n, t1_s, t2_n, t2_s = row[2].strip(), int(row[3]), row[5].strip(), int(row[6])
 
@@ -73,6 +76,8 @@ def load_results(teams, csv_file_path):
             
             t2_rank = team2.ranking if team2 else 200
             t2_elo = team2.ELO if team2 else 1300.0
+
+            #print(f"Processing Week {week}: {t1_n} vs {t2_n} | Scores: {t1_s}-{t2_s} | Ranks: {t1_rank}-{t2_rank} | ELOs: {t1_elo:.1f}-{t2_elo:.1f}")
 
             # Add to Team 1's schedule if Team 1 is an FBS team
             if team1:
@@ -181,7 +186,19 @@ def generate_weekly_breakdown_csv(teams, output_filename="weekly_breakdown.csv")
                 
     print(f"Success: Weekly breakdown generated at '{output_filename}'")
 
-def main():
+# --- At the bottom of main.py ---
+def load_all_data():
+    teams = load_teams_from_xml('resources/FBS_list.xml')
+    update_teams_with_rankings(teams, 'resources/preseason_rankings/rankings_2025.csv')
+    load_results(teams, 'resources/results/results_2025_cleaned.csv')
+    return teams
+
+if __name__ == "__main__":
+    # We remove start_gui(teams) here so it doesn't open the desktop app when imported
+    teams = load_all_data()
+    print("Data loaded successfully.")
+
+def desktop_app():
     teams = load_teams_from_xml('resources/FBS_list.xml')
     update_teams_with_rankings(teams, 'resources/preseason_rankings/rankings_2025.csv')
     load_results(teams, 'resources/results/results_2025_cleaned.csv')
@@ -193,5 +210,5 @@ def main():
     print("Data loaded. Initial ELO set. Launching GUI...")
     start_gui(teams)
 
-if __name__ == "__main__":
-    main()
+if __name__ == "__desktop_app__":
+    desktop_app()
