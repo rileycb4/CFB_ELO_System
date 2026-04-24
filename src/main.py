@@ -1,6 +1,5 @@
 import xml.etree.ElementTree as ET
 import csv
-from gui import start_gui
 from formula import calculate_delta_elo as dt_elo
 
 class Team:
@@ -186,7 +185,6 @@ def generate_weekly_breakdown_csv(teams, output_filename="weekly_breakdown.csv")
                 
     print(f"Success: Weekly breakdown generated at '{output_filename}'")
 
-# --- At the bottom of main.py ---
 def load_all_data():
     teams = load_teams_from_xml('resources/FBS_list.xml')
     update_teams_with_rankings(teams, 'resources/preseason_rankings/rankings_2025.csv')
@@ -194,21 +192,5 @@ def load_all_data():
     return teams
 
 if __name__ == "__main__":
-    # We remove start_gui(teams) here so it doesn't open the desktop app when imported
     teams = load_all_data()
     print("Data loaded successfully.")
-
-def desktop_app():
-    teams = load_teams_from_xml('resources/FBS_list.xml')
-    update_teams_with_rankings(teams, 'resources/preseason_rankings/rankings_2025.csv')
-    load_results(teams, 'resources/results/results_2025_cleaned.csv')
-    
-    # Generate the breakdown CSV!
-    print("Generating weekly breakdown report...")
-    generate_weekly_breakdown_csv(teams, "weekly_breakdown.csv")
-    
-    print("Data loaded. Initial ELO set. Launching GUI...")
-    start_gui(teams)
-
-if __name__ == "__desktop_app__":
-    desktop_app()
