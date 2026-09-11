@@ -1,214 +1,510 @@
-import xml.etree.ElementTree as ET
-import csv
-from gui import start_gui
-from formula import calculate_delta_elo as dt_elo
+import sys
+import statistics
+from pathlib import Path
+sys.path.insert(0, str(Path(__file__).parent.parent))
+
+from src.database import get_connection, init_db, resolve_conference_name, clean_database_records
+from src.data_fetcher import fetch_staged_data
+from src.formula import calculate_delta_elo as dt_elo, EloParameters, DEFAULT_PARAMS
+
+def rank_to_initial_elo(rank, total_teams, base_elo=1500.0, target_span=10.0):
+    """
+    Converts 1..N team rank to initial ELO rating using Gaussian z-score distribution.
+    Matches formula: p = (N - r + 0.5)/N, z = Phi^-1(p), Elo = R0 + z * sigma.
+    FBS teams start in range [1490.0, 1510.0] (centered at 1500.0).
+    FCS teams start in range [1090.0, 1110.0] (centered at 1100.0).
+    """
+    N = int(total_teams)
+    r = int(rank)
+    if N <= 1:
+        return base_elo
+
+    p = (N - r + 0.5) / float(N)
+    p = max(0.0001, min(0.9999, p))
+    z = statistics.NormalDist(mu=0, sigma=1).inv_cdf(p)
+
+    max_p = (N - 0.5) / float(N)
+    max_z = statistics.NormalDist(mu=0, sigma=1).inv_cdf(max_p)
+    sigma = target_span / max_z if max_z > 0 else 3.7313
+
+    return base_elo + z * sigma
 
 class Team:
-    def __init__(self, team_name, conference, ranking=None, ELO=None):
+    def __init__(self, espn_id, team_name, conference, division="FBS", ranking=None, ELO=None, logo_url=None):
+        self.espn_id = espn_id
         self.team_name = team_name
-        self.conference = conference
+        self.conference = resolve_conference_name(conference)
+        self.division = division
         self.ranking = ranking if ranking is not None else 137
-        self.ELO = ELO if ELO is not None else 1500.0
-        # MUST be curly braces for a dictionary
-        self.schedule = {} 
-        self.weekly_history = {} 
+        self.ELO = ELO if ELO is not None else (1500.0 if division == 'FBS' else 1100.0)
+        self.logo_url = logo_url or ""
+        self.schedule = [] # List of game records in chronological order
+        self.weekly_history = []
 
-    def add_week(self, week, score_t, score_opp, outcome, rank_t, rating_t, rank_opp, rating_opp, opp_name, is_champ=False):
-        self.schedule[week] = {
-            "opponent_name": opp_name,
-            "team": {"score": score_t, "rank": rank_t, "rating": rating_t},
-            "opponent": {"score": score_opp, "rank": rank_opp, "rating": rating_opp},
-            "outcome": outcome,
-            "is_champ": is_champ # Re-added so the GUI can filter championship games
-        }
+    def add_game(self, game_dict):
+        self.schedule.append(game_dict)
 
-def load_teams_from_xml(file_path):
-    tree = ET.parse(file_path)
-    root = tree.getroot()
-    teams = []
-    for conference in root.findall('Conference'): # Matches your XML tag case
-        conf_name = conference.get('name')
-        for team in conference.findall('Team'):
-            team_name = team.text
-            teams.append(Team(team_name, conf_name))
-            #print(f"Loaded team: {team_name} from conference: {conf_name}")
-    return teams
+def ensure_database_populated():
+    init_db()
+    clean_database_records()
+    conn = get_connection()
+    cursor = conn.cursor()
+    cursor.execute("SELECT COUNT(*) as cnt FROM games")
+    row = cursor.fetchone()
+    cnt = row['cnt'] if row else 0
+    conn.close()
 
-def update_teams_with_rankings(teams, csv_file_path):
-    try:
-        with open(csv_file_path, newline='') as csvfile:
-            reader = csv.reader(csvfile, delimiter='\t')
-            next(reader) 
-            for row in reader:
-                ELO = float(row[0].strip())
-                ranking = int(row[1].strip())
-                team_name = row[2].strip()
-                for team in teams:
-                    if team.team_name.strip() == team_name:
-                        team.ELO = ELO
-                        team.ranking = ranking
-                        break
-    except FileNotFoundError:
-        print(f"Warning: {csv_file_path} not found.")
+    if cnt == 0:
+        print("Database empty. Performing initial fast staged pull...")
+        fetch_staged_data(start_year=2021, end_year=2026)
 
-def load_results(teams, csv_file_path):
-    is_champ_period = False
-    with open(csv_file_path, newline='') as csvfile:
-        reader = csv.reader(csvfile)
-        next(reader) 
-        for row in reader:
-            if any('Conference Championships' in str(cell) for cell in row):
-                is_champ_period = True
+def get_available_years():
+    ensure_database_populated()
+    conn = get_connection()
+    cursor = conn.cursor()
+    cursor.execute("SELECT DISTINCT year FROM games WHERE year <= 2026 ORDER BY year ASC")
+    rows = cursor.fetchall()
+    conn.close()
+    years = [r['year'] for r in rows if r['year'] <= 2026]
+    if not years:
+        years = [2021, 2022, 2023, 2024, 2025, 2026]
+    return sorted(list(set(years)))
+
+def load_teams_and_games_for_year(year):
+    ensure_database_populated()
+    conn = get_connection()
+    cursor = conn.cursor()
+
+    # Query only FBS and FCS teams for rankings (filter out TBD or dummy teams)
+    cursor.execute("""
+    SELECT s.espn_id, s.team_name, s.conference, s.division, t.logo_url
+    FROM team_season_status s
+    LEFT JOIN teams t ON s.espn_id = t.espn_id
+    WHERE s.year = ? AND s.division IN ('FBS', 'FCS') AND LOWER(s.team_name) NOT LIKE '%tbd%'
+    """, (year,))
+    status_rows = cursor.fetchall()
+
+    # Fallback to most recent status if year has no status entries
+    if not status_rows:
+        cursor.execute("""
+        SELECT s.espn_id, s.team_name, s.conference, s.division, t.logo_url
+        FROM team_season_status s
+        LEFT JOIN teams t ON s.espn_id = t.espn_id
+        WHERE s.year = (SELECT MAX(year) FROM team_season_status) AND s.division IN ('FBS', 'FCS') AND LOWER(s.team_name) NOT LIKE '%tbd%'
+        """)
+        status_rows = cursor.fetchall()
+
+    teams_dict = {}
+    for r in status_rows:
+        espn_id = r['espn_id']
+        t_name = r['team_name']
+        if not t_name or 'tbd' in t_name.lower():
+            continue
+        teams_dict[espn_id] = Team(
+            espn_id=espn_id,
+            team_name=t_name,
+            conference=resolve_conference_name(r['conference']),
+            division=r['division'] or "FBS",
+            logo_url=r['logo_url']
+        )
+
+    # Query games for year ordered by exact game date and season type
+    cursor.execute("""
+    SELECT game_id, season_type, week, game_date, home_team_id, away_team_id, home_score, away_score, status, is_champ
+    FROM games
+    WHERE year = ? AND status = 'STATUS_FINAL' AND home_score IS NOT NULL AND away_score IS NOT NULL
+    ORDER BY game_date ASC, season_type ASC, week ASC, game_id ASC
+    """, (year,))
+    game_rows = cursor.fetchall()
+    conn.close()
+
+    return teams_dict, game_rows
+
+def calculate_multi_year_elo(end_year, elo_params=None):
+    """
+    Computes ELO sequentially from start year (2021) to end_year.
+    Preseason ELOs for EVERY season are scaled using rank_to_initial_elo:
+    - FBS starts in range [1490.0, 1510.0]
+    - FCS starts in range [1090.0, 1110.0]
+    End-of-season ELOs expand naturally through game updates to [1250, 1750].
+    For future/subsequent years, initial rankings are calculated off prior season Power ELOs.
+    """
+    if elo_params is None:
+        elo_params = DEFAULT_PARAMS
+
+    ensure_database_populated()
+    conn = get_connection()
+    cursor = conn.cursor()
+    cursor.execute("SELECT MIN(year) as min_y FROM games")
+    row = cursor.fetchone()
+    min_y = row['min_y'] if row and row['min_y'] else 2021
+    conn.close()
+
+    start_year = min_y
+    prior_season_power_ranks = {}
+    season_results = {}
+
+    end_year = min(end_year, 2026)
+
+    for yr in range(start_year, end_year + 1):
+        teams_dict, game_rows = load_teams_and_games_for_year(yr)
+        
+        # Separate teams by division for initial scale calculation
+        fbs_teams_list = [t for t in teams_dict.values() if t.division == 'FBS']
+        fcs_teams_list = [t for t in teams_dict.values() if t.division == 'FCS']
+
+        # Determine initial ranks based on prior season Power ELO ranks or default order
+        if prior_season_power_ranks:
+            fbs_teams_list.sort(key=lambda t: prior_season_power_ranks.get(t.espn_id, 999))
+            fcs_teams_list.sort(key=lambda t: prior_season_power_ranks.get(t.espn_id, 999))
+        else:
+            fbs_teams_list.sort(key=lambda t: t.team_name)
+            fcs_teams_list.sort(key=lambda t: t.team_name)
+
+        # Assign initial ELO ratings using Gaussian rank-to-ELO transformation formula
+        n_fbs = len(fbs_teams_list)
+        for r, team in enumerate(fbs_teams_list, start=1):
+            team.ELO = rank_to_initial_elo(r, n_fbs, base_elo=1500.0, target_span=10.0)
+            team.ranking = r
+
+        n_fcs = len(fcs_teams_list)
+        for r, team in enumerate(fcs_teams_list, start=1):
+            team.ELO = rank_to_initial_elo(r, n_fcs, base_elo=1100.0, target_span=10.0)
+            team.ranking = r
+
+        # Snapshot Preseason ELOs & Preseason Ranks
+        sorted_pre = sorted(teams_dict.values(), key=lambda t: t.ELO, reverse=True)
+        preseason_ranks = {}
+        preseason_elos = {}
+        for rank, team in enumerate(sorted_pre, start=1):
+            preseason_ranks[team.team_name] = rank
+            preseason_elos[team.team_name] = team.ELO
+
+        # Chronological Game Processing
+        working_elos = {t.espn_id: t.ELO for t in teams_dict.values()}
+        working_ranks = {t.espn_id: t.ranking for t in teams_dict.values()}
+        
+        # Schedules & Game History
+        weekly_deltas = {t.team_name: [0.0] * 16 for t in teams_dict.values()}
+        weekly_opp_names = {t.team_name: [None] * 16 for t in teams_dict.values()}
+        weekly_opp_elos = {t.team_name: [None] * 16 for t in teams_dict.values()}
+        all_histories = {t.team_name: [] for t in teams_dict.values()}
+
+        def update_current_ranks():
+            sorted_curr = sorted(working_elos.items(), key=lambda x: x[1], reverse=True)
+            for curr_r, (t_id, _) in enumerate(sorted_curr, start=1):
+                working_ranks[t_id] = curr_r
+
+        update_current_ranks()
+
+        # Process games in exact date order
+        for g_idx, g in enumerate(game_rows, start=1):
+            stype = g['season_type']
+            raw_wk = g['week']
+            gdate = g['game_date'][:10] if g['game_date'] else ""
+            h_id = g['home_team_id']
+            a_id = g['away_team_id']
+            hs = g['home_score']
+            ascore = g['away_score']
+            is_champ = bool(g['is_champ'])
+
+            h_team = teams_dict.get(h_id)
+            a_team = teams_dict.get(a_id)
+
+            h_name = h_team.team_name if h_team else None
+            a_name = a_team.team_name if a_team else None
+
+            if not h_name or not a_name:
                 continue
 
-            if not row or len(row) < 7: continue  # Skip malformed rows and ensure we have enough columns
+            e1 = working_elos.get(h_id, 1100.0)
+            e2 = working_elos.get(a_id, 1100.0)
+            r1 = working_ranks.get(h_id, 200)
+            r2 = working_ranks.get(a_id, 200)
 
-            week = int(row[0])
-            t1_n, t1_s, t2_n, t2_s = row[2].strip(), int(row[3]), row[5].strip(), int(row[6])
+            g_type = "Regular"
+            if is_champ:
+                g_type = "Championship"
+            elif stype == 3:
+                g_type = "Postseason / Playoff"
 
-            # Find the teams (returns None if it's an FCS school)
-            team1 = next((t for t in teams if t.team_name == t1_n), None)
-            team2 = next((t for t in teams if t.team_name == t2_n), None)
+            grid_wk = raw_wk if stype == 2 else min(16, 14 + raw_wk)
 
-            # Establish safe defaults for missing opponents (FCS schools)
-            t1_rank = team1.ranking if team1 else 200
-            t1_elo = team1.ELO if team1 else 1300.0
-            
-            t2_rank = team2.ranking if team2 else 200
-            t2_elo = team2.ELO if team2 else 1300.0
+            if 0 < grid_wk <= 16:
+                if h_name in weekly_opp_names and weekly_opp_names[h_name][grid_wk - 1] is None:
+                    weekly_opp_names[h_name][grid_wk - 1] = a_name
+                    weekly_opp_elos[h_name][grid_wk - 1] = e2
 
-            #print(f"Processing Week {week}: {t1_n} vs {t2_n} | Scores: {t1_s}-{t2_s} | Ranks: {t1_rank}-{t2_rank} | ELOs: {t1_elo:.1f}-{t2_elo:.1f}")
+                if a_name in weekly_opp_names and weekly_opp_names[a_name][grid_wk - 1] is None:
+                    weekly_opp_names[a_name][grid_wk - 1] = h_name
+                    weekly_opp_elos[a_name][grid_wk - 1] = e1
 
-            # Add to Team 1's schedule if Team 1 is an FBS team
-            if team1:
-                out1 = "W" if t1_s > t2_s else "L"
-                team1.add_week(week, t1_s, t2_s, out1, t1_rank, t1_elo, t2_rank, t2_elo, t2_n, is_champ_period)
-            
-            # Add to Team 2's schedule if Team 2 is an FBS team
-            if team2:
-                out2 = "W" if t2_s > t1_s else "L"
-                team2.add_week(week, t2_s, t1_s, out2, t2_rank, t2_elo, t1_rank, t1_elo, t1_n, is_champ_period)
+            # Delta ELO Math
+            d1 = dt_elo(e1, e2, r1, r2, "W" if hs > ascore else "L", hs, ascore, grid_wk, elo_params)
+            d2 = dt_elo(e2, e1, r2, r1, "W" if ascore > hs else "L", ascore, hs, grid_wk, elo_params)
 
-def generate_weekly_breakdown_csv(teams, output_filename="weekly_breakdown.csv"):
+            if h_id in working_elos:
+                working_elos[h_id] += d1
+                if 0 < grid_wk <= 16 and h_name in weekly_deltas:
+                    weekly_deltas[h_name][grid_wk - 1] += d1
+            if a_id in working_elos:
+                working_elos[a_id] += d2
+                if 0 < grid_wk <= 16 and a_name in weekly_deltas:
+                    weekly_deltas[a_name][grid_wk - 1] += d2
+
+            update_current_ranks()
+
+            # Record schedule game entries
+            if h_team:
+                out_h = "W" if hs > ascore else "L"
+                h_game_info = {
+                    "game_id": g['game_id'],
+                    "date": gdate,
+                    "week": raw_wk,
+                    "display_week": grid_wk,
+                    "opponent_name": a_name,
+                    "outcome": out_h,
+                    "team_score": hs,
+                    "opp_score": ascore,
+                    "score_str": f"{hs}-{ascore}",
+                    "delta": d1,
+                    "new_elo": working_elos[h_id],
+                    "new_rank": working_ranks[h_id],
+                    "is_champ": is_champ,
+                    "game_type": g_type
+                }
+                h_team.add_game(h_game_info)
+                all_histories[h_name].append(h_game_info)
+
+            if a_team:
+                out_a = "W" if ascore > hs else "L"
+                a_game_info = {
+                    "game_id": g['game_id'],
+                    "date": gdate,
+                    "week": raw_wk,
+                    "display_week": grid_wk,
+                    "opponent_name": h_name,
+                    "outcome": out_a,
+                    "team_score": ascore,
+                    "opp_score": hs,
+                    "score_str": f"{ascore}-{hs}",
+                    "delta": d2,
+                    "new_elo": working_elos[a_id],
+                    "new_rank": working_ranks[a_id],
+                    "is_champ": is_champ,
+                    "game_type": g_type
+                }
+                a_team.add_game(a_game_info)
+                all_histories[a_name].append(a_game_info)
+
+        # Calculate Final ELOs, Ranks, SoS, and Power ELOs
+        sorted_by_elo = sorted(working_elos.items(), key=lambda x: x[1], reverse=True)
+        final_ranks = {}
+        final_elos = {}
+        for r, (t_id, elo_val) in enumerate(sorted_by_elo, start=1):
+            team_obj = teams_dict[t_id]
+            final_ranks[team_obj.team_name] = r
+            final_elos[team_obj.team_name] = elo_val
+            team_obj.ranking = r
+            team_obj.ELO = elo_val
+
+        # Strength of Schedule Calculation
+        sos_values = {}
+        sos_adjs = {}
+        power_elos = {}
+        for espn_id, team in teams_dict.items():
+            name = team.team_name
+            opp_names = [g['opponent_name'] for g in team.schedule if g.get('opponent_name')]
+            played_elos = []
+            for opp in opp_names:
+                if opp and opp in final_elos:
+                    played_elos.append(final_elos[opp])
+                elif opp:
+                    played_elos.append(1100.0)
+
+            sos = sum(played_elos) / len(played_elos) if played_elos else 1100.0
+            sos_adj = (sos - 1500.0) * elo_params.OMEGA
+            power_elo = final_elos[name] + sos_adj
+
+            sos_values[name] = sos
+            sos_adjs[name] = sos_adj
+            power_elos[name] = power_elo
+
+        # Store Power ELO ranks for carryover to next season
+        sorted_power = sorted(power_elos.items(), key=lambda x: x[1], reverse=True)
+        prior_season_power_ranks = {
+            next(t.espn_id for t in teams_dict.values() if t.team_name == name): r
+            for r, (name, _) in enumerate(sorted_power, start=1)
+        }
+
+        # SoS Rankings
+        sorted_sos = sorted(sos_values.items(), key=lambda x: x[1], reverse=True)
+        sos_ranks = {name: r for r, (name, _) in enumerate(sorted_sos, start=1)}
+
+        season_results[yr] = {
+            'teams': list(teams_dict.values()),
+            'teams_by_name': {t.team_name: t for t in teams_dict.values()},
+            'final_elos': final_elos,
+            'final_ranks': final_ranks,
+            'power_elos': power_elos,
+            'sos_ranks': sos_ranks,
+            'sos_values': sos_values,
+            'sos_adjs': sos_adjs,
+            'weekly_deltas': weekly_deltas,
+            'weekly_opponents': weekly_opp_names,
+            'weekly_opp_elos': weekly_opp_elos,
+            'preseason_ranks': preseason_ranks,
+            'preseason_elos': preseason_elos,
+            'all_histories': all_histories
+        }
+
+    return season_results[end_year]
+
+def get_poll_comparison(year, week=1):
     """
-    Simulates the season week-by-week and exports a detailed historical breakdown 
-    to a CSV file.
+    Returns side-by-side poll rankings (AP, Coaches, CFP, ELO) for FBS & FCS.
+    Missing polls default to '-' placeholders.
     """
-    # 1. Initialize Starting Values
-    current_elos = {t.team_name: t.ELO for t in teams}
-    current_ranks = {t.team_name: t.ranking for t in teams}
+    year = min(year, 2026)
+    season_data = calculate_multi_year_elo(year)
+    elo_ranks = season_data['final_ranks']
+
+    conn = get_connection()
+    cursor = conn.cursor()
     
-    # 2. Extract and Group all Games by Week
-    max_week = 0
-    games_by_week = {}
-    seen_games = set()
+    # Query polls for FBS & FCS only
+    cursor.execute("""
+    SELECT p.poll_type, p.rank, s.team_name
+    FROM polls p
+    JOIN team_season_status s ON p.espn_id = s.espn_id AND p.year = s.year
+    WHERE p.year = ? AND p.week = ? AND s.division IN ('FBS', 'FCS') AND LOWER(s.team_name) NOT LIKE '%tbd%'
+    ORDER BY p.rank ASC
+    """, (year, week))
+    poll_rows = cursor.fetchall()
+    conn.close()
+
+    polls_dict = {'AP': {}, 'Coaches': {}, 'CFP': {}}
+    for r in poll_rows:
+        ptype = r['poll_type']
+        if ptype in polls_dict:
+            polls_dict[ptype][r['rank']] = r['team_name']
+
+    # Get ELO Top 25
+    sorted_elo = sorted(elo_ranks.items(), key=lambda x: x[1])[:25]
+    elo_top25 = {rank: name for rank, (name, _) in enumerate(sorted_elo, start=1)}
+
+    comparison_data = []
+    for rank in range(1, 26):
+        ap_team = polls_dict['AP'].get(rank, "-")
+        coaches_team = polls_dict['Coaches'].get(rank, "-")
+        cfp_team = polls_dict['CFP'].get(rank, "-")
+        elo_team = elo_top25.get(rank, "-")
+
+        comparison_data.append({
+            "Rank": rank,
+            "AP Poll": ap_team,
+            "Coaches Poll": coaches_team,
+            "CFP Committee": cfp_team,
+            "ELO Top 25": elo_team
+        })
+
+    return comparison_data
+
+def calculate_playoff_picture(year, ranking_source="ELO"):
+    """
+    Calculates 12-Team College Football Playoff Picture (FBS only).
+    """
+    year = min(year, 2026)
+    season_data = calculate_multi_year_elo(year)
+    teams_by_name = season_data['teams_by_name']
     
-    for team in teams:
-        for week, data in team.schedule.items():
-            max_week = max(max_week, week)
-            opp_name = data["opponent_name"]
-            game_id = tuple(sorted((team.team_name, opp_name)) + [week])
-            
-            if game_id not in seen_games:
-                games_by_week.setdefault(week, []).append({
-                    't1': team.team_name, 't2': opp_name,
-                    's1': data["team"]["score"], 's2': data["opponent"]["score"]
-                })
-                seen_games.add(game_id)
-                
-    # 3. Setup the CSV Writer
-    with open(output_filename, mode='w', newline='', encoding='utf-8') as f:
-        writer = csv.writer(f)
-        # Write the Header
-        writer.writerow(["Week", "Team", "Opponent", "Score", "Old Rank", "New Rank", "Old ELO", "New ELO"])
+    # Determine team rankings source
+    rankings_map = {}
+    if ranking_source == "ELO":
+        rankings_map = season_data['final_ranks']
+    elif ranking_source in ["AP", "Coaches", "CFP"]:
+        conn = get_connection()
+        cursor = conn.cursor()
+        cursor.execute("""
+        SELECT p.rank, s.team_name
+        FROM polls p
+        JOIN team_season_status s ON p.espn_id = s.espn_id AND p.year = s.year
+        WHERE p.year = ? AND p.poll_type = ? AND p.week = (SELECT MAX(week) FROM polls WHERE year=? AND poll_type=?)
+          AND s.division = 'FBS' AND LOWER(s.team_name) NOT LIKE '%tbd%'
+        """, (year, ranking_source, year, ranking_source))
+        rows = cursor.fetchall()
+        conn.close()
+        for r in rows:
+            rankings_map[r['team_name']] = r['rank']
         
-        # 4. Process Every Week
-        for week in range(1, max_week + 1):
-            week_games = games_by_week.get(week, [])
-            
-            # Snapshot the "Old" state before games are played
-            old_elos = current_elos.copy()
-            old_ranks = current_ranks.copy()
-            
-            played_this_week = {} # Tracks who played whom
-            
-            # --- CALCULATE DELTAS ---
-            for g in week_games:
-                t1, t2 = g['t1'], g['t2']
-                s1, s2 = g['s1'], g['s2']
-                
-                t1_in = t1 in current_elos
-                t2_in = t2 in current_elos
-                
-                # Fetch dynamically (Default to 1300/200 for FCS)
-                e1 = current_elos[t1] if t1_in else 1300.0
-                e2 = current_elos[t2] if t2_in else 1300.0
-                r1 = current_ranks[t1] if t1_in else 200
-                r2 = current_ranks[t2] if t2_in else 200
-                
-                d1 = dt_elo(e1, e2, r1, r2, "W" if s1 > s2 else "L", s1, s2, week)
-                d2 = dt_elo(e2, e1, r2, r1, "W" if s2 > s1 else "L", s2, s1, week)
-                
-                if t1_in: current_elos[t1] += d1
-                if t2_in: current_elos[t2] += d2
-                
-                # Record match details for the breakdown
-                played_this_week[t1] = {"opp": t2, "score": f"{s1}-{s2}"}
-                played_this_week[t2] = {"opp": t1, "score": f"{s2}-{s1}"}
-                
-            # --- DETERMINE "NEW" RANKS ---
-            sorted_new = sorted(current_elos.items(), key=lambda x: x[1], reverse=True)
-            current_ranks = {name: rank for rank, (name, _) in enumerate(sorted_new, start=1)}
-            
-            # --- WRITE ROWS TO CSV (Alphabetical Order) ---
-            for team in sorted(teams, key=lambda t: t.team_name):
-                t_name = team.team_name
-                
-                # Check if they had a game or a BYE
-                if t_name in played_this_week:
-                    opp = played_this_week[t_name]["opp"]
-                    score = played_this_week[t_name]["score"]
-                else:
-                    opp = "BYE"
-                    score = "N/A"
-                    
-                # [Week, Team, Opp, Score, Old Rank, New Rank, Old ELO, New ELO]
-                writer.writerow([
-                    week,
-                    t_name,
-                    opp,
-                    score,
-                    old_ranks[t_name],
-                    current_ranks[t_name],
-                    f"{old_elos[t_name]:.3f}",
-                    f"{current_elos[t_name]:.3f}"
-                ])
-                
-    print(f"Success: Weekly breakdown generated at '{output_filename}'")
+        # Fill missing with ELO rank
+        for tname, elo_r in season_data['final_ranks'].items():
+            if tname not in rankings_map:
+                rankings_map[tname] = elo_r + 50
 
-# --- At the bottom of main.py ---
-def load_all_data():
-    teams = load_teams_from_xml('resources/FBS_list.xml')
-    update_teams_with_rankings(teams, 'resources/preseason_rankings/rankings_2025.csv')
-    load_results(teams, 'resources/results/results_2025_cleaned.csv')
-    return teams
+    # Find conference champions among FBS teams
+    conf_teams = {}
+    for tname, team in teams_by_name.items():
+        if team.division == 'FBS' and 'tbd' not in tname.lower():
+            conf_teams.setdefault(team.conference, []).append(team)
+
+    conf_champs = []
+    for conf, t_list in conf_teams.items():
+        if conf in ["IND", "Independent", "None", "Conf_None"]:
+            continue
+        # Highest ranked team in conference is designated champ
+        sorted_conf = sorted(t_list, key=lambda t: rankings_map.get(t.team_name, 999))
+        if sorted_conf:
+            conf_champs.append(sorted_conf[0])
+
+    # Rank conference champions
+    sorted_champs = sorted(conf_champs, key=lambda t: rankings_map.get(t.team_name, 999))
+    top_5_champs = sorted_champs[:5]
+
+    # Top 4 champs get seeds 1-4
+    seeds = {}
+    byes = []
+    for seed, champ in enumerate(top_5_champs[:4], start=1):
+        seeds[seed] = champ.team_name
+        byes.append(champ.team_name)
+
+    # Remaining candidates for seeds 5-12 (5th champ + remaining top teams)
+    remaining_teams = [t for t in teams_by_name.values() if t.division == 'FBS' and t.team_name not in byes and 'tbd' not in t.team_name.lower()]
+    sorted_remaining = sorted(remaining_teams, key=lambda t: rankings_map.get(t.team_name, 999))
+
+    for seed, team in enumerate(sorted_remaining[:8], start=5):
+        seeds[seed] = team.team_name
+
+    playoff_table = []
+    for seed in range(1, 13):
+        t_name = seeds.get(seed, f"Seed_{seed}")
+        team_obj = teams_by_name.get(t_name)
+        conf = team_obj.conference if team_obj else "N/A"
+        rank_val = rankings_map.get(t_name, "N/A")
+        status = "First-Round BYE (Host Quarterfinal)" if seed <= 4 else ("Home Game (Seeds 5-8)" if seed <= 8 else "Road Game (Seeds 9-12)")
+        
+        playoff_table.append({
+            "Seed": seed,
+            "Team": t_name,
+            "Conference": conf,
+            "Poll Rank": str(rank_val),
+            "Playoff Status": status
+        })
+
+    matchups = [
+        {"Matchup": "First Round", "Game": f"#8 {seeds.get(8, '')} vs #9 {seeds.get(9, '')}", "Location": f"At #8 {seeds.get(8, '')}"},
+        {"Matchup": "First Round", "Game": f"#5 {seeds.get(5, '')} vs #12 {seeds.get(12, '')}", "Location": f"At #5 {seeds.get(5, '')}"},
+        {"Matchup": "First Round", "Game": f"#6 {seeds.get(6, '')} vs #11 {seeds.get(11, '')}", "Location": f"At #6 {seeds.get(6, '')}"},
+        {"Matchup": "First Round", "Game": f"#7 {seeds.get(7, '')} vs #10 {seeds.get(10, '')}", "Location": f"At #7 {seeds.get(7, '')}"},
+        {"Matchup": "Quarterfinal", "Game": f"#1 {seeds.get(1, '')} vs Winner (#8/#9)", "Location": "Neutral Bowl Site"},
+        {"Matchup": "Quarterfinal", "Game": f"#4 {seeds.get(4, '')} vs Winner (#5/#12)", "Location": "Neutral Bowl Site"},
+        {"Matchup": "Quarterfinal", "Game": f"#3 {seeds.get(3, '')} vs Winner (#6/#11)", "Location": "Neutral Bowl Site"},
+        {"Matchup": "Quarterfinal", "Game": f"#2 {seeds.get(2, '')} vs Winner (#7/#10)", "Location": "Neutral Bowl Site"}
+    ]
+
+    return playoff_table, matchups
 
 if __name__ == "__main__":
-    # We remove start_gui(teams) here so it doesn't open the desktop app when imported
-    teams = load_all_data()
-    print("Data loaded successfully.")
-
-def desktop_app():
-    teams = load_teams_from_xml('resources/FBS_list.xml')
-    update_teams_with_rankings(teams, 'resources/preseason_rankings/rankings_2025.csv')
-    load_results(teams, 'resources/results/results_2025_cleaned.csv')
-    
-    # Generate the breakdown CSV!
-    print("Generating weekly breakdown report...")
-    generate_weekly_breakdown_csv(teams, "weekly_breakdown.csv")
-    
-    print("Data loaded. Initial ELO set. Launching GUI...")
-    start_gui(teams)
-
-if __name__ == "__desktop_app__":
-    desktop_app()
+    from src.gui import start_gui
+    print("Launching NCAA CFB System Local Desktop GUI...")
+    start_gui()

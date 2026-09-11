@@ -1,187 +1,343 @@
+import sys
+from pathlib import Path
+sys.path.insert(0, str(Path(__file__).parent.parent))
+
 import streamlit as st
 import pandas as pd
-from main import load_all_data
-from formula import calculate_delta_elo as dt_elo
+from datetime import datetime
 
-st.set_page_config(page_title="NCAA Advanced Team System", layout="wide")
+from src.main import (
+    get_available_years, calculate_multi_year_elo,
+    get_poll_comparison, calculate_playoff_picture
+)
+from src.data_fetcher import update_latest_data, fetch_full_historical_data
 
-# Cache the data loading so it doesn't reload the CSVs on every button click
-@st.cache_data
-def get_data():
-    return load_all_data()
+st.set_page_config(page_title="NCAA Advanced Team System", layout="wide", initial_sidebar_state="expanded")
 
-teams = get_data()
+# Custom CSS for rich aesthetics and hover tooltips
+st.markdown("""
+<style>
+    .main-header {
+        font-size: 2.2rem;
+        font-weight: 700;
+        background: linear-gradient(90deg, #1E3C72 0%, #2A5298 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-bottom: 0.5rem;
+    }
+    .sub-header {
+        font-size: 1.0rem;
+        color: #6c757d;
+        margin-bottom: 1.5rem;
+    }
+    .metric-card {
+        background-color: #f8f9fa;
+        border-radius: 8px;
+        padding: 15px;
+        border-left: 4px solid #1E3C72;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+    .tooltip-box {
+        position: relative;
+        display: inline-block;
+        border-bottom: 1px dashed #666;
+        cursor: help;
+    }
+</style>
+""", unsafe_allow_html=True)
 
-# --- Shared Calculation Logic (Ported from your gui.py) ---
-@st.cache_data
-def calculate_season_data(_teams):
-    working_elos = {t.team_name: t.ELO for t in _teams}
-    working_ranks = {t.team_name: t.ranking for t in _teams}
-    weekly_deltas = {t.team_name: [0.0] * 16 for t in _teams}
-    weekly_opp_names = {t.team_name: [None] * 16 for t in _teams}
-    
-    # NEW: A dedicated dictionary to hold our histories so Streamlit doesn't erase them
-    all_histories = {t.team_name: {} for t in _teams}
-    
-    seen_games = set()
-    games_by_week = {}
-    
-    for team in _teams:
-        for week, data in team.schedule.items():
-            opp_name = data["opponent_name"]
-            game_id = tuple(sorted((team.team_name, opp_name)) + [week])
-            if game_id not in seen_games:
-                games_by_week.setdefault(week, []).append({
-                    'week': week, 't1': team.team_name, 't2': opp_name,
-                    's1': data["team"]["score"], 's2': data["opponent"]["score"]
-                })
-                seen_games.add(game_id)
-                
-    for week in sorted(games_by_week.keys()):
-        sorted_by_elo = sorted(working_elos.items(), key=lambda item: item[1], reverse=True)
-        for current_rank, (team_name, _) in enumerate(sorted_by_elo, start=1):
-            working_ranks[team_name] = current_rank
-        
-        current_week_deltas = {}
-        for g in games_by_week[week]:
-            t1_name, t2_name = g['t1'], g['t2']
-            t1_in = t1_name in working_elos
-            t2_in = t2_name in working_elos
+st.markdown('<div class="main-header">🏈 NCAA College Football Advanced ELO System</div>', unsafe_allow_html=True)
 
-            e1 = working_elos[t1_name] if t1_in else 1300.0
-            e2 = working_elos[t2_name] if t2_in else 1300.0
-            r1 = working_ranks[t1_name] if t1_in else 200
-            r2 = working_ranks[t2_name] if t2_in else 200
-            
-            if t1_in and 0 < g['week'] <= 16: weekly_opp_names[t1_name][g['week']-1] = t2_name
-            if t2_in and 0 < g['week'] <= 16: weekly_opp_names[t2_name][g['week']-1] = t1_name
+# Top Bar / Controls
+years_list = get_available_years()
+current_yr = datetime.now().year
+default_idx = years_list.index(current_yr) if current_yr in years_list else len(years_list) - 1
 
-            d1 = dt_elo(e1, e2, r1, r2, "W" if g['s1'] > g['s2'] else "L", g['s1'], g['s2'], g['week'])
-            d2 = dt_elo(e2, e1, r2, r1, "W" if g['s2'] > g['s1'] else "L", g['s2'], g['s1'], g['week'])
-            
-            if t1_in:
-                working_elos[t1_name] += d1
-                current_week_deltas[t1_name] = current_week_deltas.get(t1_name, 0.0) + d1
-                if 0 < g['week'] <= 16: weekly_deltas[t1_name][g['week']-1] += d1
-            if t2_in:
-                working_elos[t2_name] += d2
-                current_week_deltas[t2_name] = current_week_deltas.get(t2_name, 0.0) + d2
-                if 0 < g['week'] <= 16: weekly_deltas[t2_name][g['week']-1] += d2
+col_year, col_sync, col_backfill = st.columns([2, 1.5, 2])
 
-        sorted_by_elo = sorted(working_elos.items(), key=lambda item: item[1], reverse=True)
-        end_ranks = {name: rank for rank, (name, _) in enumerate(sorted_by_elo, start=1)}
+with col_year:
+    selected_year = st.selectbox("📅 Select Season Year", options=years_list, index=default_idx)
 
-        # CHANGED: Save to our dictionary instead of the team object directly
-        for t_name, total_delta in current_week_deltas.items():
-            all_histories[t_name][week] = {'delta': total_delta, 'new_elo': working_elos[t_name], 'new_rank': end_ranks[t_name]}
+with col_sync:
+    st.write("")
+    st.write("")
+    if st.button("🔄 Sync Latest Data"):
+        with st.spinner("Updating recent scores and games..."):
+            update_latest_data()
+            st.cache_data.clear()
+            st.success("Sync completed!")
+            st.rerun()
 
-    sorted_by_elo = sorted(working_elos.items(), key=lambda item: item[1], reverse=True)
-    for final_rank, (team_name, _) in enumerate(sorted_by_elo, start=1):
-        working_ranks[team_name] = final_rank
-        
-    # CHANGED: Return our new all_histories dictionary
-    return working_elos, working_ranks, weekly_deltas, weekly_opp_names, all_histories
+with col_backfill:
+    st.write("")
+    st.write("")
+    if st.button("📥 Run Full Historical Backfill"):
+        with st.spinner("Backfilling 2001-present historical data across all divisions..."):
+            fetch_full_historical_data()
+            st.cache_data.clear()
+            st.success("Historical backfill completed!")
+            st.rerun()
 
-# Run Calculations (Now unpacking all_histories)
-final_elos, final_ranks, weekly_deltas, weekly_opp_names, all_histories = calculate_season_data(teams)
+# Cache calculation per year
+@st.cache_data(show_spinner="Calculating ELO rankings & Strength of Schedule...")
+def get_season_data(year):
+    return calculate_multi_year_elo(year)
 
-st.title("NCAA Advanced Team System")
+season_data = get_season_data(selected_year)
+teams = season_data['teams']
+final_elos = season_data['final_elos']
+final_ranks = season_data['final_ranks']
+power_elos = season_data['power_elos']
+sos_ranks = season_data['sos_ranks']
+sos_values = season_data['sos_values']
+sos_adjs = season_data['sos_adjs']
+weekly_deltas = season_data['weekly_deltas']
+weekly_opps = season_data['weekly_opponents']
+weekly_opp_elos = season_data['weekly_opp_elos']
+preseason_ranks = season_data['preseason_ranks']
+all_histories = season_data['all_histories']
 
-# Create Web Tabs
-tab1, tab2, tab3, tab4, tab5 = st.tabs(["Team Viewer", "Standings", "Rankings", "Strength of Schedule", "Schedule Detail Search"])
+# Create 8 Web Tabs
+tab1, tab2, tab3, tab4, tab5, tab6, tab7, tab8 = st.tabs([
+    "🏆 Top 25 (Home)",
+    "📊 Full Power ELO Rankings",
+    "💪 Strength of Schedule",
+    "🔍 Team Schedule Detail",
+    "⚖️ Poll Comparison",
+    "🏟️ Playoff Picture",
+    "📖 About & Formulas",
+    "📜 Legal & Disclaimers"
+])
 
+# TAB 1: HOME (TOP 25)
 with tab1:
-    st.subheader("Team Viewer")
-    search = st.text_input("Search Team or Conference:")
-    viewer_data = [{"Rank": t.ranking or "N/A", "Team": t.team_name, "Conference": t.conference, "Initial ELO": round(t.ELO, 3)} for t in teams]
-    df_viewer = pd.DataFrame(viewer_data)
-    if search:
-        df_viewer = df_viewer[df_viewer['Team'].str.contains(search, case=False) | df_viewer['Conference'].str.contains(search, case=False)]
-    st.dataframe(df_viewer, width='stretch', hide_index=True)
-
-with tab2:
-    st.subheader("Standings")
-    confs = sorted(list(set(t.conference for t in teams)))
-    selected_conf = st.selectbox("Select Conference", confs)
+    st.subheader(f"Top 25 ELO Rankings - {selected_year} Season")
     
-    standings_data = []
-    for t in [team for team in teams if team.conference == selected_conf]:
-        w, l = 0, 0
-        for week, data in t.schedule.items():
-            if not data.get("is_champ", False):
-                if data["outcome"] == 'W': w += 1
-                elif data["outcome"] == 'L': l += 1
-        pct = w / (w + l) if (w + l) > 0 else 0
-        standings_data.append({"Team": t.team_name, "W": w, "L": l, "Pct": round(pct, 3)})
+    top25_data = []
+    fbs_teams = [t for t in teams if t.division == 'FBS']
+    sorted_fbs = sorted(fbs_teams, key=lambda t: final_elos.get(t.team_name, 0.0), reverse=True)[:25]
     
-    st.dataframe(pd.DataFrame(standings_data).sort_values(by=["Pct", "W"], ascending=[False, False]), width='stretch', hide_index=True)
-
-with tab3:
-    st.subheader("Rankings")
-    rank_data = []
-    for t in teams:
-        row = {"Team": t.team_name, "Rank": final_ranks[t.team_name], "ELO": round(final_elos[t.team_name], 3)}
-        for i in range(16):
-            val = weekly_deltas[t.team_name][i]
-            row[f"W{i+1}"] = f"{val:+.1f}" if val != 0 else ""
-        rank_data.append(row)
-    
-    st.dataframe(pd.DataFrame(rank_data).sort_values(by="ELO", ascending=False), width='stretch', hide_index=True)
-
-with tab4:
-    st.subheader("Strength of Schedule")
-    sos_data = []
-    for t in teams:
+    for r, t in enumerate(sorted_fbs, start=1):
         name = t.team_name
-        opp_final_elos = [final_elos.get(opp_name, 1300.0) if opp_name else None for opp_name in weekly_opp_names[name]]
-        played_elos = [elo for elo in opp_final_elos if elo is not None]
-        
-        sos = sum(played_elos) / len(played_elos) if played_elos else 1300.0
-        sos_adj = (sos - 1500) * 0.5
-        power_elo = final_elos[name] + sos_adj
-        
-        row = {"Team": name, "SoS": round(sos, 2), "Wk17 ELO": round(final_elos[name], 2), "SoS Adj": round(sos_adj, 2), "Power ELO": round(power_elo, 2)}
-        
-        # FIXED: Ensure everything in the W1-W16 columns is a string
-        for i, elo in enumerate(opp_final_elos):
-            row[f"W{i+1}"] = f"{elo:.1f}" if elo is not None else ""
-            
-        sos_data.append(row)
-        
-    df_sos = pd.DataFrame(sos_data)
-    df_sos['SoS Rank'] = df_sos['SoS'].rank(ascending=False).astype(int)
-    # Reorder columns to put SoS Rank next to SoS
-    cols = ['Team', 'SoS', 'SoS Rank', 'Wk17 ELO', 'SoS Adj', 'Power ELO'] + [f'W{i}' for i in range(1, 17)]
-    st.dataframe(df_sos[cols].sort_values(by="Power ELO", ascending=False), width='stretch', hide_index=True)
+        wins, losses = 0, 0
+        for gdata in t.schedule:
+            if gdata['outcome'] == 'W': wins += 1
+            elif gdata['outcome'] == 'L': losses += 1
 
-with tab5:
-    st.subheader("Team Schedule Detail")
-    
-    team_list = sorted([t.team_name for t in teams])
-    selected_team = st.selectbox("Select a Team to view their historical schedule:", team_list)
-    
-    team = next(t for t in teams if t.team_name == selected_team)
-    
-    st.write(f"**Preseason Ranking/ELO:** {team.ranking or 200} | {team.ELO:.3f}")
-    
-    sched_data = []
-    
-    # NEW: Fetch the actual history from our returned dictionary
-    team_history = all_histories.get(selected_team, {})
-    
-    for week in sorted(team.schedule.keys()):
-        data = team.schedule[week]
-        history = team_history.get(week, {})
-        sched_data.append({
-            "Week": week,
-            "Opponent": data['opponent_name'],
-            "Outcome": data['outcome'],
-            "Score": f"{data['team']['score']}-{data['opponent']['score']}",
-            
-            # Formatted as strings to appease PyArrow!
-            "Delta ELO": f"{history.get('delta', 0.0):+.3f}" if history else "-",
-            "New ELO": f"{history.get('new_elo', 0.0):.3f}" if history else "-",
-            "New Rank": str(history.get('new_rank', "-"))
+        pre_r = preseason_ranks.get(name, "N/A")
+        top25_data.append({
+            "Rank": r,
+            "Team": name,
+            "Conference": t.conference,
+            "Record": f"{wins}-{losses}",
+            "Current ELO": round(final_elos.get(name, 1500.0), 2),
+            "Power ELO": round(power_elos.get(name, 1500.0), 2),
+            "Preseason Rank": pre_r
         })
+
+    df_top25 = pd.DataFrame(top25_data)
+    st.dataframe(df_top25, width="stretch", hide_index=True)
+
+# TAB 2: FULL POWER ELO RANKINGS
+with tab2:
+    st.subheader(f"Full Power ELO Rankings - All Teams ({selected_year})")
+    
+    c1, c2, c3 = st.columns([1, 1, 2])
+    with c1:
+        div_filter = st.selectbox("Filter Division", ["All", "FBS", "FCS"])
+    with c2:
+        all_confs = ["All"] + sorted(list(set(t.conference for t in teams)))
+        conf_filter = st.selectbox("Filter Conference", all_confs)
+    with c3:
+        search_query = st.text_input("Search Team Name")
+
+    full_rank_data = []
+    for t in teams:
+        if div_filter != "All" and t.division != div_filter:
+            continue
+        if conf_filter != "All" and t.conference != conf_filter:
+            continue
+        if search_query and search_query.lower() not in t.team_name.lower():
+            continue
+
+        name = t.team_name
+        wins, losses = 0, 0
+        for gdata in t.schedule:
+            if gdata['outcome'] == 'W': wins += 1
+            elif gdata['outcome'] == 'L': losses += 1
+
+        full_rank_data.append({
+            "Power Rank": 0, # Will set after sort
+            "Team": name,
+            "Division": t.division,
+            "Conference": t.conference,
+            "W-L": f"{wins}-{losses}",
+            "Power ELO": round(power_elos.get(name, 1500.0), 2),
+            "End ELO": round(final_elos.get(name, 1500.0), 2),
+            "SoS Rating": round(sos_values.get(name, 1300.0), 2),
+            "SoS Adj": round(sos_adjs.get(name, 0.0), 2),
+            "Preseason Rank": preseason_ranks.get(name, "N/A")
+        })
+
+    df_full = pd.DataFrame(full_rank_data).sort_values(by="Power ELO", ascending=False)
+    df_full["Power Rank"] = range(1, len(df_full) + 1)
+    
+    st.dataframe(df_full, width="stretch", hide_index=True)
+
+# TAB 3: STRENGTH OF SCHEDULE
+with tab3:
+    st.subheader(f"Strength of Schedule Metrics & Opponent ELO Details ({selected_year})")
+    
+    sos_table_data = []
+    for t in teams:
+        if t.division != 'FBS': continue
+        name = t.team_name
         
-    st.dataframe(pd.DataFrame(sched_data), width='stretch', hide_index=True)
+        row = {
+            "Team": name,
+            "SoS Rank": sos_ranks.get(name, 999),
+            "SoS Rating": round(sos_values.get(name, 1300.0), 2),
+            "Wk17 ELO": round(final_elos.get(name, 1500.0), 2),
+            "SoS Adj": round(sos_adjs.get(name, 0.0), 2),
+            "Power ELO": round(power_elos.get(name, 1500.0), 2)
+        }
+
+        # Add columns W1..W16 with opponent name and ELO
+        opps = weekly_opps.get(name, [None]*16)
+        opp_elos = weekly_opp_elos.get(name, [None]*16)
+
+        for i in range(16):
+            opp = opps[i] if i < len(opps) else None
+            o_elo = opp_elos[i] if i < len(opp_elos) else None
+
+            if opp and o_elo is not None:
+                # Rank lookup for opponent
+                opp_r = final_ranks.get(opp, "N/A")
+                row[f"W{i+1}"] = f"{opp} (#{opp_r} | {o_elo:.1f})"
+            elif opp:
+                row[f"W{i+1}"] = f"{opp} (1300.0)"
+            else:
+                row[f"W{i+1}"] = "BYE"
+
+        sos_table_data.append(row)
+
+    df_sos = pd.DataFrame(sos_table_data).sort_values(by="Power ELO", ascending=False)
+    cols = ["Team", "SoS Rank", "SoS Rating", "Wk17 ELO", "SoS Adj", "Power ELO"] + [f"W{i}" for i in range(1, 17)]
+    
+    st.caption("💡 Hover over or expand table cells under W1-W16 to inspect opponent names, game ELO ratings, and opponent rankings.")
+    st.dataframe(df_sos[cols], width="stretch", hide_index=True)
+
+# TAB 4: TEAM SCHEDULE DETAIL
+with tab4:
+    st.subheader(f"Team Schedule Detail Search ({selected_year})")
+    
+    team_names = sorted([t.team_name for t in teams if 'tbd' not in t.team_name.lower()])
+    if team_names:
+        sel_team_name = st.selectbox("Select Team", team_names)
+        sel_team = next((t for t in teams if t.team_name == sel_team_name), None)
+        
+        if sel_team:
+            pre_rank = preseason_ranks.get(sel_team_name, "N/A")
+            pre_elo = season_data['preseason_elos'].get(sel_team_name, 1500.0 if sel_team.division == 'FBS' else 1100.0)
+
+            st.info(f"**{sel_team_name}** | Conference: **{sel_team.conference}** | Division: **{sel_team.division}** | Preseason Rank: **#{pre_rank}** | Preseason ELO: **{pre_elo:.2f}** | End ELO: **{final_elos.get(sel_team_name, 1500.0):.2f}**")
+
+            sched_rows = []
+            for gdata in sel_team.schedule:
+                delta_val = gdata.get('delta', 0.0)
+                delta_str = f"{delta_val:+.3f}"
+                new_elo_str = f"{gdata.get('new_elo', 0.0):.3f}"
+                new_rank_str = str(gdata.get('new_rank', "-"))
+
+                sched_rows.append({
+                    "Date": gdata.get('date', ''),
+                    "Week": gdata.get('display_week', gdata.get('week', '')),
+                    "Opponent": gdata['opponent_name'],
+                    "Outcome": gdata['outcome'],
+                    "Score": gdata.get('score_str', f"{gdata.get('team_score', '')}-{gdata.get('opp_score', '')}"),
+                    "Delta ELO": delta_str,
+                    "New ELO": new_elo_str,
+                    "New Rank": new_rank_str,
+                    "Game Type": gdata.get('game_type', 'Regular')
+                })
+
+            if sched_rows:
+                st.dataframe(pd.DataFrame(sched_rows), width="stretch", hide_index=True)
+            else:
+                st.write("No played games recorded for this team in this season.")
+
+# TAB 5: POLL COMPARISON
+with tab5:
+    st.subheader(f"Side-by-Side Poll Comparison Top 25 ({selected_year})")
+    
+    poll_week = st.slider("Select Week", min_value=1, max_value=16, value=16)
+    poll_comp_data = get_poll_comparison(selected_year, week=poll_week)
+
+    st.caption("Note: If a poll (such as CFP Committee rankings prior to November) was unreleased for the selected week, '-' is displayed.")
+    st.dataframe(pd.DataFrame(poll_comp_data), width="stretch", hide_index=True)
+
+# TAB 6: PLAYOFF PICTURE
+with tab6:
+    st.subheader(f"12-Team College Football Playoff Picture ({selected_year})")
+    
+    ranking_source = st.selectbox("Select Playoff Ranking Metric Source", ["ELO", "AP", "Coaches", "CFP"])
+    playoff_table, matchups = calculate_playoff_picture(selected_year, ranking_source)
+
+    st.markdown("### 🥇 Official 12-Team Playoff Seeding")
+    st.caption("Rules: 5 highest-ranked conference champions receive automatic bids. Top 4 conference champions receive Top 4 Seeds and 1st-Round BYEs.")
+    st.dataframe(pd.DataFrame(playoff_table), width="stretch", hide_index=True)
+
+    st.markdown("### 🏆 Playoff Bracket Matchups")
+    st.dataframe(pd.DataFrame(matchups), width="stretch", hide_index=True)
+
+# TAB 7: ABOUT & FORMULAS
+with tab7:
+    st.subheader("About the CFB Advanced ELO System & Mathematical Formula")
+    
+    st.markdown("""
+    ### Purpose
+    This system models NCAA College Football team strength using an advanced, non-linear ELO rating algorithm. It dynamically accounts for opponent strength, margin of victory, upset magnitude, schedule difficulty, and year-over-year rating carryover.
+
+    ---
+
+    ### Core ELO Formula & Calculations
+
+    #### 1. Effective K-Factor ($K_{eff}$)
+    Calculates week-by-week decay factor for ratings volatility:
+    $$K_{eff} = \\max\\left(K_{min}, K_0 \\times 0.95^{\\text{Week} - 1}\\right)$$
+
+    #### 2. Expected Outcome ($E_t$)
+    Standard logistic expected win probability:
+    $$E_t = \\frac{1}{1 + 10^{\\frac{\\text{ELO}_{opp} - \\text{ELO}_t}{C}}}$$
+    *(where $C = 400$)*
+
+    #### 3. Margin of Victory Factor ($m$)
+    Logarithmic dampening factor for point differentials:
+    $$m = \\ln\\left(1 + \\frac{|\\text{Score}_t - \\text{Score}_{opp}|}{C}\\right)$$
+
+    #### 4. Upset Boost ($U$)
+    Non-linear reward multiplier for lower-ranked teams defeating higher-ranked opponents:
+    $$U = \\min\\left(1 + \\beta \\left(\\frac{|\\text{Rank}_t - \\text{Rank}_{opp}|}{N - 1}\\right)^\\rho, 1 + \\beta_{max}\\right)$$
+
+    #### 5. Rating Delta ($\Delta ELO$)
+    $$\Delta ELO = K_{eff} \\times (S_t - E_t) \\times (1 + \\gamma \\cdot m) \\times U$$
+
+    #### 6. Strength of Schedule ($SoS$) & Power ELO
+    $$SoS = \\frac{1}{n} \\sum_{i=1}^{n} \\text{ELO}_{opp, i}$$
+    $$SoS_{Adj} = (SoS - 1500) \\times \\omega$$
+    $$\\text{Power ELO} = \\text{ELO}_{end} + SoS_{Adj}$$
+    """)
+
+# TAB 8: LEGAL & DISCLAIMERS
+with tab8:
+    st.subheader("Legal Disclaimers & Usage Policy")
+    st.markdown("""
+    > [!NOTE]
+    > **Experimental Non-Commercial Use Only**
+    > 
+    > This application and its underlying rating calculations are strictly for experimental, educational, and analytical purposes. 
+    > 
+    > - **Free to Use**: This tool is provided free of charge under an open experimental license.
+    > - **Data Attribution**: Schedule, score, team, and poll ranking data are sourced via ESPN's public endpoints. All team names, logos, and trademarks belong to their respective university rights holders and NCAA.
+    > - **No Commercial Warranty**: Provided "as is" without warranty of any kind.
+    """)
