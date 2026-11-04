@@ -1,19 +1,5 @@
 <?xml version="1.0" ?>
 <NCAA_FBS_Teams>
-  <Conference name="30">
-    <Team>East Texas A&amp;M Lions</Team>
-    <Team>Houston Christian Huskies</Team>
-    <Team>Incarnate Word Cardinals</Team>
-    <Team>Lamar Cardinals</Team>
-    <Team>McNeese Cowboys</Team>
-    <Team>Nicholls Colonels</Team>
-    <Team>Northwestern State Demons</Team>
-    <Team>SE Louisiana Lions</Team>
-    <Team>UT Rio Grande Valley Vaqueros</Team>
-  </Conference>
-  <Conference name="32">
-    <Team>Merrimack Warriors</Team>
-  </Conference>
   <Conference name="AAC">
     <Team>Army Black Knights</Team>
     <Team>Charlotte 49ers</Team>
@@ -130,20 +116,9 @@
     <Team>Western Kentucky Hilltoppers</Team>
   </Conference>
   <Conference name="IND">
-    <Team>App State Mountaineers</Team>
-    <Team>Arkansas State Red Wolves</Team>
-    <Team>Coastal Carolina Chanticleers</Team>
-    <Team>Georgia Southern Eagles</Team>
-    <Team>Georgia State Panthers</Team>
-    <Team>James Madison Dukes</Team>
-    <Team>Louisiana Ragin' Cajuns</Team>
-    <Team>Louisiana Tech Bulldogs</Team>
-    <Team>Marshall Thundering Herd</Team>
-    <Team>Old Dominion Monarchs</Team>
-    <Team>South Alabama Jaguars</Team>
-    <Team>Southern Miss Golden Eagles</Team>
-    <Team>Troy Trojans</Team>
-    <Team>UL Monroe Warhawks</Team>
+    <Team>Merrimack Warriors</Team>
+    <Team>Notre Dame Fighting Irish</Team>
+    <Team>UConn Huskies</Team>
   </Conference>
   <Conference name="MAC">
     <Team>Akron Zips</Team>
@@ -230,8 +205,20 @@
     <Team>William &amp; Mary Tribe</Team>
   </Conference>
   <Conference name="SBC">
-    <Team>Notre Dame Fighting Irish</Team>
-    <Team>UConn Huskies</Team>
+    <Team>App State Mountaineers</Team>
+    <Team>Arkansas State Red Wolves</Team>
+    <Team>Coastal Carolina Chanticleers</Team>
+    <Team>Georgia Southern Eagles</Team>
+    <Team>Georgia State Panthers</Team>
+    <Team>James Madison Dukes</Team>
+    <Team>Louisiana Ragin' Cajuns</Team>
+    <Team>Louisiana Tech Bulldogs</Team>
+    <Team>Marshall Thundering Herd</Team>
+    <Team>Old Dominion Monarchs</Team>
+    <Team>South Alabama Jaguars</Team>
+    <Team>Southern Miss Golden Eagles</Team>
+    <Team>Troy Trojans</Team>
+    <Team>UL Monroe Warhawks</Team>
   </Conference>
   <Conference name="SEC">
     <Team>Alabama Crimson Tide</Team>
@@ -262,6 +249,17 @@
     <Team>VMI Keydets</Team>
     <Team>Western Carolina Catamounts</Team>
     <Team>Wofford Terriers</Team>
+  </Conference>
+  <Conference name="SOUTHLAND">
+    <Team>East Texas A&amp;M Lions</Team>
+    <Team>Houston Christian Huskies</Team>
+    <Team>Incarnate Word Cardinals</Team>
+    <Team>Lamar Cardinals</Team>
+    <Team>McNeese Cowboys</Team>
+    <Team>Nicholls Colonels</Team>
+    <Team>Northwestern State Demons</Team>
+    <Team>SE Louisiana Lions</Team>
+    <Team>UT Rio Grande Valley Vaqueros</Team>
   </Conference>
   <Conference name="SWAC">
     <Team>Alabama State Hornets</Team>

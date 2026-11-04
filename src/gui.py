@@ -46,7 +46,7 @@ class DesktopApp(tk.Tk):
     def __init__(self):
         super().__init__()
         self.title("NCAA College Football Advanced ELO System")
-        self.geometry("1280x850")
+        self.geometry("1280x700")
         
         self.years = get_available_years()
         self.selected_year = self.years[-1] if self.years else 2025
@@ -111,14 +111,15 @@ class DesktopApp(tk.Tk):
         bar = ttk.Frame(self, padding="10")
         bar.pack(fill=tk.X)
 
-        ttk.Label(bar, text="📅 Season Year: ", font=('Helvetica', 11, 'bold')).pack(side=tk.LEFT)
+        ttk.Label(bar, text="🏈 Season Year: ", font=('Helvetica', 11, 'bold')).pack(side=tk.LEFT)
         self.year_cb = ttk.Combobox(bar, values=self.years, state="readonly", width=10)
         self.year_cb.set(self.selected_year)
         self.year_cb.pack(side=tk.LEFT, padx=5)
         self.year_cb.bind("<<ComboboxSelected>>", self._on_year_changed)
 
         ttk.Button(bar, text="🔄 Sync Latest Data", command=self._run_sync).pack(side=tk.LEFT, padx=10)
-        ttk.Button(bar, text="📥 Run Full Historical Backfill", command=self._run_backfill).pack(side=tk.LEFT, padx=5)
+        ttk.Button(bar, text="⏳ Run Full Historical Backfill", command=self._run_backfill).pack(side=tk.LEFT, padx=5)
+        ttk.Button(bar, text="♻️ Refresh Data", command=self.load_data).pack(side=tk.LEFT, padx=5)
 
     def _on_year_changed(self, event=None):
         self.selected_year = int(self.year_cb.get())
@@ -189,7 +190,7 @@ class DesktopApp(tk.Tk):
 
     def _refresh_full_rankings(self):
         for i in self.full_tree.get_children(): self.full_tree.delete(i)
-        teams = self.season_data['teams']
+        teams = [t for t in self.season_data['teams'] if t.division in ('FBS', 'FCS')]
         final_elos = self.season_data['final_elos']
         power_elos = self.season_data['power_elos']
         sos_vals = self.season_data['sos_values']
@@ -289,7 +290,7 @@ class DesktopApp(tk.Tk):
         self.sched_tree.pack(fill=tk.BOTH, expand=True, padx=10, pady=10)
 
     def _refresh_sched_dropdown(self):
-        teams = sorted([t.team_name for t in self.season_data['teams'] if 'tbd' not in t.team_name.lower()])
+        teams = sorted([t.team_name for t in self.season_data['teams'] if t.division in ('FBS', 'FCS') and 'tbd' not in t.team_name.lower()])
         self.team_cb['values'] = teams
         if teams:
             self.team_cb.set(teams[0])
@@ -395,7 +396,7 @@ class DesktopApp(tk.Tk):
 
     # TAB 7: ABOUT
     def _setup_about_tab(self):
-        txt = tk.Text(self.tab_about, wrap=tk.WORD, font=('Helvetica', 10), padding=15)
+        txt = tk.Text(self.tab_about, wrap=tk.WORD, font=('Helvetica', 10))#, padding=15)
         txt.insert(tk.END, """NCAA COLLEGE FOOTBALL ADVANCED ELO SYSTEM
 ===================================================
 
@@ -429,7 +430,7 @@ MATHEMATICAL FORMULAS:
 
     # TAB 8: LEGAL
     def _setup_legal_tab(self):
-        txt = tk.Text(self.tab_legal, wrap=tk.WORD, font=('Helvetica', 10), padding=15)
+        txt = tk.Text(self.tab_legal, wrap=tk.WORD, font=('Helvetica', 10))#, padding=15)
         txt.insert(tk.END, """LEGAL DISCLAIMERS & EXPERIMENTAL NOTICE
 ========================================
 

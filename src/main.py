@@ -7,13 +7,22 @@ from src.database import get_connection, init_db, resolve_conference_name, clean
 from src.data_fetcher import fetch_staged_data
 from src.formula import calculate_delta_elo as dt_elo, EloParameters, DEFAULT_PARAMS
 
-def rank_to_initial_elo(rank, total_teams, base_elo=1500.0, target_span=10.0):
+def rank_to_initial_elo(rank, total_teams, division="FBS", base_elo=None, target_span=10.0):
     """
     Converts 1..N team rank to initial ELO rating using Gaussian z-score distribution.
     Matches formula: p = (N - r + 0.5)/N, z = Phi^-1(p), Elo = R0 + z * sigma.
     FBS teams start in range [1490.0, 1510.0] (centered at 1500.0).
     FCS teams start in range [1090.0, 1110.0] (centered at 1100.0).
     """
+    if base_elo is None:
+        div_str = str(division).strip().upper() if division else "FBS"
+        if div_str == "FCS":
+            base_elo = 1100.0
+        elif div_str == "FBS":
+            base_elo = 1500.0
+        else:
+            base_elo = 1500.0
+
     N = int(total_teams)
     r = int(rank)
     if N <= 1:
@@ -77,22 +86,10 @@ def load_teams_and_games_for_year(year):
 
     # Query only FBS and FCS teams for rankings (filter out TBD or dummy teams)
     cursor.execute("""
-    SELECT s.espn_id, s.team_name, s.conference, s.division, t.logo_url
-    FROM team_season_status s
-    LEFT JOIN teams t ON s.espn_id = t.espn_id
-    WHERE s.year = ? AND s.division IN ('FBS', 'FCS') AND LOWER(s.team_name) NOT LIKE '%tbd%'
-    """, (year,))
+    SELECT * FROM teams
+    WHERE division IN ('FBS', 'FCS')
+    """)
     status_rows = cursor.fetchall()
-
-    # Fallback to most recent status if year has no status entries
-    if not status_rows:
-        cursor.execute("""
-        SELECT s.espn_id, s.team_name, s.conference, s.division, t.logo_url
-        FROM team_season_status s
-        LEFT JOIN teams t ON s.espn_id = t.espn_id
-        WHERE s.year = (SELECT MAX(year) FROM team_season_status) AND s.division IN ('FBS', 'FCS') AND LOWER(s.team_name) NOT LIKE '%tbd%'
-        """)
-        status_rows = cursor.fetchall()
 
     teams_dict = {}
     for r in status_rows:
@@ -164,12 +161,12 @@ def calculate_multi_year_elo(end_year, elo_params=None):
         # Assign initial ELO ratings using Gaussian rank-to-ELO transformation formula
         n_fbs = len(fbs_teams_list)
         for r, team in enumerate(fbs_teams_list, start=1):
-            team.ELO = rank_to_initial_elo(r, n_fbs, base_elo=1500.0, target_span=10.0)
+            team.ELO = rank_to_initial_elo(r, n_fbs, division=team.division, target_span=10.0)
             team.ranking = r
 
         n_fcs = len(fcs_teams_list)
         for r, team in enumerate(fcs_teams_list, start=1):
-            team.ELO = rank_to_initial_elo(r, n_fcs, base_elo=1100.0, target_span=10.0)
+            team.ELO = rank_to_initial_elo(r, n_fcs, division=team.division, target_span=10.0)
             team.ranking = r
 
         # Snapshot Preseason ELOs & Preseason Ranks
@@ -177,6 +174,7 @@ def calculate_multi_year_elo(end_year, elo_params=None):
         preseason_ranks = {}
         preseason_elos = {}
         for rank, team in enumerate(sorted_pre, start=1):
+            #print(f"Preseason Rank: {rank}, Team: {team.team_name}, Division: {team.division}, ELO: {team.ELO}")
             preseason_ranks[team.team_name] = rank
             preseason_elos[team.team_name] = team.ELO
 
@@ -342,8 +340,8 @@ def calculate_multi_year_elo(end_year, elo_params=None):
         sos_ranks = {name: r for r, (name, _) in enumerate(sorted_sos, start=1)}
 
         season_results[yr] = {
-            'teams': list(teams_dict.values()),
-            'teams_by_name': {t.team_name: t for t in teams_dict.values()},
+            'teams': [t for t in teams_dict.values() if t.division in ('FBS', 'FCS')],
+            'teams_by_name': {t.team_name: t for t in teams_dict.values() if t.division in ('FBS', 'FCS')},
             'final_elos': final_elos,
             'final_ranks': final_ranks,
             'power_elos': power_elos,

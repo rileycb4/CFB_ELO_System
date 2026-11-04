@@ -58,25 +58,25 @@ col_year, col_sync, col_backfill = st.columns([2, 1.5, 2])
 with col_year:
     selected_year = st.selectbox("📅 Select Season Year", options=years_list, index=default_idx)
 
-with col_sync:
-    st.write("")
-    st.write("")
-    if st.button("🔄 Sync Latest Data"):
-        with st.spinner("Updating recent scores and games..."):
-            update_latest_data()
-            st.cache_data.clear()
-            st.success("Sync completed!")
-            st.rerun()
+#with col_sync:
+#    st.write("")
+#    st.write("")
+#    if st.button("🔄 Sync Latest Data"):
+#        with st.spinner("Updating recent scores and games..."):
+#            update_latest_data()
+#            st.cache_data.clear()
+#            st.success("Sync completed!")
+#            st.rerun()
 
-with col_backfill:
-    st.write("")
-    st.write("")
-    if st.button("📥 Run Full Historical Backfill"):
-        with st.spinner("Backfilling 2001-present historical data across all divisions..."):
-            fetch_full_historical_data()
-            st.cache_data.clear()
-            st.success("Historical backfill completed!")
-            st.rerun()
+#with col_backfill:
+#    st.write("")
+#    st.write("")
+#    if st.button("📥 Run Full Historical Backfill"):
+#        with st.spinner("Backfilling 2001-present historical data across all divisions..."):
+#            fetch_full_historical_data()
+#            st.cache_data.clear()
+#            st.success("Historical backfill completed!")
+#            st.rerun()
 
 # Cache calculation per year
 @st.cache_data(show_spinner="Calculating ELO rankings & Strength of Schedule...")
@@ -146,13 +146,15 @@ with tab2:
     with c1:
         div_filter = st.selectbox("Filter Division", ["All", "FBS", "FCS"])
     with c2:
-        all_confs = ["All"] + sorted(list(set(t.conference for t in teams)))
+        all_confs = ["All"] + sorted(list(set(t.conference for t in teams if t.division in ('FBS', 'FCS'))))
         conf_filter = st.selectbox("Filter Conference", all_confs)
     with c3:
         search_query = st.text_input("Search Team Name")
 
     full_rank_data = []
     for t in teams:
+        if t.division not in ('FBS', 'FCS'):
+            continue
         if div_filter != "All" and t.division != div_filter:
             continue
         if conf_filter != "All" and t.conference != conf_filter:
@@ -231,7 +233,7 @@ with tab3:
 with tab4:
     st.subheader(f"Team Schedule Detail Search ({selected_year})")
     
-    team_names = sorted([t.team_name for t in teams if 'tbd' not in t.team_name.lower()])
+    team_names = sorted([t.team_name for t in teams if t.division in ('FBS', 'FCS') and 'tbd' not in t.team_name.lower()])
     if team_names:
         sel_team_name = st.selectbox("Select Team", team_names)
         sel_team = next((t for t in teams if t.team_name == sel_team_name), None)
@@ -319,8 +321,8 @@ with tab7:
     Non-linear reward multiplier for lower-ranked teams defeating higher-ranked opponents:
     $$U = \\min\\left(1 + \\beta \\left(\\frac{|\\text{Rank}_t - \\text{Rank}_{opp}|}{N - 1}\\right)^\\rho, 1 + \\beta_{max}\\right)$$
 
-    #### 5. Rating Delta ($\Delta ELO$)
-    $$\Delta ELO = K_{eff} \\times (S_t - E_t) \\times (1 + \\gamma \\cdot m) \\times U$$
+    #### 5. Rating Delta ($\\Delta ELO$)
+    $$\\Delta ELO = K_{eff} \\times (S_t - E_t) \\times (1 + \\gamma \\cdot m) \\times U$$
 
     #### 6. Strength of Schedule ($SoS$) & Power ELO
     $$SoS = \\frac{1}{n} \\sum_{i=1}^{n} \\text{ELO}_{opp, i}$$

@@ -9,7 +9,8 @@ from pathlib import Path
 
 from src.database import (
     init_db, save_teams, save_team_season_status,
-    save_games, save_polls, set_meta, get_meta, sync_xml_backup
+    save_games, save_polls, set_meta, get_meta, sync_xml_backup,
+    resolve_conference_name, resolve_conference_id
 )
 
 BASE_SCOREBOARD_URL = "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard"
@@ -38,8 +39,45 @@ def http_get_json(url, retries=3, delay=1.0):
             time.sleep(delay)
     return None
 
+def fetch_teams_conference_map():
+    """
+    Fetch current FBS and FCS standings to build a map of {team_id: {'conference': conf_abbr, 'conference_id': conf_id, 'division': div, 'division_id': did}}
+    """
+    conf_map = {}
+    for group_param in ['', '?group=81']:
+        url = f"https://site.api.espn.com/apis/v2/sports/football/college-football/standings{group_param}"
+        data = http_get_json(url)
+        if not data:
+            continue
+        div_label = 'FBS' if group_param == '' else 'FCS'
+        div_id = '80' if group_param == '' else '81'
+        for conf in data.get('children', []):
+            cid = str(conf.get('id', ''))
+            cabbr = conf.get('abbreviation', '')
+            entries = []
+            if 'standings' in conf and 'entries' in conf['standings']:
+                entries.extend(conf['standings']['entries'])
+            for sub in conf.get('children', []):
+                if 'standings' in sub and 'entries' in sub['standings']:
+                    entries.extend(sub['standings']['entries'])
+            
+            clean_conf = resolve_conference_name(cabbr or cid)
+            clean_cid = cid or resolve_conference_id(clean_conf)
+            for ent in entries:
+                t = ent.get('team', {})
+                tid = str(t.get('id', ''))
+                if tid:
+                    conf_map[tid] = {
+                        'conference': clean_conf,
+                        'conference_id': clean_cid,
+                        'division': div_label,
+                        'division_id': div_id
+                    }
+    return conf_map
+
 def fetch_and_store_all_teams():
     print("Fetching global team metadata from ESPN...")
+    conf_map = fetch_teams_conference_map()
     data = http_get_json(BASE_TEAMS_URL)
     if not data:
         return []
@@ -58,11 +96,21 @@ def fetch_and_store_all_teams():
             if logos:
                 logo_url = logos[0].get('href', '')
                 
+            c_info = conf_map.get(espn_id, {})
+            conf_abbr = c_info.get('conference')
+            conf_id = c_info.get('conference_id')
+            div_name = c_info.get('division')
+            div_id = c_info.get('division_id')
+
             team_records.append({
                 'espn_id': espn_id,
                 'team_name': t.get('displayName', t.get('location', '')),
                 'alt_name': t.get('shortDisplayName', t.get('nickname', '')),
                 'abbreviation': t.get('abbreviation', ''),
+                'division': div_name,
+                'division_id': div_id,
+                'conference': conf_abbr,
+                'conference_id': conf_id,
                 'logo_url': logo_url
             })
         
@@ -81,6 +129,7 @@ def parse_scoreboard_data(data, year, group_id):
     game_records = []
 
     division_label = GROUP_MAP.get(str(group_id), 'Other')
+    division_id_str = str(group_id)
 
     for ev in data.get('events', []):
         game_id = str(ev.get('id'))
@@ -136,20 +185,25 @@ def parse_scoreboard_data(data, year, group_id):
         a_score = int(away_comp['score']) if 'score' in away_comp and away_comp['score'] != "" else None
 
         # Add to teams & status
-        for t_info in [(h_id, h_name, h_abbrev), (a_id, a_name, a_abbrev)]:
-            tid, tname, tabbr = t_info
+        for t_info in [(h_id, h_name, h_abbrev, h_team), (a_id, a_name, a_abbrev, a_team)]:
+            tid, tname, tabbr, team_dict = t_info
+            
+            # Conference
+            conf_id = team_dict.get('conferenceId')
+            conf_name = resolve_conference_name(conf_id)
+            conf_id_str = str(conf_id) if conf_id else resolve_conference_id(conf_name)
+
             team_records.append({
                 'espn_id': tid,
                 'team_name': tname,
                 'alt_name': tname,
                 'abbreviation': tabbr,
+                'division': division_label,
+                'division_id': division_id_str,
+                'conference': conf_name,
+                'conference_id': conf_id_str,
                 'logo_url': f"https://a.espncdn.com/i/teamlogos/ncaa/500/{tid}.png"
             })
-            
-            # Conference
-            conf_id = h_team.get('conferenceId') if tid == h_id else a_team.get('conferenceId')
-            from src.database import resolve_conference_name
-            conf_name = resolve_conference_name(conf_id)
 
             status_records.append({
                 'espn_id': tid,

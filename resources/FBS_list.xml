@@ -1,161 +1,287 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<FBS>
+<?xml version="1.0" ?>
+<NCAA_FBS_Teams>
+  <Conference name="30">
+    <Team>East Texas A&amp;M Lions</Team>
+    <Team>Houston Christian Huskies</Team>
+    <Team>Incarnate Word Cardinals</Team>
+    <Team>Lamar Cardinals</Team>
+    <Team>McNeese Cowboys</Team>
+    <Team>Nicholls Colonels</Team>
+    <Team>Northwestern State Demons</Team>
+    <Team>SE Louisiana Lions</Team>
+    <Team>UT Rio Grande Valley Vaqueros</Team>
+  </Conference>
+  <Conference name="32">
+    <Team>Merrimack Warriors</Team>
+  </Conference>
   <Conference name="AAC">
-    <Team>Army</Team>
-    <Team>Navy</Team>
-    <Team>Tulsa</Team>
-    <Team>Texas-San Antonio</Team>
-    <Team>South Florida</Team>
-    <Team>East Carolina</Team>
-    <Team>North Texas</Team>
-    <Team>Memphis</Team>
-    <Team>Alabama-Birmingham</Team>
-    <Team>Tulane</Team>
-    <Team>Temple</Team>
-    <Team>Florida Atlantic</Team>
-    <Team>Rice</Team>
-    <Team>Charlotte</Team>
+    <Team>Army Black Knights</Team>
+    <Team>Charlotte 49ers</Team>
+    <Team>East Carolina Pirates</Team>
+    <Team>Florida Atlantic Owls</Team>
+    <Team>Memphis Tigers</Team>
+    <Team>Navy Midshipmen</Team>
+    <Team>North Texas Mean Green</Team>
+    <Team>Rice Owls</Team>
+    <Team>South Florida Bulls</Team>
+    <Team>Temple Owls</Team>
+    <Team>Tulane Green Wave</Team>
+    <Team>Tulsa Golden Hurricane</Team>
+    <Team>UAB Blazers</Team>
+    <Team>UTSA Roadrunners</Team>
   </Conference>
   <Conference name="ACC">
-    <Team>Clemson</Team>
-    <Team>Duke</Team>
-    <Team>North Carolina</Team>
-    <Team>North Carolina State</Team>
-    <Team>Wake Forest</Team>
-    <Team>Virginia</Team>
-    <Team>Georgia Tech</Team>
-    <Team>Florida State</Team>
-    <Team>Miami (FL)</Team>
-    <Team>Virginia Tech</Team>
-    <Team>Boston College</Team>
-    <Team>Pittsburgh</Team>
-    <Team>Syracuse</Team>
-    <Team>Louisville</Team>
-    <Team>Southern Methodist</Team>
-    <Team>California</Team>
-    <Team>Stanford</Team>
+    <Team>Boston College Eagles</Team>
+    <Team>California Golden Bears</Team>
+    <Team>Clemson Tigers</Team>
+    <Team>Duke Blue Devils</Team>
+    <Team>Florida State Seminoles</Team>
+    <Team>Georgia Tech Yellow Jackets</Team>
+    <Team>Louisville Cardinals</Team>
+    <Team>Miami Hurricanes</Team>
+    <Team>NC State Wolfpack</Team>
+    <Team>North Carolina Tar Heels</Team>
+    <Team>Pittsburgh Panthers</Team>
+    <Team>SMU Mustangs</Team>
+    <Team>Stanford Cardinal</Team>
+    <Team>Syracuse Orange</Team>
+    <Team>Virginia Cavaliers</Team>
+    <Team>Virginia Tech Hokies</Team>
+    <Team>Wake Forest Demon Deacons</Team>
   </Conference>
-  <Conference name="Big10">
-    <Team>Indiana</Team>
-    <Team>Ohio State</Team>
-    <Team>Oregon</Team>
-    <Team>Southern California</Team>
-    <Team>Michigan</Team>
-    <Team>Iowa</Team>
-    <Team>Washington</Team>
-    <Team>Illinois</Team>
-    <Team>Minnesota</Team>
-    <Team>Nebraska</Team>
-    <Team>Northwestern</Team>
-    <Team>UCLA</Team>
-    <Team>Penn State</Team>
-    <Team>Wisconsin</Team>
-    <Team>Rutgers</Team>
-    <Team>Michigan State</Team>
-    <Team>Maryland</Team>
-    <Team>Purdue</Team>
+  <Conference name="BIG10">
+    <Team>Illinois Fighting Illini</Team>
+    <Team>Indiana Hoosiers</Team>
+    <Team>Iowa Hawkeyes</Team>
+    <Team>Maryland Terrapins</Team>
+    <Team>Michigan State Spartans</Team>
+    <Team>Michigan Wolverines</Team>
+    <Team>Minnesota Golden Gophers</Team>
+    <Team>Nebraska Cornhuskers</Team>
+    <Team>Northwestern Wildcats</Team>
+    <Team>Ohio State Buckeyes</Team>
+    <Team>Oregon Ducks</Team>
+    <Team>Penn State Nittany Lions</Team>
+    <Team>Purdue Boilermakers</Team>
+    <Team>Rutgers Scarlet Knights</Team>
+    <Team>UCLA Bruins</Team>
+    <Team>USC Trojans</Team>
+    <Team>Washington Huskies</Team>
+    <Team>Wisconsin Badgers</Team>
   </Conference>
-  <Conference name="Big12">
-    <Team>Arizona</Team>
-    <Team>Arizona State</Team>
-    <Team>Baylor</Team>
-    <Team>Brigham Young</Team>
-    <Team>Central Florida</Team>
-    <Team>Cincinnati</Team>
-    <Team>Colorado</Team>
-    <Team>Houston</Team>
-    <Team>Iowa State</Team>
-    <Team>Kansas</Team>
-    <Team>Kansas State</Team>
-    <Team>Oklahoma State</Team>
-    <Team>Texas Christian</Team>
-    <Team>Utah</Team>
-    <Team>Texas Tech</Team>
-    <Team>West Virginia</Team>
+  <Conference name="BIG12">
+    <Team>Arizona State Sun Devils</Team>
+    <Team>Arizona Wildcats</Team>
+    <Team>BYU Cougars</Team>
+    <Team>Baylor Bears</Team>
+    <Team>Cincinnati Bearcats</Team>
+    <Team>Colorado Buffaloes</Team>
+    <Team>Houston Cougars</Team>
+    <Team>Iowa State Cyclones</Team>
+    <Team>Kansas Jayhawks</Team>
+    <Team>Kansas State Wildcats</Team>
+    <Team>Oklahoma State Cowboys</Team>
+    <Team>TCU Horned Frogs</Team>
+    <Team>Texas Tech Red Raiders</Team>
+    <Team>UCF Knights</Team>
+    <Team>Utah Utes</Team>
+    <Team>West Virginia Mountaineers</Team>
+  </Conference>
+  <Conference name="BIGSKY">
+    <Team>Cal Poly Mustangs</Team>
+    <Team>Eastern Washington Eagles</Team>
+    <Team>Idaho State Bengals</Team>
+    <Team>Idaho Vandals</Team>
+    <Team>Montana Grizzlies</Team>
+    <Team>Montana State Bobcats</Team>
+    <Team>Northern Arizona Lumberjacks</Team>
+    <Team>Northern Colorado Bears</Team>
+    <Team>Portland State Vikings</Team>
+    <Team>Southern Utah Thunderbirds</Team>
+    <Team>UC Davis Aggies</Team>
+    <Team>Utah Tech Trailblazers</Team>
+    <Team>Weber State Wildcats</Team>
+  </Conference>
+  <Conference name="CAA">
+    <Team>Bryant Bulldogs</Team>
+    <Team>Campbell Fighting Camels</Team>
+    <Team>Elon Phoenix</Team>
+    <Team>Hampton Pirates</Team>
+    <Team>Maine Black Bears</Team>
+    <Team>Monmouth Hawks</Team>
+    <Team>New Hampshire Wildcats</Team>
+    <Team>North Carolina A&amp;T Aggies</Team>
+    <Team>Rhode Island Rams</Team>
+    <Team>Sacred Heart Pioneers</Team>
+    <Team>Stony Brook Seawolves</Team>
+    <Team>Towson Tigers</Team>
+    <Team>UAlbany Great Danes</Team>
   </Conference>
   <Conference name="CUSA">
-    <Team>Delaware</Team>
-    <Team>Florida International</Team>
-    <Team>Jacksonville State</Team>
-    <Team>Kennesaw State</Team>
-    <Team>Liberty</Team>
-    <Team>Louisiana Tech</Team>
-    <Team>Middle Tennessee State</Team>
-    <Team>Missouri State</Team>
-    <Team>New Mexico State</Team>
-    <Team>Sam Houston</Team>
-    <Team>Texas-El Paso</Team>
-    <Team>Western Kentucky</Team>
+    <Team>Delaware Blue Hens</Team>
+    <Team>Florida International Panthers</Team>
+    <Team>Jacksonville State Gamecocks</Team>
+    <Team>Kennesaw State Owls</Team>
+    <Team>Liberty Flames</Team>
+    <Team>Middle Tennessee Blue Raiders</Team>
+    <Team>Missouri State Bears</Team>
+    <Team>New Mexico State Aggies</Team>
+    <Team>Sam Houston Bearkats</Team>
+    <Team>Western Kentucky Hilltoppers</Team>
+  </Conference>
+  <Conference name="IND">
+    <Team>App State Mountaineers</Team>
+    <Team>Arkansas State Red Wolves</Team>
+    <Team>Coastal Carolina Chanticleers</Team>
+    <Team>Georgia Southern Eagles</Team>
+    <Team>Georgia State Panthers</Team>
+    <Team>James Madison Dukes</Team>
+    <Team>Louisiana Ragin' Cajuns</Team>
+    <Team>Louisiana Tech Bulldogs</Team>
+    <Team>Marshall Thundering Herd</Team>
+    <Team>Old Dominion Monarchs</Team>
+    <Team>South Alabama Jaguars</Team>
+    <Team>Southern Miss Golden Eagles</Team>
+    <Team>Troy Trojans</Team>
+    <Team>UL Monroe Warhawks</Team>
   </Conference>
   <Conference name="MAC">
-    <Team>Akron</Team>
-    <Team>Ball State</Team>
-    <Team>Bowling Green</Team>
-    <Team>Buffalo</Team>
-    <Team>Central Michigan</Team>
-    <Team>Eastern Michigan</Team>
-    <Team>Kent State</Team>
-    <Team>Massachusetts</Team>
-    <Team>Miami (OH)</Team>
-    <Team>Northern Illinois</Team>
-    <Team>Ohio</Team>
-    <Team>Toledo</Team>
-    <Team>Western Michigan</Team>
+    <Team>Akron Zips</Team>
+    <Team>Ball State Cardinals</Team>
+    <Team>Bowling Green Falcons</Team>
+    <Team>Buffalo Bulls</Team>
+    <Team>Central Michigan Chippewas</Team>
+    <Team>Eastern Michigan Eagles</Team>
+    <Team>Kent State Golden Flashes</Team>
+    <Team>Massachusetts Minutemen</Team>
+    <Team>Miami (OH) RedHawks</Team>
+    <Team>Ohio Bobcats</Team>
+    <Team>Sacramento State Hornets</Team>
+    <Team>Toledo Rockets</Team>
+    <Team>Western Michigan Broncos</Team>
+  </Conference>
+  <Conference name="MEAC">
+    <Team>Delaware State Hornets</Team>
+    <Team>Howard Bison</Team>
+    <Team>Morgan State Bears</Team>
+    <Team>Norfolk State Spartans</Team>
+    <Team>North Carolina Central Eagles</Team>
+  </Conference>
+  <Conference name="MVFC">
+    <Team>Illinois State Redbirds</Team>
+    <Team>Indiana State Sycamores</Team>
+    <Team>Murray State Racers</Team>
+    <Team>North Dakota Fighting Hawks</Team>
+    <Team>Northern Iowa Panthers</Team>
+    <Team>South Dakota Coyotes</Team>
+    <Team>South Dakota State Jackrabbits</Team>
+    <Team>Southern Illinois Salukis</Team>
+    <Team>Youngstown State Penguins</Team>
   </Conference>
   <Conference name="MWC">
-    <Team>Air Force</Team>
-    <Team>Boise State</Team>
-    <Team>Colorado State</Team>
-    <Team>Fresno State</Team>
-    <Team>Hawaii</Team>
-    <Team>Nevada</Team>
-    <Team>New Mexico</Team>
-    <Team>San Diego State</Team>
-    <Team>San Jose State</Team>
-    <Team>Nevada-Las Vegas</Team>
-    <Team>Utah State</Team>
-    <Team>Wyoming</Team>
+    <Team>Air Force Falcons</Team>
+    <Team>Hawai'i Rainbow Warriors</Team>
+    <Team>Nevada Wolf Pack</Team>
+    <Team>New Mexico Lobos</Team>
+    <Team>North Dakota State Bison</Team>
+    <Team>Northern Illinois Huskies</Team>
+    <Team>San José State Spartans</Team>
+    <Team>UNLV Rebels</Team>
+    <Team>UTEP Miners</Team>
+    <Team>Wyoming Cowboys</Team>
+  </Conference>
+  <Conference name="NEC">
+    <Team>Central Connecticut Blue Devils</Team>
+    <Team>Duquesne Dukes</Team>
+    <Team>Long Island University Sharks</Team>
+    <Team>Mercyhurst Lakers</Team>
+    <Team>Robert Morris Colonials</Team>
+    <Team>Stonehill Skyhawks</Team>
+    <Team>Wagner Seahawks</Team>
+  </Conference>
+  <Conference name="OVC">
+    <Team>Charleston Southern Buccaneers</Team>
+    <Team>Eastern Illinois Panthers</Team>
+    <Team>Gardner-Webb Runnin' Bulldogs</Team>
+    <Team>Lindenwood Lions</Team>
+    <Team>Southeast Missouri State Redhawks</Team>
+    <Team>Tennessee State Tigers</Team>
+    <Team>UT Martin Skyhawks</Team>
+    <Team>Western Illinois Leathernecks</Team>
   </Conference>
   <Conference name="PAC12">
-    <Team>Oregon State</Team>
-    <Team>Washington State</Team>
+    <Team>Boise State Broncos</Team>
+    <Team>Colorado State Rams</Team>
+    <Team>Fresno State Bulldogs</Team>
+    <Team>Oregon State Beavers</Team>
+    <Team>San Diego State Aztecs</Team>
+    <Team>Texas State Bobcats</Team>
+    <Team>Utah State Aggies</Team>
+    <Team>Washington State Cougars</Team>
   </Conference>
-  <Conference name="SEC">
-    <Team>Alabama</Team>
-    <Team>Arkansas</Team>
-    <Team>Auburn</Team>
-    <Team>Florida</Team>
-    <Team>Georgia</Team>
-    <Team>Kentucky</Team>
-    <Team>Louisiana State</Team>
-    <Team>Mississippi</Team>
-    <Team>Mississippi State</Team>
-    <Team>Missouri</Team>
-    <Team>Oklahoma</Team>
-    <Team>South Carolina</Team>
-    <Team>Tennessee</Team>
-    <Team>Texas</Team>
-    <Team>Texas A&amp;M</Team>
-    <Team>Vanderbilt</Team>
+  <Conference name="PATRIOT">
+    <Team>Bucknell Bison</Team>
+    <Team>Colgate Raiders</Team>
+    <Team>Fordham Rams</Team>
+    <Team>Holy Cross Crusaders</Team>
+    <Team>Lafayette Leopards</Team>
+    <Team>Richmond Spiders</Team>
+    <Team>Villanova Wildcats</Team>
+    <Team>William &amp; Mary Tribe</Team>
   </Conference>
   <Conference name="SBC">
-    <Team>Appalachian State</Team>
-    <Team>Coastal Carolina</Team>
-    <Team>Georgia Southern</Team>
-    <Team>Georgia State</Team>
-    <Team>James Madison</Team>
-    <Team>Marshall</Team>
-    <Team>Old Dominion</Team>
-    <Team>Arkansas State</Team>
-    <Team>Louisiana</Team>
-    <Team>Louisiana-Monroe</Team>
-    <Team>South Alabama</Team>
-    <Team>Southern Mississippi</Team>
-    <Team>Texas State</Team>
-    <Team>Troy</Team>
+    <Team>Notre Dame Fighting Irish</Team>
+    <Team>UConn Huskies</Team>
   </Conference>
-  <Conference name="Independents">
-    <Team>Notre Dame</Team>
-    <Team>Connecticut</Team>
+  <Conference name="SEC">
+    <Team>Alabama Crimson Tide</Team>
+    <Team>Arkansas Razorbacks</Team>
+    <Team>Auburn Tigers</Team>
+    <Team>Florida Gators</Team>
+    <Team>Georgia Bulldogs</Team>
+    <Team>Kentucky Wildcats</Team>
+    <Team>LSU Tigers</Team>
+    <Team>Mississippi State Bulldogs</Team>
+    <Team>Missouri Tigers</Team>
+    <Team>Oklahoma Sooners</Team>
+    <Team>Ole Miss Rebels</Team>
+    <Team>South Carolina Gamecocks</Team>
+    <Team>Tennessee Volunteers</Team>
+    <Team>Texas A&amp;M Aggies</Team>
+    <Team>Texas Longhorns</Team>
+    <Team>Vanderbilt Commodores</Team>
   </Conference>
-</FBS>
+  <Conference name="SOCON">
+    <Team>Chattanooga Mocs</Team>
+    <Team>East Tennessee State Buccaneers</Team>
+    <Team>Furman Paladins</Team>
+    <Team>Mercer Bears</Team>
+    <Team>Samford Bulldogs</Team>
+    <Team>Tennessee Tech Golden Eagles</Team>
+    <Team>The Citadel Bulldogs</Team>
+    <Team>VMI Keydets</Team>
+    <Team>Western Carolina Catamounts</Team>
+    <Team>Wofford Terriers</Team>
+  </Conference>
+  <Conference name="SWAC">
+    <Team>Alabama State Hornets</Team>
+    <Team>Alcorn State Braves</Team>
+    <Team>Arkansas-Pine Bluff Golden Lions</Team>
+    <Team>Bethune-Cookman Wildcats</Team>
+    <Team>Florida A&amp;M Rattlers</Team>
+    <Team>Grambling Tigers</Team>
+    <Team>Mississippi Valley State Delta Devils</Team>
+    <Team>Prairie View A&amp;M Panthers</Team>
+    <Team>Southern Jaguars</Team>
+    <Team>Texas Southern Tigers</Team>
+  </Conference>
+  <Conference name="UAC">
+    <Team>Abilene Christian Wildcats</Team>
+    <Team>Austin Peay Governors</Team>
+    <Team>Central Arkansas Bears</Team>
+    <Team>Eastern Kentucky Colonels</Team>
+    <Team>North Alabama Lions</Team>
+    <Team>Tarleton State Texans</Team>
+    <Team>West Georgia Wolves</Team>
+  </Conference>
+</NCAA_FBS_Teams>
