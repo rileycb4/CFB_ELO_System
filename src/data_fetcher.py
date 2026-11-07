@@ -7,7 +7,7 @@ from datetime import datetime
 import threading
 from pathlib import Path
 
-from src.database import (
+from archive.src.database import (
     init_db, save_teams, save_team_season_status,
     save_games, save_polls, set_meta, get_meta, sync_xml_backup,
     resolve_conference_name, resolve_conference_id

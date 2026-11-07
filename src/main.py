@@ -3,9 +3,8 @@ import statistics
 from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
-from src.database import get_connection, init_db, resolve_conference_name, clean_database_records
-from src.data_fetcher import fetch_staged_data
-from src.formula import calculate_delta_elo as dt_elo, EloParameters, DEFAULT_PARAMS
+from archive.src.database import get_connection, init_db, resolve_conference_name, clean_database_records
+from archive.src.formula import calculate_delta_elo as dt_elo, EloParameters, DEFAULT_PARAMS
 
 def rank_to_initial_elo(rank, total_teams, division="FBS", base_elo=None, target_span=10.0):
     """
@@ -21,7 +20,7 @@ def rank_to_initial_elo(rank, total_teams, division="FBS", base_elo=None, target
         elif div_str == "FBS":
             base_elo = 1500.0
         else:
-            base_elo = 1500.0
+            base_elo = 800.0
 
     N = int(total_teams)
     r = int(rank)
@@ -65,6 +64,13 @@ def ensure_database_populated():
 
     if cnt == 0:
         print("Database empty. Performing initial fast staged pull...")
+        try:
+            from cfb_integrated_app.src.data_fetcher import fetch_staged_data
+        except ImportError as exc:
+            raise RuntimeError(
+                "The database is empty and src.data_fetcher is unavailable. "
+                "Add your existing data_fetcher.py module or populate the database first."
+            ) from exc
         fetch_staged_data(start_year=2021, end_year=2026)
 
 def get_available_years():
@@ -219,6 +225,7 @@ def calculate_multi_year_elo(end_year, elo_params=None):
             e2 = working_elos.get(a_id, 1100.0)
             r1 = working_ranks.get(h_id, 200)
             r2 = working_ranks.get(a_id, 200)
+            # Preserve the pre-game ranking snapshot for the schedule viewer.
 
             g_type = "Regular"
             if is_champ:
@@ -266,6 +273,10 @@ def calculate_multi_year_elo(end_year, elo_params=None):
                     "opp_score": ascore,
                     "score_str": f"{hs}-{ascore}",
                     "delta": d1,
+                    "rank_before": r1,
+                    "delta_rank": r1 - working_ranks[h_id],
+                    "opponent_elo_before": e2,
+                    "opponent_rank_before": r2,
                     "new_elo": working_elos[h_id],
                     "new_rank": working_ranks[h_id],
                     "is_champ": is_champ,
@@ -287,6 +298,10 @@ def calculate_multi_year_elo(end_year, elo_params=None):
                     "opp_score": hs,
                     "score_str": f"{ascore}-{hs}",
                     "delta": d2,
+                    "rank_before": r2,
+                    "delta_rank": r2 - working_ranks[a_id],
+                    "opponent_elo_before": e1,
+                    "opponent_rank_before": r1,
                     "new_elo": working_elos[a_id],
                     "new_rank": working_ranks[a_id],
                     "is_champ": is_champ,
@@ -503,6 +518,6 @@ def calculate_playoff_picture(year, ranking_source="ELO"):
     return playoff_table, matchups
 
 if __name__ == "__main__":
-    from src.gui import start_gui
+    from archive.src.gui import start_gui
     print("Launching NCAA CFB System Local Desktop GUI...")
     start_gui()

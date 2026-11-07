@@ -6,11 +6,11 @@ import streamlit as st
 import pandas as pd
 from datetime import datetime
 
-from src.main import (
+from archive.src.main import (
     get_available_years, calculate_multi_year_elo,
     get_poll_comparison, calculate_playoff_picture
 )
-from src.data_fetcher import update_latest_data, fetch_full_historical_data
+from cfb_integrated_app.src.data_fetcher import update_latest_data, fetch_full_historical_data
 
 st.set_page_config(page_title="NCAA Advanced Team System", layout="wide", initial_sidebar_state="expanded")
 
